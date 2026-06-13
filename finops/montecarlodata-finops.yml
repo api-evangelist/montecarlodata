@@ -1,0 +1,83 @@
+specificationVersion: "1.0"
+id: montecarlodata-finops
+name: Monte Carlo FinOps Framework
+description: >
+  FOCUS-aligned FinOps guidance for managing Monte Carlo Data + AI Observability
+  platform costs. Monte Carlo pricing is based on a pay-per-table model with optional
+  commitment-based discounts. Key cost drivers are the number of monitored tables,
+  daily API call consumption, and plan tier. Enterprise buyers with 30-100 tables
+  across 2-3 data sources typically see annual contract values between $25,000 and $50,000.
+url: https://info.montecarlodata.com/solutions/data-observability-platform-pricing
+provider: Monte Carlo
+framework: FinOps Framework 1.0
+costDrivers:
+  - name: Monitored Tables
+    description: >
+      The primary billing dimension. Costs scale with the number of data tables
+      actively monitored across connected data sources. The Start plan caps at
+      1,000 tables; Scale and Enterprise plans use unlimited pay-per-table pricing.
+    unit: table
+    billingModel: pay-per-table
+    impactLevel: high
+  - name: Daily API Call Volume
+    description: >
+      Each plan tier includes a fixed daily quota of API calls (10K / 50K / 100K).
+      Exceeding plan-level quotas may require a plan upgrade.
+    unit: API request
+    billingModel: included-in-plan
+    quotas:
+      - plan: Start
+        dailyLimit: 10000
+      - plan: Scale
+        dailyLimit: 50000
+      - plan: Enterprise
+        dailyLimit: 100000
+    impactLevel: medium
+  - name: Plan Tier
+    description: >
+      Plan selection (Start / Scale / Enterprise) determines feature access,
+      user count, supported data source types, and support SLA. Upgrading tiers
+      increases cost but unlocks data lake, database, and EDW monitoring.
+    impactLevel: high
+  - name: Commitment Discount
+    description: >
+      Opting into commitment-based pricing rather than pay-as-you-go provides
+      cost predictability and discounted rates. Recommended for teams with stable
+      or growing table counts.
+    impactLevel: medium
+optimization:
+  - recommendation: Right-size monitored table count
+    description: >
+      Audit which tables are actively monitored and remove low-priority or
+      rarely-queried tables to minimize per-table costs.
+    effort: low
+  - recommendation: Use commitment-based pricing
+    description: >
+      If table volume is predictable, commit to a fixed term to receive
+      discounted rates versus pay-as-you-go.
+    effort: low
+  - recommendation: Manage API call budgets per team
+    description: >
+      Track daily API call consumption by team or integration to avoid hitting
+      plan quotas, which could degrade monitoring coverage. Use the SDK's
+      built-in retry handling to minimize wasted calls.
+    effort: medium
+  - recommendation: Consolidate data sources per workspace
+    description: >
+      Enterprise multi-workspace configurations may carry separate per-workspace
+      costs. Consolidate where governance allows to reduce overhead.
+    effort: medium
+  - recommendation: Negotiate enterprise pricing for large deployments
+    description: >
+      For deployments exceeding 100 tables or requiring EDW support, negotiate
+      a custom enterprise contract. Annual ACVs of $25K-$50K are typical for
+      30-100 table deployments across 2-3 sources.
+    effort: high
+visibility:
+  - type: UsageMonitoring
+    description: Monitor daily API call consumption against plan quotas via the Monte Carlo UI or API.
+    url: https://getmontecarlo.com/settings/api
+  - type: CostReporting
+    description: Request itemized usage reports from Monte Carlo customer success for table-level cost attribution.
+  - type: BudgetAlerts
+    description: Set internal alerts when daily API call consumption exceeds 80% of plan quota to avoid service degradation.

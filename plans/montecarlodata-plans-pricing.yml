@@ -1,0 +1,75 @@
+specificationVersion: "0.1"
+id: montecarlodata-plans-pricing
+name: Monte Carlo Plans and Pricing
+description: >
+  Monte Carlo offers three pricing tiers for its Data + AI Observability platform,
+  all based on a pay-per-table model. Plans differ by user count, daily API call limits,
+  supported data sources, and access to advanced features such as enterprise governance
+  integrations, multi-workspace support, and SLA-backed support response times.
+url: https://info.montecarlodata.com/solutions/data-observability-platform-pricing
+plans:
+  - name: Start
+    description: >
+      Entry-level plan for single team data reliability. Supports data warehouses,
+      BI tools, and ETL monitoring with incident management, lineage, and performance
+      observability. Includes self-guided onboarding and up to 1,000 monitored tables.
+    url: https://info.montecarlodata.com/solutions/data-observability-platform-pricing
+    pricing:
+      model: pay-per-table
+      commitment: pay-as-you-go or commitment-based discount
+      note: Specific dollar amounts not publicly disclosed; up to 1,000 tables
+    features:
+      - Up to 10 users
+      - Up to 1,000 tables monitored
+      - 10,000 API calls per day
+      - Data warehouse, BI, and ETL monitoring
+      - Incident management
+      - Data lineage
+      - Performance observability
+      - Self-guided onboarding
+  - name: Scale
+    description: >
+      Mid-tier plan for multi-team deployments. Adds data lake support (Databricks,
+      Hive, Glue, Azure), database integrations, GenAI pipeline monitoring, Data Mesh
+      functionality, advanced security with SSO and PII filtering, incident automation,
+      and expert onboarding with a 48-hour support SLA.
+    url: https://info.montecarlodata.com/solutions/data-observability-platform-pricing
+    pricing:
+      model: pay-per-table
+      commitment: pay-as-you-go or commitment-based discount
+      note: Specific dollar amounts not publicly disclosed
+    features:
+      - Unlimited users
+      - Pay-per-table pricing
+      - 50,000 API calls per day
+      - All Start features
+      - Data lake monitoring (Databricks, Hive, Glue, Azure)
+      - Database support (MySQL, Postgres, SQL Server)
+      - GenAI pipeline monitoring
+      - Data Mesh functionality
+      - SSO and PII filtering
+      - Incident automation
+      - Expert onboarding
+      - 48-hour support SLA
+  - name: Enterprise
+    description: >
+      Comprehensive plan for large organizations requiring EDW support (Oracle, SAP HANA,
+      Teradata), multi-workspace management, enterprise governance integrations with
+      ServiceNow and data catalogs, audit logging, expert-led implementation, and a
+      24-hour support SLA.
+    url: https://info.montecarlodata.com/solutions/data-observability-platform-pricing
+    pricing:
+      model: pay-per-table
+      commitment: custom / commitment-based
+      note: Custom pricing; contact sales for annual contract value
+    features:
+      - Unlimited users
+      - Pay-per-table pricing
+      - 100,000 API calls per day
+      - All Scale features
+      - EDW monitoring (Oracle, SAP HANA, Teradata)
+      - Multi-workspace support
+      - Enterprise governance integrations (ServiceNow, Data Catalogs)
+      - Audit logging
+      - Expert-led implementation
+      - 24-hour support SLA

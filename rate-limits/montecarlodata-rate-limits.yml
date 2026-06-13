@@ -1,0 +1,48 @@
+specificationVersion: "0.1"
+id: montecarlodata-rate-limits
+name: Monte Carlo API Rate Limits
+description: >
+  Monte Carlo's GraphQL API enforces daily API call quotas that vary by plan tier.
+  Specific per-minute or per-second rate limit details are not publicly documented.
+  The platform uses API key-based authentication and may throttle aggressive polling
+  or bulk mutations. For enterprise-level rate limit information, contact Monte Carlo
+  support directly.
+url: https://docs.getmontecarlo.com/docs/api
+limits:
+  - name: Start Plan Daily API Calls
+    description: Maximum number of API calls allowed per day on the Start plan.
+    plan: Start
+    quota: 10000
+    period: day
+    unit: requests
+    enforcement: hard limit (plan-defined)
+    note: Applies to all GraphQL API calls against api.getmontecarlo.com/graphql
+  - name: Scale Plan Daily API Calls
+    description: Maximum number of API calls allowed per day on the Scale plan.
+    plan: Scale
+    quota: 50000
+    period: day
+    unit: requests
+    enforcement: hard limit (plan-defined)
+    note: Applies to all GraphQL API calls against api.getmontecarlo.com/graphql
+  - name: Enterprise Plan Daily API Calls
+    description: Maximum number of API calls allowed per day on the Enterprise plan.
+    plan: Enterprise
+    quota: 100000
+    period: day
+    unit: requests
+    enforcement: hard limit (plan-defined)
+    note: Applies to all GraphQL API calls against api.getmontecarlo.com/graphql
+authentication:
+  type: API Key
+  description: >
+    API keys are generated from 42 cryptographically secure random bytes and base64 encoded,
+    producing a 56-character string. Keys are created via the API settings page at
+    getmontecarlo.com/settings/api. Both personal and account-level keys are supported;
+    only the Account Owner role can create account-level keys.
+  headerName: x-mcd-id / x-mcd-token
+  docsUrl: https://docs.getmontecarlo.com/docs/api-authentication
+notes:
+  - Per-minute and per-second rate limits are not publicly disclosed.
+  - Aggressive polling or bulk mutations may be throttled without a Retry-After header.
+  - Contact Monte Carlo support for enterprise-specific throttling thresholds.
