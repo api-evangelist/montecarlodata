@@ -1,0 +1,85 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "mc": "https://docs.getmontecarlo.com/docs/",
+    "name": "name",
+    "description": "description",
+    "url": "url",
+    "provider": "provider",
+    "api": {
+      "@id": "mc:api",
+      "@type": "@id"
+    },
+    "endpoint": "mc:endpoint",
+    "graphqlEndpoint": {
+      "@id": "mc:graphqlEndpoint",
+      "@type": "@id"
+    },
+    "pushIngestEndpoint": {
+      "@id": "mc:pushIngestEndpoint",
+      "@type": "@id"
+    },
+    "documentation": {
+      "@id": "mc:documentation",
+      "@type": "@id"
+    },
+    "apiExplorer": {
+      "@id": "mc:apiExplorer",
+      "@type": "@id"
+    },
+    "pythonSDK": {
+      "@id": "mc:pythonSDK",
+      "@type": "@id"
+    },
+    "cli": {
+      "@id": "mc:cli",
+      "@type": "@id"
+    },
+    "statusPage": {
+      "@id": "mc:statusPage",
+      "@type": "@id"
+    },
+    "blog": {
+      "@id": "mc:blog",
+      "@type": "@id"
+    },
+    "blogFeed": {
+      "@id": "mc:blogFeed",
+      "@type": "@id"
+    },
+    "gitHubOrg": {
+      "@id": "mc:gitHubOrg",
+      "@type": "@id"
+    },
+    "DataObservabilityPlatform": "mc:DataObservabilityPlatform",
+    "DataMonitor": "mc:DataMonitor",
+    "DataIncident": "mc:DataIncident",
+    "DataLineage": "mc:DataLineage",
+    "FieldHealth": "mc:FieldHealth",
+    "PushIngestEvent": "mc:PushIngestEvent"
+  },
+  "@type": "WebAPI",
+  "name": "Monte Carlo API",
+  "description": "Monte Carlo is a data and AI observability platform. Its GraphQL API powers the full platform, enabling programmatic management of data monitors, incidents, field health, lineage, and the Push Ingest API for custom metadata ingestion.",
+  "url": "https://montecarlo.ai",
+  "provider": {
+    "@type": "Organization",
+    "name": "Monte Carlo",
+    "url": "https://montecarlo.ai",
+    "sameAs": [
+      "https://github.com/monte-carlo-data",
+      "https://www.linkedin.com/company/monte-carlo-data",
+      "https://x.com/montecarlodata"
+    ]
+  },
+  "graphqlEndpoint": "https://api.getmontecarlo.com/graphql",
+  "pushIngestEndpoint": "https://integrations.getmontecarlo.com",
+  "documentation": "https://docs.getmontecarlo.com/docs/api",
+  "apiExplorer": "https://apidocs.getmontecarlo.com",
+  "pythonSDK": "https://docs.getmontecarlo.com/docs/mcu-monte-carlo-python-sdk",
+  "cli": "https://docs.getmontecarlo.com/docs/using-the-cli",
+  "statusPage": "https://status.getmontecarlo.com",
+  "blog": "https://montecarlo.ai/blog",
+  "blogFeed": "https://montecarlo.ai/feed",
+  "gitHubOrg": "https://github.com/monte-carlo-data"
+}

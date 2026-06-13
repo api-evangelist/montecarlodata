@@ -1,0 +1,11 @@
+{
+  "url": "https://montecarlo.ai/feed",
+  "type": "rss",
+  "title": "Monte Carlo Blog",
+  "description": "News, insights, and technical content from Monte Carlo on data observability, data quality, AI observability, and data reliability.",
+  "link": "https://montecarlo.ai/blog",
+  "language": "en",
+  "confirmed": "2026-06-13",
+  "last_fetched": null,
+  "posts": []
+}
