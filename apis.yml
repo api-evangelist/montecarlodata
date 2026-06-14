@@ -1,71 +1,79 @@
 aid: montecarlodata
 name: Monte Carlo
-description: >
-  Monte Carlo is a data and AI observability platform that helps enterprise organizations find and fix bad data fast.
-  The platform exposes a GraphQL API that powers all the same capabilities as the Monte Carlo web application, enabling
-  programmatic management of data monitors, incidents, field health, and lineage across data warehouses, lakes, ETL, and BI.
-  Developers can automate custom monitoring configurations, augment lineage with external resources, manage bulk operations,
-  and push metadata from sources unreachable via standard collection through the Push Ingest API.
-  Additional developer tools include a Python SDK (Pycarlo), a CLI for onboarding and integration operations, webhooks
-  for routing incident data to custom platforms, and an Airflow provider for pipeline quality gates.
+description: 'Monte Carlo is a data and AI observability platform that helps enterprise
+  organizations find and fix bad data fast. The platform exposes a GraphQL API that
+  powers all the same capabilities as the Monte Carlo web application, enabling programmatic
+  management of data monitors, incidents, field health, and lineage across data warehouses,
+  lakes, ETL, and BI. Developers can automate custom monitoring configurations, augment
+  lineage with external resources, manage bulk operations, and push metadata from
+  sources unreachable via standard collection through the Push Ingest API. Additional
+  developer tools include a Python SDK (Pycarlo), a CLI for onboarding and integration
+  operations, webhooks for routing incident data to custom platforms, and an Airflow
+  provider for pipeline quality gates.
+
+  '
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/montecarlodata/refs/heads/main/apis.yml
-created: "2026-06-13"
-modified: "2026-06-13"
-specificationVersion: "0.19"
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
 tags:
+- Data Observability
+- Data Quality
+- Data Monitoring
+- Data Lineage
+- GraphQL
+- AI Observability
+- Data Reliability
+apis:
+- name: Monte Carlo GraphQL API
+  description: 'GraphQL API powering the full Monte Carlo platform, enabling programmatic
+    access to data monitors, incidents, field health, lineage, table and warehouse
+    asset management, and the Push Ingest API for custom metadata ingestion from sources
+    unreachable via standard pull-based collection.
+
+    '
+  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.getmontecarlo.com/docs/api
+  baseURL: https://api.getmontecarlo.com/graphql
+  tags:
   - Data Observability
-  - Data Quality
+  - GraphQL
   - Data Monitoring
   - Data Lineage
-  - GraphQL
-  - AI Observability
-  - Data Reliability
-apis:
-  - name: Monte Carlo GraphQL API
-    description: >
-      GraphQL API powering the full Monte Carlo platform, enabling programmatic access to data monitors,
-      incidents, field health, lineage, table and warehouse asset management, and the Push Ingest API
-      for custom metadata ingestion from sources unreachable via standard pull-based collection.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://docs.getmontecarlo.com/docs/api
-    baseURL: https://api.getmontecarlo.com/graphql
-    tags:
-      - Data Observability
-      - GraphQL
-      - Data Monitoring
-      - Data Lineage
-    properties:
-      - type: Documentation
-        url: https://docs.getmontecarlo.com/docs/api
-      - type: APIReference
-        url: https://apidocs.getmontecarlo.com
-      - type: OpenAPI
-        url: https://apidocs.getmontecarlo.com
-common:
-  - type: Website
-    url: https://montecarlo.ai
+  properties:
   - type: Documentation
-    url: https://docs.getmontecarlo.com/docs/developer-resources
-  - type: GitHubOrg
-    url: https://github.com/monte-carlo-data
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/monte-carlo-data
-  - type: Blog
-    url: https://montecarlo.ai/blog
-  - type: Pricing
-    url: https://info.montecarlodata.com/solutions/data-observability-platform-pricing
-  - type: StatusPage
-    url: https://status.getmontecarlo.com
-  - type: X
-    url: https://x.com/montecarlodata
-  - type: Plans
-    url: plans/montecarlodata-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/montecarlodata-rate-limits.yml
-  - type: FinOps
-    url: finops/montecarlodata-finops.yml
+    url: https://docs.getmontecarlo.com/docs/api
+  - type: APIReference
+    url: https://apidocs.getmontecarlo.com
+  - type: OpenAPI
+    url: https://apidocs.getmontecarlo.com
+  - url: graphql/montecarlodata-graphql.md
+    type: GraphQL
+common:
+- type: Website
+  url: https://montecarlo.ai
+- type: Documentation
+  url: https://docs.getmontecarlo.com/docs/developer-resources
+- type: GitHubOrg
+  url: https://github.com/monte-carlo-data
+- type: LinkedIn
+  url: https://www.linkedin.com/company/monte-carlo-data
+- type: Blog
+  url: https://montecarlo.ai/blog
+- type: Pricing
+  url: https://info.montecarlodata.com/solutions/data-observability-platform-pricing
+- type: StatusPage
+  url: https://status.getmontecarlo.com
+- type: X
+  url: https://x.com/montecarlodata
+- type: Plans
+  url: plans/montecarlodata-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/montecarlodata-rate-limits.yml
+- type: FinOps
+  url: finops/montecarlodata-finops.yml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,10732 @@
+"""
+Monte Carlo Data GraphQL API Schema
+Source: https://apidocs.getmontecarlo.com
+Endpoint: https://api.getmontecarlo.com/graphql
+Types extracted from official API reference documentation.
+624 queries, 566 mutations, 2511 named types.
+"""
+
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  agenticNotificationRoutes: JSON
+  bulkMonitor: JSON
+  bulkMonitors: JSON
+  createSqlQuery: JSON
+  detectTimeAxisIntrinsicDelta: JSON
+  discoverCustomerMcpServerAuth: JSON
+  echo: JSON
+  evaluateAgentMonitorDataSource: JSON
+  evaluateAlertConditions: JSON
+  evaluateAssetSelection: JSON
+  evaluateComparisonMonitorAlertConditions: JSON
+  evaluateComparisons: JSON
+  evaluateDataSource: JSON
+  evaluateFieldPatternMatches: JSON
+  evaluatePlatformAgentDataSource: JSON
+  evaluatePolicyProposal: JSON
+  evaluateSqlBlocks: JSON
+  exportDimensionTrackingMonitorMigrationTemplates: JSON
+  exportLatestVersionMonitorReplacementTemplates: JSON
+  exportMonteCarloConfigTemplates: JSON
+  favoriteAssets: JSON
+  finding: JSON
+  findings: JSON
+  fixSqlQuery: JSON
+  generateAwsPolicy: JSON
+  generateEvalPrompt: JSON
+  generateMcSql: JSON
+  generateSqlEval: JSON
+  generateWebhookUrl: JSON
+  getAccessRequest: JSON
+  getAccountAuditLogs: JSON
+  getAccountEntitlements: JSON
+  getAccountFeatureFlagStatus: JSON
+  getAccountHealthSnapshot: JSON
+  getAccountMonitorLabels: JSON
+  getAccountOwners: JSON
+  getAccountRoles: JSON
+  getAccountSecret: JSON
+  getAccountSecrets: JSON
+  getAccountUsage: JSON
+  getActiveMonitors: JSON
+  getAdfJobRuns: JSON
+  getAdfTaskRuns: JSON
+  getAgentAwsExternalId: JSON
+  getAgentConversationSampleV2: JSON
+  getAgentDetails: JSON
+  getAgentGraph: JSON
+  getAgentGraphInsights: JSON
+  getAgentHealthCard: JSON
+  getAgentHealthFindings: JSON
+  getAgentMemories: JSON
+  getAgentMetadata: JSON
+  getAgentMetadataV2: JSON
+  getAgentObservabilityBillingInfo: JSON
+  getAgentOperationLogs: JSON
+  getAgentSegments: JSON
+  getAgentSpanGroups: JSON
+  getAgentSpanSample: JSON
+  getAgentSpanSampleV2: JSON
+  getAgentSpansExport: JSON
+  getAgentTraceExport: JSON
+  getAgentTraceTables: JSON
+  getAgenticDomains: JSON
+  getAgenticPlatformConfig: JSON
+  getAgenticPlatformPipelineExecutions: JSON
+  getAgenticPlatformPipelines: JSON
+  getAggregatedQueries: JSON
+  getAiAgentConfig: JSON
+  getAirflowCapabilities: JSON
+  getAirflowDagRuns: JSON
+  getAirflowTaskResults: JSON
+  getAirflowTaskStats: JSON
+  getAirflowTasksForSourceAndDestinationTables: JSON
+  getAlationTableFlags: JSON
+  getAlert: JSON
+  getAlertAccessRequest: JSON
+  getAlertDataWeekly: JSON
+  getAlertDescription: JSON
+  getAlertNotificationSettingsUsed: JSON
+  getAlertTypeSummary: JSON
+  getAlertWarehouseTables: JSON
+  getAlerts: JSON
+  getAlertsCountByDate: JSON
+  getAlertsFilters: JSON
+  getAlertsFiltersData: JSON
+  getAllDomains: JSON
+  getAllUserDefinedMonitors: JSON
+  getAllUserDefinedMonitorsV2: JSON
+  getAllowList: JSON
+  getApiUsage: JSON
+  getAssetCollectionPreferences: JSON
+  getAssetMetricAuditLogs: JSON
+  getAssetsUsage: JSON
+  getAssignedAssets: JSON
+  getAuthorizationGroups: JSON
+  getAuthorizationGroupsPaginated: JSON
+  getAuthorizationPrompt: JSON
+  getAuthorizationProvisioning: JSON
+  getAvailablePlatformAgents: JSON
+  getAwsAgentInfraDetails: JSON
+  getAwsAgentLogs: JSON
+  getAwsAgentUpgradeLogs: JSON
+  getAwsLogsQueryResults: JSON
+  getAzureAgentLogs: JSON
+  getAzureAgentTasksSummary: JSON
+  getAzureDevopsInstallation: JSON
+  getAzureDevopsInstallations: JSON
+  getAzureDevopsIntegrations: JSON
+  getAzureDevopsOrganization: JSON
+  getAzureDevopsProjects: JSON
+  getAzureDevopsWorkItemTypes: JSON
+  getBillingContractInvoices: JSON
+  getBillingCreditGrants: JSON
+  getBillingInvoices: JSON
+  getBillingMonitorUsage: JSON
+  getBlastRadiusDirectUsersV2: JSON
+  getBqProjects: JSON
+  getBulkMonitor: JSON
+  getBulkMonitorJobExecutions: JSON
+  getCaasCollectionNodeParameters: JSON
+  getCatalogNavGroupedNodes: JSON
+  getCatalogNavLevelNodes: JSON
+  getCatalogObjectMetadata: JSON
+  getCiGateConfig: JSON
+  getCircuitBreakerRuleState: JSON
+  getCircuitBreakerRuleStateV2: JSON
+  getClassifiedAssets: JSON
+  getCollectionBlockList: JSON
+  getCollectionDatasetList: JSON
+  getCollectionProperties: JSON
+  getCollectorJobLimits: JSON
+  getCollibraDomainsForTableSearchName: JSON
+  getCollibraMonitorNote: JSON
+  getCollibraMonitorTableSearchNames: JSON
+  getCollibraPing: JSON
+  getCommentsForMonitorIncidents: JSON
+  getCommonFields: JSON
+  getCommonFieldsV2: JSON
+  getComparableDashboards: JSON
+  getComparisonMonitorFieldMetricDefinitions: JSON
+  getComparisonMonitorSegmentLabelCount: JSON
+  getComparisonMonitorSegmentLabels: JSON
+  getConnectedMconLineage: JSON
+  getContractCommits: JSON
+  getConversationEval: JSON
+  getConversationExplanation: JSON
+  getConversationMessageContentV2: JSON
+  getConversationThread: JSON
+  getConversationThreadV2: JSON
+  getConversations: JSON
+  getConversationsFilters: JSON
+  getConversationsFiltersData: JSON
+  getCorrelationSamplingMetadata: JSON
+  getCustomConnectors: JSON
+  getCustomDashboard: JSON
+  getCustomDashboardAsJson: JSON
+  getCustomDashboardWidgetAsDefinition: JSON
+  getCustomEtlConnectors: JSON
+  getCustomMetricTestQuery: JSON
+  getCustomRule: JSON
+  getCustomRuleExecutionAnalytics: JSON
+  getCustomRules: JSON
+  getCustomSqlOutputDownload: JSON
+  getCustomSqlOutputSample: JSON
+  getCustomSqlTemplates: JSON
+  getCustomUsers: JSON
+  getCustomerMcpServers: JSON
+  getDataAssetsDashboard: JSON
+  getDataExplorerComparisonDashboards: JSON
+  getDataExplorerDashboardForTable: JSON
+  getDataExplorerDashboards: JSON
+  getDataExplorerTableMetadata: JSON
+  getDataExplorerTableSummaryStats: JSON
+  getDataExportUrl: JSON
+  getDataLakeCatalogMappings: JSON
+  getDataMaintenanceEntries: JSON
+  getDataMaintenanceEntriesByMcon: JSON
+  getDataMaintenanceEntriesByMonitor: JSON
+  getDataMaintenanceHolidayCodes: JSON
+  getDataMaintenanceHolidayNames: JSON
+  getDataOperationsDashboard: JSON
+  getDataProduct: JSON
+  getDataProductAssetData: JSON
+  getDataProductAudiences: JSON
+  getDataProductDryRunCounts: JSON
+  getDataProductMetrics: JSON
+  getDataProductMetricsV2: JSON
+  getDataProductUpstreamCounts: JSON
+  getDataProductV2: JSON
+  getDataProducts: JSON
+  getDataProductsV2: JSON
+  getDataProfilerMonitorRecommendations: JSON
+  getDataProfilerWidgetData: JSON
+  getDataSamplingRestrictions: JSON
+  getDatabricksJobRuns: JSON
+  getDatabricksTaskRuns: JSON
+  getDatabricksWarehouseInfo: JSON
+  getDatadogIncidentTypes: JSON
+  getDatadogIntegrations: JSON
+  getDatadogServices: JSON
+  getDatadogTeams: JSON
+  getDatadogUsers: JSON
+  getDatasets: JSON
+  getDatasetsByUuid: JSON
+  getDbtConnectionDetails: JSON
+  getDbtConnections: JSON
+  getDbtJobExecutions: JSON
+  getDbtJobs: JSON
+  getDbtLastRunResults: JSON
+  getDbtModelResults: JSON
+  getDbtModelResultsCount: JSON
+  getDbtModels: JSON
+  getDbtNodeResultsCount: JSON
+  getDbtNodes: JSON
+  getDbtProjects: JSON
+  getDbtRunSteps: JSON
+  getDbtRuns: JSON
+  getDbtTestResults: JSON
+  getDbtTestResultsCount: JSON
+  getDbtUploadUrl: JSON
+  getDefaultMonitorConfiguration: JSON
+  getDeltaLogs: JSON
+  getDeploymentInfo: JSON
+  getDerivedTablesPartialLineage: JSON
+  getDigraph: JSON
+  getDomain: JSON
+  getDomainFilteredDataProducts: JSON
+  getDomainMembershipsForMcons: JSON
+  getDomainTableCounts: JSON
+  getDomainsByTags: JSON
+  getDomainsForMcons: JSON
+  getDomainsV2: JSON
+  getDownstreamBi: JSON
+  getDownstreamImpactRadiusSummary: JSON
+  getDownstreamReportOwners: JSON
+  getDownstreamReportTypes: JSON
+  getDownstreamReports: JSON
+  getEtlContainers: JSON
+  getEtlGroupV3: JSON
+  getEtlGroupsV3: JSON
+  getEtlJob: JSON
+  getEtlJobRunV3: JSON
+  getEtlJobRunsV3: JSON
+  getEtlJobV3: JSON
+  getEtlJobs: JSON
+  getEtlJobsV2: JSON
+  getEtlJobsV3: JSON
+  getEtlTask: JSON
+  getEtlTaskRunsV3: JSON
+  getEtlTaskV3: JSON
+  getEtlTasks: JSON
+  getEtlTasksV3: JSON
+  getEvent: JSON
+  getEventGroups: JSON
+  getEventGroupsPaginated: JSON
+  getEventMutingRules: JSON
+  getEventOnboardingData: JSON
+  getEventTypeSummary: JSON
+  getEvents: JSON
+  getEventsForAlerts: JSON
+  getEventsForIncidents: JSON
+  getExceptionActivityLogs: JSON
+  getExecDashboardMetrics: JSON
+  getExecDashboardTables: JSON
+  getExternalSourcePathsSample: JSON
+  getFhEvents: JSON
+  getFhEventsByMonitor: JSON
+  getFhEventsFieldFilterValues: JSON
+  getFhEventsMetricFilterValues: JSON
+  getFhEventsWhereConditionFilterValues: JSON
+  getFhEventsWhereConditionFilterValuesPaginated: JSON
+  getFhReproductionQuery: JSON
+  getFhSampling: JSON
+  getFieldBiLineage: JSON
+  getFieldHealthSamplingConditions: JSON
+  getFieldMetricData: JSON
+  getFieldMetricDefinitions: JSON
+  getFieldMetricQuery: JSON
+  getFieldMetricsInfo: JSON
+  getFieldOverviewProperties: JSON
+  getFieldQuery: JSON
+  getFig: JSON
+  getFigAgents: JSON
+  getFigBestRuns: JSON
+  getFigCosts: JSON
+  getFigPracticalMetrics: JSON
+  getFigProjects: JSON
+  getFigScore: JSON
+  getFigs: JSON
+  getFivetranConnectors: JSON
+  getFreshnessTableMonitor: JSON
+  getG2ReviewPrompt: JSON
+  getGcpAgentLogs: JSON
+  getGenerateReportStatus: JSON
+  getGeneratedRules: JSON
+  getGithubIntegrations: JSON
+  getGithubPullRequests: JSON
+  getGithubPullRequestsForTable: JSON
+  getGithubPullRequestsForTableV2: JSON
+  getGitlabIntegration: JSON
+  getGitlabIntegrations: JSON
+  getGitlabProjects: JSON
+  getHostingInfo: JSON
+  getIAMResourceDefinitions: JSON
+  getIncidentDashboardData: JSON
+  getIncidentDataWeekly: JSON
+  getIncidentNotificationSettingsUsed: JSON
+  getIncidentTables: JSON
+  getIncidentTimelineEvents: JSON
+  getIncidentTypeSummary: JSON
+  getIncidentWarehouseTables: JSON
+  getIncidents: JSON
+  getIncidentsCountByDate: JSON
+  getIncidentsFilters: JSON
+  getIncidentsFiltersData: JSON
+  getIndexedFieldSpecs: JSON
+  getInformaticaMappingTaskRuns: JSON
+  getInsight: JSON
+  getInsights: JSON
+  getIntegrationKeys: JSON
+  getInvitesInAccount: JSON
+  getJiraIntegrations: JSON
+  getJiraIssueTypes: JSON
+  getJiraProjects: JSON
+  getJiraStatuses: JSON
+  getJiraTeams: JSON
+  getJiraUsers: JSON
+  getJobDependencies: JSON
+  getJobExecutionHistoryLogs: JSON
+  getJobExecutions: JSON
+  getJobSchedules: JSON
+  getJobsPerformanceData: JSON
+  getJobsPerformanceFacets: JSON
+  getLatestAgentHealthFinding: JSON
+  getLatestAgentHealthFindingSummaries: JSON
+  getLineageNodeBlockPattern: JSON
+  getLineageNodeBlockPatterns: JSON
+  getLineageNodeCollapsingRule: JSON
+  getLineageNodeCollapsingRules: JSON
+  getLineageNodeProperties: JSON
+  getLineageNodeReplacementRule: JSON
+  getLineageNodeReplacementRules: JSON
+  getLineageNodeTypes: JSON
+  getLogsIntegrations: JSON
+  getManualMonitorExecutionStatus: JSON
+  getMemoryExtractionStatus: JSON
+  getMemoryPipelineStatus: JSON
+  getMetadata: JSON
+  getMetricComparisonEvents: JSON
+  getMetricEventGroups: JSON
+  getMetricsV4: JSON
+  getMigrationTestStatus: JSON
+  getMonitor: JSON
+  getMonitorAuditLogs: JSON
+  getMonitorComments: JSON
+  getMonitorConfiguration: JSON
+  getMonitorCountsByCreator: JSON
+  getMonitorCountsByType: JSON
+  getMonitorCreators: JSON
+  getMonitorDashboardData: JSON
+  getMonitorDatasets: JSON
+  getMonitorExceptions: JSON
+  getMonitorLabels: JSON
+  getMonitorNamespaces: JSON
+  getMonitorProjects: JSON
+  getMonitorQueries: JSON
+  getMonitorSchedulingConfiguration: JSON
+  getMonitorSummary: JSON
+  getMonitorTables: JSON
+  getMonitorTuningRuns: JSON
+  getMonitorUpdaters: JSON
+  getMonitorWarehouses: JSON
+  getMonitoredRulesAuditLogs: JSON
+  getMonitors: JSON
+  getMonitorsByType: JSON
+  getMonitorsCount: JSON
+  getMonitorsScoreTrend: JSON
+  getMonteCarloConfigTemplateUpdateState: JSON
+  getMonteCarloConfigTemplates: JSON
+  getMsTeamsChannels: JSON
+  getMsTeamsIntegrations: JSON
+  getMyDashboardSchedules: JSON
+  getMyMcpIntegrationKeys: JSON
+  getNetworkAccessControlLists: JSON
+  getNodeAttributes: JSON
+  getNodeDetail: JSON
+  getNotMonitoredReason: JSON
+  getNotebook: JSON
+  getNotebooks: JSON
+  getNotificationAudienceCreators: JSON
+  getNotificationAudiences: JSON
+  getNotificationAudiencesCount: JSON
+  getNotificationAudiencesForTable: JSON
+  getNotificationCounts: JSON
+  getNotificationSettings: JSON
+  getNotificationSettingsForAudiences: JSON
+  getNotificationSettingsForMonitorsWith: JSON
+  getNotificationSettingsForOotb: JSON
+  getNotificationSettingsForRulesWith: JSON
+  getNotificationTypeCapabilities: JSON
+  getOauthClients: JSON
+  getObject: JSON
+  getObjectProperties: JSON
+  getObjectPropertyNameValues: JSON
+  getObjectPropertyNames: JSON
+  getObjectPropertyValues: JSON
+  getOpenTelemetryDataStores: JSON
+  getOpsgenieIntegrations: JSON
+  getPagerdutyServiceIntegrations: JSON
+  getParsedQuery: JSON
+  getPastCommentsForAlert: JSON
+  getPastSlackEngagementsForAlert: JSON
+  getPiiFilterMetrics: JSON
+  getPiiFilteringPreferences: JSON
+  getPiiFilters: JSON
+  getPiiScanFindings: JSON
+  getPiiScanInventory: JSON
+  getPiiTypes: JSON
+  getPipelines: JSON
+  getPlatformAgents: JSON
+  getPlatformMigrationStatus: JSON
+  getPlatformMigrationTestStatus: JSON
+  getPlatformServices: JSON
+  getPrAgentConfig: JSON
+  getProjects: JSON
+  getQueriedTables: JSON
+  getQueryById: JSON
+  getQueryByQueryHash: JSON
+  getQueryData: JSON
+  getQueryDataByQueryHash: JSON
+  getQueryDimensions: JSON
+  getQueryList: JSON
+  getQueryLogHashesThatAffectTheseTables: JSON
+  getQueryLogTimeline: JSON
+  getQueryLogs: JSON
+  getQueryLogsFacets: JSON
+  getQueryLogsFacetsV2: JSON
+  getQueryPerfMonitorExplanation: JSON
+  getQueryPerfMonitorExplanationForEvent: JSON
+  getQueryPerfRuleExecutionHistoryLogs: JSON
+  getQueryPerformanceData: JSON
+  getQueryRcas: JSON
+  getQueryRuntimePercentileTimeseries: JSON
+  getQueryTemplate: JSON
+  getQueryText: JSON
+  getRcaJobResult: JSON
+  getReducedDownstreamLineage: JSON
+  getRelatedUsers: JSON
+  getReportUrl: JSON
+  getReports: JSON
+  getResource: JSON
+  getResources: JSON
+  getRunSqlRuleState: JSON
+  getSchemaChanges: JSON
+  getSegmentCountQuery: JSON
+  getSegmentedWhereConditionLabelCount: JSON
+  getSegmentedWhereConditionLabels: JSON
+  getSensitivity: JSON
+  getServicenowIncidentFields: JSON
+  getServicenowIntegrations: JSON
+  getServicenowReferenceValues: JSON
+  getServicenowUsers: JSON
+  getSessionSettings: JSON
+  getSharedQuery: JSON
+  getSizeCollectionAuditLogs: JSON
+  getSizeCollectionConfiguration: JSON
+  getSizeCollectionQuery: JSON
+  getSlackChannels: JSON
+  getSlackChannelsV2: JSON
+  getSlackEngagementsForAlert: JSON
+  getSlackEngagementsForAlerts: JSON
+  getSlackEngagementsForIncident: JSON
+  getSlackEngagementsForIncidents: JSON
+  getSlackMessagesForAlert: JSON
+  getSlackMessagesForIncident: JSON
+  getSlackOauthUrl: JSON
+  getSlackUserGroups: JSON
+  getSlackUsers: JSON
+  getSloPolicies: JSON
+  getSnowflakeAgentLogs: JSON
+  getSpanPredicates: JSON
+  getSqlPredicates: JSON
+  getStorageOptimizationCandidates: JSON
+  getStreamingSystems: JSON
+  getSupportedAwsRegions: JSON
+  getSupportedTableValidations: JSON
+  getSupportedValidationsV2: JSON
+  getTable: JSON
+  getTableColumnsLineage: JSON
+  getTableFieldsImportance: JSON
+  getTableLineage: JSON
+  getTableLineageJobs: JSON
+  getTableLineageV2: JSON
+  getTableLineageV3: JSON
+  getTableLineageV4: JSON
+  getTableMonitor: JSON
+  getTableMonitorConfiguration: JSON
+  getTableMonitorCoverage: JSON
+  getTableMonitorMetric: JSON
+  getTableMonitorValidationStatuses: JSON
+  getTableStats: JSON
+  getTableStatsV2: JSON
+  getTableUseCases: JSON
+  getTableauAssetWarningById: JSON
+  getTableauWorkbookCount: JSON
+  getTables: JSON
+  getTablesForCoverageDashboard: JSON
+  getTablesForSql: JSON
+  getTablesHealth: JSON
+  getTablesUpstreamCounts: JSON
+  getTaskGraph: JSON
+  getTasksPerformanceData: JSON
+  getThresholds: JSON
+  getTimeAxisSqlExpressions: JSON
+  getTokenMetadata: JSON
+  getToolCallOverview: JSON
+  getToolCallTimeSeries: JSON
+  getToolDetail: JSON
+  getTopQueryGroups: JSON
+  getTopSegmentedWhereConditionLabels: JSON
+  getTopTools: JSON
+  getTopWarehouseForDataProductMcons: JSON
+  getTraceExplanation: JSON
+  getTraceOverview: JSON
+  getTraceRxReports: JSON
+  getTraceTimeSeries: JSON
+  getTraceTreeNodes: JSON
+  getTraces: JSON
+  getTracesFilters: JSON
+  getTracesFiltersData: JSON
+  getTransformFunctions: JSON
+  getTsaAnalysisResult: JSON
+  getTsaAvailability: JSON
+  getTutorialState: JSON
+  getUcsTableMonitor: JSON
+  getUnifiedUserAssignments: JSON
+  getUnifiedUsers: JSON
+  getUnmonitoredTablesWithAnomalies: JSON
+  getUseCaseTableDetails: JSON
+  getUseCaseTableSummary: JSON
+  getUseCaseTables: JSON
+  getUseCases: JSON
+  getUser: JSON
+  getUserAuthorization: JSON
+  getUserId: JSON
+  getUserSettings: JSON
+  getUsersBasicInfo: JSON
+  getUsersInAccount: JSON
+  getVcsPullRequests: JSON
+  getVcsSummary: JSON
+  getVolumeChangeTableMonitor: JSON
+  getWarehouse: JSON
+  getWarehouseConnections: JSON
+  getWarehouseSupportedLlmModels: JSON
+  getWarehouseTagsCollectionSetting: JSON
+  getWarehouses: JSON
+  getWebexIntegrations: JSON
+  getWildcardTemplates: JSON
+  getWorkspaceIdsAllowListForPowerBiReportsCollection: JSON
+  getWorkspacesAllowListForPowerBiReportsCollection: JSON
+  isFavorite: JSON
+  isTsaAvailableForAlert: JSON
+  listCustomDashboards: JSON
+  listDataOperationsDashboards: JSON
+  listDataQualityDimensions: JSON
+  listDatasets: JSON
+  listMonitorTags: JSON
+  listProjects: JSON
+  listSlackUserGroups: JSON
+  listSlackUsers: JSON
+  listTags: JSON
+  loadCustomDashboardWidgetData: JSON
+  lookupCustomDashboardTimeSeriesIdByMcon: JSON
+  lookupCustomDashboardTimeSeriesIdByMonitor: JSON
+  monitorLabels: JSON
+  parseQuery: JSON
+  parseQueryForLogTypes: JSON
+  performCorrelationSampling: JSON
+  performCorrelationSamplingWithTimeTravel: JSON
+  performFieldHealthSampling: JSON
+  performFieldHealthSamplingV2: JSON
+  performFieldHealthSamplingV3: JSON
+  pingDataCollector: JSON
+  queuedJob: JSON
+  resolveDataAuthorization: JSON
+  resolveGroupsPermissions: JSON
+  resolveRolesPermissions: JSON
+  retrieveTableData: JSON
+  retrieveWidgetData: JSON
+  runCustomMetricTestQuery: JSON
+  runCustomQuery: JSON
+  runSegmentCountQuery: JSON
+  runSqlInvestigationQuery: JSON
+  search: JSON
+  searchJiraUsers: JSON
+  searchJobsPerformanceFacet: JSON
+  searchTablesForDynamicSchedule: JSON
+  simulateLineageNodeReplacementRule: JSON
+  simulateQueryPerfMonitorEvaluation: JSON
+  startAwsLogsQuery: JSON
+  stopAwsLogsQuery: JSON
+  testAgentReachability: JSON
+  testAzureDevopsCredentials: JSON
+  testDataStoreReachability: JSON
+  testDatadogCredentials: JSON
+  testDnsLookup: JSON
+  testExistingConnection: JSON
+  testExistingConnectionV2: JSON
+  testHttpConnection: JSON
+  testJiraCredentials: JSON
+  testMonitorQueries: JSON
+  testNotificationIntegration: JSON
+  testServicenowCredentials: JSON
+  testSqlQueryPart: JSON
+  testSqlQueryWhereExpression: JSON
+  testStorageAccess: JSON
+  testTcpOpenConnection: JSON
+  testTelnetConnection: JSON
+  testWebexCredentials: JSON
+  thresholds: JSON
+  traverseGitlabProjects: JSON
+  validateAirflowAssetAccess: JSON
+  validateConnectionType: JSON
+  validateDataAssetAccess: JSON
+}
+
+type Mutation {
+  addAllowListEntry: JSON
+  addBiConnection: JSON
+  addConnection: JSON
+  addCustomConnector: JSON
+  addCustomEtlConnector: JSON
+  addDatabricksConnection: JSON
+  addDomainAssignments: JSON
+  addEtlConnection: JSON
+  addFavoriteAsset: JSON
+  addMonitorsLabels: JSON
+  addOrUpdateCustomDashboardWidget: JSON
+  addOrUpdateCustomDashboardWidgetFromDefinition: JSON
+  addPlatformService: JSON
+  addRedshiftConsumerConnection: JSON
+  addStreamingConnection: JSON
+  addStreamingSystem: JSON
+  addToCollectionBlockList: JSON
+  applyMonitorFindings: JSON
+  applyMonitorTuningRun: JSON
+  bulkAddMonitorDataQualityDimension: JSON
+  bulkAddMonitorTags: JSON
+  bulkAssignMonitorsDomain: JSON
+  bulkCreateCommentForExceptions: JSON
+  bulkCreateOrUpdateObjectProperties: JSON
+  bulkSetEtlJobGeneratesAlerts: JSON
+  bulkSetEtlJobGeneratesAlertsV3: JSON
+  bulkUpdateAlerts: JSON
+  bulkUpdateIncidents: JSON
+  bulkUpdateMonitorExceptions: JSON
+  caasLinkCollectionResources: JSON
+  caasUpdateCollectionNodeEnv: JSON
+  caasUpdateCollectionNodeParameters: JSON
+  caasUpdateCollectionNodeVersion: JSON
+  caasUpdateCollectionStorageEncryption: JSON
+  caasUpdateCollectionStorageLink: JSON
+  caasUpdateCollectionStorageParameters: JSON
+  caasUpdateCollectionStorageVersion: JSON
+  cleanupAzureAgentTasks: JSON
+  cleanupCollectorRecord: JSON
+  clearBootstrapMemoryData: JSON
+  clearMemoryData: JSON
+  configureAgentAssistance: JSON
+  configureAgenticPlatform: JSON
+  configureAiAgentPrompt: JSON
+  configureMetadataEvents: JSON
+  configureQueryLogEvents: JSON
+  connectPlatformServiceToExistingBucket: JSON
+  connectPlatformServiceToLegacyBucket: JSON
+  connectPlatformToExistingAgent: JSON
+  convertConfigTemplateToUiMonitors: JSON
+  convertUiMonitorsToConfigTemplate: JSON
+  createAccessToken: JSON
+  createAccountSecret: JSON
+  createAgentOauthClient: JSON
+  createAgenticDomain: JSON
+  createAssetMemory: JSON
+  createAzureDevopsInstallation: JSON
+  createAzureDevopsIntegration: JSON
+  createAzureDevopsWorkItemForAlert: JSON
+  createCollectorRecord: JSON
+  createCustomMetricRule: JSON
+  createCustomRule: JSON
+  createCustomUser: JSON
+  createCustomerMcpServer: JSON
+  createDashboardSchedule: JSON
+  createDataMaintenanceWindowFromHolidays: JSON
+  createDatadogIncidentForAlert: JSON
+  createDatadogIntegration: JSON
+  createDraftMonitorFromYaml: JSON
+  createFig: JSON
+  createIntegrationKey: JSON
+  createJiraIntegration: JSON
+  createJiraTicketForAlert: JSON
+  createJiraTicketForIncident: JSON
+  createLogsIntegration: JSON
+  createMcpIntegrationKey: JSON
+  createMonitorTuningRun: JSON
+  createOpenTelemetryDataStore: JSON
+  createOpsgenieIntegration: JSON
+  createOrUpdateAccountRole: JSON
+  createOrUpdateAccountRoleFromDefinition: JSON
+  createOrUpdateAgent: JSON
+  createOrUpdateAgentEvaluationMonitor: JSON
+  createOrUpdateAgentMetricMonitor: JSON
+  createOrUpdateAgentTraceTable: JSON
+  createOrUpdateAgentTrajectory: JSON
+  createOrUpdateAgentValidation: JSON
+  createOrUpdateAgenticNotificationRoute: JSON
+  createOrUpdateAlationIntegration: JSON
+  createOrUpdateAlationTableFlag: JSON
+  createOrUpdateAlertComment: JSON
+  createOrUpdateAudience: JSON
+  createOrUpdateAudienceNotificationSetting: JSON
+  createOrUpdateAudienceRoutingRule: JSON
+  createOrUpdateAuthProvisioning: JSON
+  createOrUpdateAuthorizationGroup: JSON
+  createOrUpdateBulkMonitor: JSON
+  createOrUpdateCatalogObjectMetadata: JSON
+  createOrUpdateCollibraIntegration: JSON
+  createOrUpdateComparisonMonitor: JSON
+  createOrUpdateComparisonRule: JSON
+  createOrUpdateCustomDashboard: JSON
+  createOrUpdateCustomDashboardFromJson: JSON
+  createOrUpdateCustomIntegration: JSON
+  createOrUpdateCustomMetricRule: JSON
+  createOrUpdateCustomRule: JSON
+  createOrUpdateCustomSqlRule: JSON
+  createOrUpdateCustomSqlTemplate: JSON
+  createOrUpdateDataExplorerComparisonDashboard: JSON
+  createOrUpdateDataExplorerDashboard: JSON
+  createOrUpdateDataMaintenanceEntry: JSON
+  createOrUpdateDataOperationsDashboard: JSON
+  createOrUpdateDataProduct: JSON
+  createOrUpdateDataProductV2: JSON
+  createOrUpdateDataSamplingRestrictions: JSON
+  createOrUpdateDomain: JSON
+  createOrUpdateFieldQualityRule: JSON
+  createOrUpdateFreshnessCustomRule: JSON
+  createOrUpdateIncidentComment: JSON
+  createOrUpdateJsonSchemaMonitor: JSON
+  createOrUpdateLineageEdge: JSON
+  createOrUpdateLineageNode: JSON
+  createOrUpdateLineageNodeBlockPattern: JSON
+  createOrUpdateLineageNodeCollapsingRule: JSON
+  createOrUpdateLineageNodeReplacementRule: JSON
+  createOrUpdateMetricMonitor: JSON
+  createOrUpdateMonitor: JSON
+  createOrUpdateMonitorComment: JSON
+  createOrUpdateMonitorLabel: JSON
+  createOrUpdateMonteCarloConfigTemplate: JSON
+  createOrUpdateMonteCarloConfigTemplateAsync: JSON
+  createOrUpdateNotebook: JSON
+  createOrUpdateNotificationSetting: JSON
+  createOrUpdateObjectProperty: JSON
+  createOrUpdatePlatformAgent: JSON
+  createOrUpdateQueryPerfRule: JSON
+  createOrUpdateRecipientName: JSON
+  createOrUpdateResource: JSON
+  createOrUpdateSamlIdentityProvider: JSON
+  createOrUpdateServiceApiToken: JSON
+  createOrUpdateSloPolicy: JSON
+  createOrUpdateTableMonitor: JSON
+  createOrUpdateTag: JSON
+  createOrUpdateTagAssignments: JSON
+  createOrUpdateUserSettings: JSON
+  createOrUpdateUserSettingsBatch: JSON
+  createOrUpdateValidation: JSON
+  createOrUpdateVolumeRule: JSON
+  createPagerdutyServiceIntegration: JSON
+  createPiiMonitor: JSON
+  createSemanticMemory: JSON
+  createServicenowIncidentForAlert: JSON
+  createServicenowIntegration: JSON
+  createSharedQuery: JSON
+  createSingleTableMonitoringNotification: JSON
+  createTableauAssetWarning: JSON
+  createUnifiedUserAssignment: JSON
+  createWebexIntegration: JSON
+  deauthorizeSlackApp: JSON
+  deleteAccessToken: JSON
+  deleteAccountRole: JSON
+  deleteAccountSecret: JSON
+  deleteAgent: JSON
+  deleteAgentTraceTable: JSON
+  deleteAgenticDomain: JSON
+  deleteAgenticNotificationRoute: JSON
+  deleteAlationIntegration: JSON
+  deleteAlertComment: JSON
+  deleteAllowListEntry: JSON
+  deleteAssetCollectionPreferences: JSON
+  deleteAssetMemory: JSON
+  deleteAudienceNotificationSetting: JSON
+  deleteAudienceRoutingRule: JSON
+  deleteAuthorizationGroup: JSON
+  deleteAzureDevopsInstallation: JSON
+  deleteAzureDevopsIntegration: JSON
+  deleteBulkMonitor: JSON
+  deleteCatalogObjectMetadata: JSON
+  deleteCiGateRepoOverride: JSON
+  deleteCollibraIntegration: JSON
+  deleteCustomDashboard: JSON
+  deleteCustomDashboardWidget: JSON
+  deleteCustomRule: JSON
+  deleteCustomSqlTemplate: JSON
+  deleteCustomerMcpServer: JSON
+  deleteDashboardSchedule: JSON
+  deleteDataExplorerComparisonDashboard: JSON
+  deleteDataExplorerDashboard: JSON
+  deleteDataMaintenanceEntry: JSON
+  deleteDataOperationsDashboard: JSON
+  deleteDataProduct: JSON
+  deleteDataProductV2: JSON
+  deleteDatadogIntegration: JSON
+  deleteDomain: JSON
+  deleteEtlJobsV3: JSON
+  deleteEventOnboardingData: JSON
+  deleteFinding: JSON
+  deleteGithubInstallation: JSON
+  deleteGitlabInstallation: JSON
+  deleteIncidentComment: JSON
+  deleteIntegration: JSON
+  deleteIntegrationKey: JSON
+  deleteJiraIntegration: JSON
+  deleteLineageNode: JSON
+  deleteLineageNodeBlockPattern: JSON
+  deleteLineageNodeCollapsingRule: JSON
+  deleteLineageNodeReplacementRule: JSON
+  deleteLogsIntegration: JSON
+  deleteMcpIntegrationKey: JSON
+  deleteMonitor: JSON
+  deleteMonitorComment: JSON
+  deleteMonitorLabel: JSON
+  deleteMonitorTag: JSON
+  deleteMonitors: JSON
+  deleteMonteCarloConfigTemplate: JSON
+  deleteNetworkAccessControl: JSON
+  deleteNotebook: JSON
+  deleteNotificationSettings: JSON
+  deleteOauthClient: JSON
+  deleteObjectProperty: JSON
+  deleteOpenTelemetryDataStore: JSON
+  deleteOpsgenieIntegration: JSON
+  deletePagerdutyServiceIntegration: JSON
+  deletePlatformAgent: JSON
+  deletePushIngestedTables: JSON
+  deleteRecipientName: JSON
+  deleteSamlIdentityProvider: JSON
+  deleteSemanticMemory: JSON
+  deleteServicenowIntegration: JSON
+  deleteSloPolicy: JSON
+  deleteStreamingCluster: JSON
+  deleteStreamingSystem: JSON
+  deleteTableMonitor: JSON
+  deleteUnifiedUserAssignment: JSON
+  deleteUserInvite: JSON
+  deleteWebexIntegration: JSON
+  disableAgentAssistance: JSON
+  disableFreshnessTableMonitor: JSON
+  disableMetadataEvents: JSON
+  disableQueryLogEvents: JSON
+  disableUcsTableMonitor: JSON
+  disableUser: JSON
+  disableVolumeChangeTableMonitor: JSON
+  enableAgentAssistance: JSON
+  enableAutomatedFreshnessTableMonitor: JSON
+  enableAutomatedUcsTableMonitor: JSON
+  enableAutomatedVolumeChangeTableMonitor: JSON
+  enableExplicitFreshnessTableMonitor: JSON
+  enableExplicitUcsTableMonitor: JSON
+  enableExplicitVolumeChangeTableMonitor: JSON
+  exportAgentSpans: JSON
+  exportAgentTrace: JSON
+  extractMemoryData: JSON
+  generateAgentAwsExternalId: JSON
+  generateBridgeToken: JSON
+  generateCollectorTemplate: JSON
+  generateDcUpgradeTemplate: JSON
+  generateReport: JSON
+  getCustomerMcpServerAuthorizationUrl: JSON
+  ingestMemoryData: JSON
+  inviteUsers: JSON
+  inviteUsersV2: JSON
+  linkAzureDevopsInstallation: JSON
+  linkAzureDevopsIntegration: JSON
+  linkAzureDevopsWorkItemForAlert: JSON
+  linkDatadogIncidentForAlert: JSON
+  linkGithubAppInstallation: JSON
+  linkGitlabApp: JSON
+  linkJiraTicketForAlert: JSON
+  linkJiraTicketForIncident: JSON
+  linkMsTeamsInstallation: JSON
+  linkOpsgenieIncident: JSON
+  linkServicenowIncidentForAlert: JSON
+  linkSlackAppInstallation: JSON
+  matchAndCreateBiWarehouseSources: JSON
+  mergeAlerts: JSON
+  migrateCollectorResources: JSON
+  migrateConnectionFromSnowflakeAgent: JSON
+  migrateConnectionToSnowflakeAgent: JSON
+  modifyCollectionBlockList: JSON
+  pauseBulkMonitor: JSON
+  pauseMonitor: JSON
+  pauseMonitorBootstrap: JSON
+  pauseMonitors: JSON
+  pauseRule: JSON
+  pauseTableMonitor: JSON
+  pruneDeletedTables: JSON
+  refreshEntitlements: JSON
+  refreshOpenTelemetryCollectorConfig: JSON
+  registerGithubAppInstallationRequest: JSON
+  registerGithubAppOnGhes: JSON
+  registerGitlabApp: JSON
+  relinkOpsgenieIncident: JSON
+  removeConnection: JSON
+  removeConnectionCtpConfig: JSON
+  removeDataSamplingRestrictions: JSON
+  removeDomainAssignments: JSON
+  removeFavoriteAsset: JSON
+  removeFromCollectionBlockList: JSON
+  removeMonitorsLabels: JSON
+  requestAccess: JSON
+  requestAlertAccess: JSON
+  resendUserInvite: JSON
+  restartAgent: JSON
+  restoreCollectionStorage: JSON
+  restoreCustomRule: JSON
+  restoreMonitors: JSON
+  resumeMonitorBootstrap: JSON
+  revokeCustomerMcpServerAuthorization: JSON
+  runAgentEvaluations: JSON
+  runCustomRules: JSON
+  runMonitor: JSON
+  runMonitors: JSON
+  runSqlRule: JSON
+  runTableMonitorValidation: JSON
+  saveEventOnboardingData: JSON
+  saveNetworkAccessControl: JSON
+  saveSlackCredentials: JSON
+  saveTableImportanceStats: JSON
+  selectGitlabProjects: JSON
+  sendAlertInvite: JSON
+  sendDbtArtifactsEvent: JSON
+  setAccountBillingPlan: JSON
+  setAccountMaxTimeSeries: JSON
+  setAccountName: JSON
+  setAlertOwner: JSON
+  setAlertSeverity: JSON
+  setAssetCollectionPreferences: JSON
+  setAzureDevopsSourceSelections: JSON
+  setCollibraMcDomainMapping: JSON
+  setConnectionCtpConfig: JSON
+  setConnectionDeletionProtection: JSON
+  setConnectionName: JSON
+  setCustomSqlSamplingSize: JSON
+  setDataLakeCatalogMappings: JSON
+  setDbtCloudEventFilter: JSON
+  setDefaultAlertGroupInterval: JSON
+  setDefaultFailureAudiences: JSON
+  setDefaultIncidentGroupInterval: JSON
+  setDefaultLineageAlertGrouping: JSON
+  setDefaultLineageIncidentGrouping: JSON
+  setEtlContainerName: JSON
+  setEtlJobGeneratesAlerts: JSON
+  setEtlJobGeneratesAlertsV3: JSON
+  setEtlJobGeneratesIncidents: JSON
+  setEventDetectorFeedback: JSON
+  setEventDetectorFeedbackByAlert: JSON
+  setGroupRepetitiveDbtModelFailures: JSON
+  setGroupRepetitiveDbtSeedFailures: JSON
+  setGroupRepetitiveDbtSnapshotFailures: JSON
+  setGroupRepetitiveDbtTestFailures: JSON
+  setGroupRepetitiveDbtTestWarnings: JSON
+  setIncidentFeedback: JSON
+  setIncidentFeedbackV2: JSON
+  setIncidentOwner: JSON
+  setIncidentSeverity: JSON
+  setIntegrationName: JSON
+  setJobGeneratesAlerts: JSON
+  setJobGeneratesIncidents: JSON
+  setMonitorVisibilityForAsset: JSON
+  setPiiFilterStatus: JSON
+  setProjectGenerateAlertsForModelFailures: JSON
+  setProjectGenerateAlertsForSeedFailures: JSON
+  setProjectGenerateAlertsForSnapshotFailures: JSON
+  setProjectGenerateAlertsForTestFailures: JSON
+  setProjectGenerateAlertsForTestWarnings: JSON
+  setProjectGenerateIncidentsForModelFailures: JSON
+  setProjectGenerateIncidentsForTestFailures: JSON
+  setProjectGenerateIncidentsForTestWarnings: JSON
+  setProjectPropagateJobTags: JSON
+  setSensitivity: JSON
+  setSloPolicies: JSON
+  setTutorialState: JSON
+  setWarehouseName: JSON
+  setWildcardTemplates: JSON
+  setWorkspacesAllowListForPowerBiReportsCollection: JSON
+  snoozeCustomRule: JSON
+  snoozeCustomRules: JSON
+  snoozeDbtNode: JSON
+  splitAlert: JSON
+  splitIncident: JSON
+  startDatabricksWarehouse: JSON
+  startTsaAnalysis: JSON
+  stopMonitor: JSON
+  submitFindingFeedback: JSON
+  switchUserAccount: JSON
+  syncMonitorsToCollibra: JSON
+  testAirflowCredentialsV2: JSON
+  testAthenaCredentials: JSON
+  testAthenaCredentialsV2: JSON
+  testAzureDataFactoryCredentials: JSON
+  testBqCredentials: JSON
+  testBqCredentialsV2: JSON
+  testConfluentKafkaConnectCredentials: JSON
+  testConfluentKafkaCredentials: JSON
+  testCredentials: JSON
+  testCustomConnector: JSON
+  testCustomerMcpServerConnection: JSON
+  testDatabaseCredentials: JSON
+  testDatabricksMetastoreSqlWarehouseCredentialsV2: JSON
+  testDatabricksSqlWarehouseCredentials: JSON
+  testDatabricksSqlWarehouseCredentialsV2: JSON
+  testDbtCloudCredentials: JSON
+  testDbtCloudCredentialsV2: JSON
+  testFivetranCredentials: JSON
+  testGlueCredentials: JSON
+  testGlueCredentialsV2: JSON
+  testHiveCredentials: JSON
+  testInformaticaCredentials: JSON
+  testInformaticaV2Credentials: JSON
+  testLookerCredentialsV2: JSON
+  testLookerGitAuthCredentialsV2: JSON
+  testLookerGitCloneCredentials: JSON
+  testLookerGitCloneCredentialsV2: JSON
+  testLookerGitCredentials: JSON
+  testMskKafkaConnectCredentials: JSON
+  testMskKafkaCredentials: JSON
+  testMulesoftCredentials: JSON
+  testPineconeCredentials: JSON
+  testPowerBiCredentials: JSON
+  testPowerBiCredentialsV2: JSON
+  testPrestoCredentials: JSON
+  testRedshiftCredentialsV2: JSON
+  testS3Credentials: JSON
+  testSelfHostedCredentials: JSON
+  testSelfHostedCredentialsV2: JSON
+  testSelfHostedKafkaConnectCredentials: JSON
+  testSelfHostedKafkaCredentials: JSON
+  testSnowflakeCredentials: JSON
+  testSnowflakeCredentialsV2: JSON
+  testSparkCredentials: JSON
+  testTableauCredentials: JSON
+  testTableauCredentialsV2: JSON
+  testTransactionalDbCredentials: JSON
+  testUpdatedCredentialsV2: JSON
+  toggleAccountFeature: JSON
+  toggleAlertGrouping: JSON
+  toggleConnectionEnable: JSON
+  toggleCreateAlertsInDatasource: JSON
+  toggleDataProductMonitoring: JSON
+  toggleDisableSampling: JSON
+  toggleDisableValueIngestion: JSON
+  toggleDisableValueSamplingWhenTesting: JSON
+  toggleEnableFullDistributionMetrics: JSON
+  toggleEventConfig: JSON
+  toggleIncidentGrouping: JSON
+  toggleMuteDataset: JSON
+  toggleMuteDatasets: JSON
+  toggleMuteTable: JSON
+  toggleMuteTables: JSON
+  toggleMuteWithRegex: JSON
+  togglePerformanceDashboardForDomainRestrictedUsers: JSON
+  toggleRestrictSampling: JSON
+  toggleSchemaChangeAlertGrouping: JSON
+  toggleSchemaChangeIncidentGrouping: JSON
+  toggleSizeCollection: JSON
+  toggleSlackBroadcastUpdates: JSON
+  toggleSlackReplyWarning: JSON
+  toggleWarehouseTagsCollectionSetting: JSON
+  toggleWildcardAggregation: JSON
+  trackTable: JSON
+  triageAlerts: JSON
+  triggerAgenticPlatformPipeline: JSON
+  triggerCircuitBreakerRule: JSON
+  triggerCircuitBreakerRuleV2: JSON
+  triggerConnectionManifestJob: JSON
+  triggerCustomRule: JSON
+  triggerMigrationTest: JSON
+  triggerPlatformMigration: JSON
+  triggerPlatformMigrationTest: JSON
+  unlinkAzureDevopsWorkItemForAlert: JSON
+  unlinkDatadogIncidentForAlert: JSON
+  unlinkJiraTicketForAlert: JSON
+  unlinkJiraTicketForIncident: JSON
+  unlinkOpsgenieIncident: JSON
+  unlinkServicenowIncidentForAlert: JSON
+  unsnoozeCustomRule: JSON
+  unsnoozeCustomRules: JSON
+  unsnoozeDbtNode: JSON
+  unsubscribeFromDashboardSchedule: JSON
+  updateAccountDisplayAssetsSearchTags: JSON
+  updateAccountSecret: JSON
+  updateAgentEnabled: JSON
+  updateAgentParameters: JSON
+  updateAgenticDomain: JSON
+  updateAgenticPlatformPipeline: JSON
+  updateAlert: JSON
+  updateAssetMemory: JSON
+  updateAssignedAssets: JSON
+  updateAthenaCredentialsV2: JSON
+  updateAzureDataFactoryCredentialsV2: JSON
+  updateAzureDevopsInstallation: JSON
+  updateAzureDevopsIntegration: JSON
+  updateBiConnectionName: JSON
+  updateBigQueryCredentialsV2: JSON
+  updateCiGateConfig: JSON
+  updateCredentials: JSON
+  updateCredentialsV2: JSON
+  updateCustomConnector: JSON
+  updateCustomDashboardWidgetOrdering: JSON
+  updateCustomMetricRuleNotes: JSON
+  updateCustomMetricSeverity: JSON
+  updateCustomRuleInvestigationQuery: JSON
+  updateCustomerMcpServer: JSON
+  updateDailyUsageAlertConfig: JSON
+  updateDashboardSchedule: JSON
+  updateDataProductSharing: JSON
+  updateDataShare: JSON
+  updateDatabricksMetastoreSqlWarehouseCredentialsV2: JSON
+  updateDatabricksSqlWarehouseCredentialsV2: JSON
+  updateDatadogIntegration: JSON
+  updateDbtCloudCredentialsV2Mutation: JSON
+  updateDbtProjectInfo: JSON
+  updateGithubInstallation: JSON
+  updateGitlabInstallation: JSON
+  updateGlueCredentialsV2: JSON
+  updateInformaticaV2CredentialsV2: JSON
+  updateJiraIntegration: JSON
+  updateJiraIntegrationWebhookSecret: JSON
+  updateLogsIntegration: JSON
+  updateLookerCredentialsV2: JSON
+  updateLookerGitAuthCredentialsV2: JSON
+  updateMonitorDataQualityDimension: JSON
+  updateMonitorDescription: JSON
+  updateMonitorLabels: JSON
+  updateMonitorName: JSON
+  updateMonitorNotes: JSON
+  updateMonitorTags: JSON
+  updateMonitorsPriorities: JSON
+  updateMonitorsSchedules: JSON
+  updateMonitorsSensitivity: JSON
+  updateNotificationReadStatus: JSON
+  updateOpsgenieIntegration: JSON
+  updateOpsgenieIntegrationWebhookSecret: JSON
+  updatePagerdutyServiceIntegration: JSON
+  updatePagerdutyServiceIntegrationWebhookSecret: JSON
+  updatePiiFilteringPreferences: JSON
+  updatePineconeCredentialsV2: JSON
+  updatePlatformService: JSON
+  updatePowerBiCredentialsV2: JSON
+  updatePrAgentConfig: JSON
+  updateRedshiftCredentialsV2: JSON
+  updateSelfHostedCredentialsV2: JSON
+  updateSemanticMemory: JSON
+  updateServicenowIntegration: JSON
+  updateSessionSettings: JSON
+  updateSlackChannels: JSON
+  updateSnowflakeCredentialsV2: JSON
+  updateStatementOption: JSON
+  updateStreamingClusterName: JSON
+  updateStreamingSystemName: JSON
+  updateTableauAssetWarning: JSON
+  updateTableauCredentialsV2: JSON
+  updateTransactionalDbCredentialsV2: JSON
+  updateUserAuthorizationGroupMembership: JSON
+  updateUserPersona: JSON
+  updateUserState: JSON
+  updateWebexIntegration: JSON
+  updateWorkspaceIdentifier: JSON
+  upgradeAgent: JSON
+  uploadAirflowDagResult: JSON
+  uploadAirflowSlaMisses: JSON
+  uploadAirflowTaskResult: JSON
+  uploadCredentials: JSON
+  validateConnectionCtpConfig: JSON
+  validateCron: JSON
+}
+
+scalar JSON
+scalar DateTime
+scalar Date
+scalar UUID
+scalar Upload
+
+enum AccessControlScope {
+  UNKNOWN
+}
+
+enum AccessKeyIndexEnum {
+  UNKNOWN
+}
+
+enum AccountNotificationDigestSettingsModelDigestType {
+  UNKNOWN
+}
+
+enum AccountNotificationRoutingRulesModelMonitorLabelsMatchType {
+  UNKNOWN
+}
+
+enum AccountNotificationSettingsModelNotificationScheduleType {
+  UNKNOWN
+}
+
+enum AccountNotificationSettingsModelType {
+  UNKNOWN
+}
+
+enum ActorType {
+  UNKNOWN
+}
+
+enum AdfJobRunModelStatus {
+  UNKNOWN
+}
+
+enum AdfTaskRunModelStatus {
+  UNKNOWN
+}
+
+enum AgentHealthCheckType {
+  UNKNOWN
+}
+
+enum AgentModelAgentType {
+  UNKNOWN
+}
+
+enum AgentModelAuthType {
+  UNKNOWN
+}
+
+enum AgentModelStorageType {
+  UNKNOWN
+}
+
+enum AgentModelWrapperType {
+  UNKNOWN
+}
+
+enum AgentMonitorSelectExpressionType {
+  UNKNOWN
+}
+
+enum AgentSourceType {
+  UNKNOWN
+}
+
+enum AgentTraceExportStatus {
+  UNKNOWN
+}
+
+enum AgentTraceFormatEnum {
+  UNKNOWN
+}
+
+enum AgentTypeEnum {
+  UNKNOWN
+}
+
+enum AgenticFindingType {
+  UNKNOWN
+}
+
+enum AgenticPlatformPipelineStatus {
+  UNKNOWN
+}
+
+enum AgenticPlatformPipelineType {
+  UNKNOWN
+}
+
+enum AgenticPlatformScope {
+  UNKNOWN
+}
+
+enum AgenticPlatformStatus {
+  UNKNOWN
+}
+
+enum AggregateMetricType {
+  UNKNOWN
+}
+
+enum AggregatedMetricDataType {
+  UNKNOWN
+}
+
+enum AiAgentType {
+  UNKNOWN
+}
+
+enum AlertAccessRequestStatus {
+  UNKNOWN
+}
+
+enum AlertReactionType {
+  UNKNOWN
+}
+
+enum AlertStatus {
+  UNKNOWN
+}
+
+enum AlertSubType {
+  UNKNOWN
+}
+
+enum AlertType {
+  UNKNOWN
+}
+
+enum AlertsFilterDataFilterType {
+  UNKNOWN
+}
+
+enum AlertsFilterDataRequestType {
+  UNKNOWN
+}
+
+enum AlertsFilterDataSearchCriteriaType {
+  UNKNOWN
+}
+
+enum AssetFilterTableType {
+  UNKNOWN
+}
+
+enum AssetFilterType {
+  UNKNOWN
+}
+
+enum AssetMemoryResultType {
+  UNKNOWN
+}
+
+enum AssetsSortDirection {
+  UNKNOWN
+}
+
+enum AssignedAssetOperationEnum {
+  UNKNOWN
+}
+
+enum AssignedAssetStatusEnum {
+  UNKNOWN
+}
+
+enum AuditLogActorRole {
+  UNKNOWN
+}
+
+enum AuthType {
+  UNKNOWN
+}
+
+enum AuthTypeEnum {
+  UNKNOWN
+}
+
+enum BiContainerModelType {
+  UNKNOWN
+}
+
+enum BillingInvoiceStatus {
+  UNKNOWN
+}
+
+enum BillingPlanType {
+  UNKNOWN
+}
+
+enum BulkMonitorTypeEnum {
+  UNKNOWN
+}
+
+enum ClassifiedAssetType {
+  UNKNOWN
+}
+
+enum CollectionNodeModelStatus {
+  UNKNOWN
+}
+
+enum CollectionPreferenceEffectType {
+  UNKNOWN
+}
+
+enum CollectionPreferenceFilterType {
+  UNKNOWN
+}
+
+enum CollectionPreferenceMatchType {
+  UNKNOWN
+}
+
+enum CollectionPreferenceTargetObjectType {
+  UNKNOWN
+}
+
+enum CollectionStorageModelStatus {
+  UNKNOWN
+}
+
+enum CollibraCredentialsType {
+  UNKNOWN
+}
+
+enum ColumnConfigType {
+  UNKNOWN
+}
+
+enum ComparableDashboardType {
+  UNKNOWN
+}
+
+enum ComparisonDataSourceType {
+  UNKNOWN
+}
+
+enum ComparisonType {
+  UNKNOWN
+}
+
+enum ConnectionModelType {
+  UNKNOWN
+}
+
+enum ConnectionSubtypeEnum {
+  UNKNOWN
+}
+
+enum ConnectionTypeEnum {
+  UNKNOWN
+}
+
+enum ConsolidatedMonitorStatusType {
+  UNKNOWN
+}
+
+enum ConversationStatus {
+  UNKNOWN
+}
+
+enum CreateOrUpdateAccountRole {
+  UNKNOWN
+}
+
+enum CustomDashboardWidgetDataSourceType {
+  UNKNOWN
+}
+
+enum CustomDashboardWidgetType {
+  UNKNOWN
+}
+
+enum CustomRuleModelQueryResultType {
+  UNKNOWN
+}
+
+enum CustomRuleModelRuleType {
+  UNKNOWN
+}
+
+enum CustomSQLTemplateModelQueryResultType {
+  UNKNOWN
+}
+
+enum CustomerMcpAuthorizationStatus {
+  UNKNOWN
+}
+
+enum CustomerMcpOAuthGrantType {
+  UNKNOWN
+}
+
+enum CustomerMcpServerStatus {
+  UNKNOWN
+}
+
+enum CustomerMcpUserIdFieldType {
+  UNKNOWN
+}
+
+enum DashboardScheduleType {
+  UNKNOWN
+}
+
+enum DashboardType {
+  UNKNOWN
+}
+
+enum DataAssetTypeEnum {
+  UNKNOWN
+}
+
+enum DataCollectorDeploymentTypeExtendedEnum {
+  UNKNOWN
+}
+
+enum DataCollectorModelDeploymentTypeEnum {
+  UNKNOWN
+}
+
+enum DataCollectorScheduleModelScheduleType {
+  UNKNOWN
+}
+
+enum DataExplorerComparisonDashboardType {
+  UNKNOWN
+}
+
+enum DataExplorerDashboardType {
+  UNKNOWN
+}
+
+enum DataExplorerWidgetModelWidgetType {
+  UNKNOWN
+}
+
+enum DataExplorerWidgetType {
+  UNKNOWN
+}
+
+enum DataMaintenanceReasonType {
+  UNKNOWN
+}
+
+enum DataResponseType {
+  UNKNOWN
+}
+
+enum DataShareType {
+  UNKNOWN
+}
+
+enum DataSourceType {
+  UNKNOWN
+}
+
+enum DatabricksJobRunModelStatus {
+  UNKNOWN
+}
+
+enum DatabricksTaskRunModelStatus {
+  UNKNOWN
+}
+
+enum DecryptionServiceTypeEnum {
+  UNKNOWN
+}
+
+enum DecryptionServiceUpdateTypeEnum {
+  UNKNOWN
+}
+
+enum DeleteAccountRole {
+  UNKNOWN
+}
+
+enum DeleteMemoryResultType {
+  UNKNOWN
+}
+
+enum DetectorStatus {
+  UNKNOWN
+}
+
+enum DisplayableFieldValueType {
+  UNKNOWN
+}
+
+enum DomainModelDomainType {
+  UNKNOWN
+}
+
+enum DomainType {
+  UNKNOWN
+}
+
+enum ETLJobUnionType {
+  UNKNOWN
+}
+
+input AIMessageInput {
+  _placeholder: Boolean
+}
+
+input AgentCapabilitiesInput {
+  _placeholder: Boolean
+}
+
+input AgentCapabilityInput {
+  _placeholder: Boolean
+}
+
+input AgentCreditBudgetInput {
+  _placeholder: Boolean
+}
+
+input AgentFilterInput {
+  _placeholder: Boolean
+}
+
+input AgentSpanConditionInput {
+  _placeholder: Boolean
+}
+
+input AgentSpanFieldFilterInput {
+  _placeholder: Boolean
+}
+
+input AgentSpanFilterInput {
+  _placeholder: Boolean
+}
+
+input AgentSpanInput {
+  _placeholder: Boolean
+}
+
+input AgenticPlatformConfigInput {
+  _placeholder: Boolean
+}
+
+input AggregateInput {
+  _placeholder: Boolean
+}
+
+input AirflowEnvInput {
+  _placeholder: Boolean
+}
+
+input AlertStatusInput {
+  _placeholder: Boolean
+}
+
+input AlertsFilterCriteriaInput {
+  _placeholder: Boolean
+}
+
+input AlertsFilterExclusionCriteriaInput {
+  _placeholder: Boolean
+}
+
+input AlertsFilterInput {
+  _placeholder: Boolean
+}
+
+input AllowedIPEntryInput {
+  _placeholder: Boolean
+}
+
+input ApplyMonitorTuningRunInput {
+  _placeholder: Boolean
+}
+
+input AssetCollectionRuleConditionInput {
+  _placeholder: Boolean
+}
+
+input AssetCollectionRuleInput {
+  _placeholder: Boolean
+}
+
+input AssetFilterUnionInput {
+  _placeholder: Boolean
+}
+
+input AssetIncludeDatabaseInput {
+  _placeholder: Boolean
+}
+
+input AssetSelectionInput {
+  _placeholder: Boolean
+}
+
+input AssetsSortInput {
+  _placeholder: Boolean
+}
+
+input AthenaPolicyInput {
+  _placeholder: Boolean
+}
+
+input AudienceNotificationSettingInput {
+  _placeholder: Boolean
+}
+
+input AuthorizationPolicyStatementInput {
+  _placeholder: Boolean
+}
+
+input AzureDevOpsBasicAuthCredentialsInput {
+  _placeholder: Boolean
+}
+
+input AzureDevOpsOauthCredentialsInput {
+  _placeholder: Boolean
+}
+
+input AzureDevopsBasicAuthCredentialsInput {
+  _placeholder: Boolean
+}
+
+input AzureDevopsOauthCredentialsInput {
+  _placeholder: Boolean
+}
+
+input AzureDevopsSourceSelectionInput {
+  _placeholder: Boolean
+}
+
+input BiWarehouseSourcesInput {
+  _placeholder: Boolean
+}
+
+input CapabilityConfigInput {
+  _placeholder: Boolean
+}
+
+input CatalogMappingInput {
+  _placeholder: Boolean
+}
+
+input ClassificationCategoriesInput {
+  _placeholder: Boolean
+}
+
+input ClassifiedAssetScopeInput {
+  _placeholder: Boolean
+}
+
+input CollectionBlockInput {
+  _placeholder: Boolean
+}
+
+input CollectionBlockListParentScopeInput {
+  _placeholder: Boolean
+}
+
+input ComparisonAlertConditionInput {
+  _placeholder: Boolean
+}
+
+input ConfluentKafkaConnectCredentialsInput {
+  _placeholder: Boolean
+}
+
+input ConfluentKafkaCredentialsInput {
+  _placeholder: Boolean
+}
+
+input ConversationEvalCustomDimensionInput {
+  _placeholder: Boolean
+}
+
+input ConversationEvalDimensionInput {
+  _placeholder: Boolean
+}
+
+input ConversationFiltersInput {
+  _placeholder: Boolean
+}
+
+input CreateMonitorTuningRunInput {
+  _placeholder: Boolean
+}
+
+input CreateOrUpdateAgentTraceTableInput {
+  _placeholder: Boolean
+}
+
+input CreateOrUpdatePlatformAgentInput {
+  _placeholder: Boolean
+}
+
+input CriteriaInput {
+  _placeholder: Boolean
+}
+
+input CustomComparisonMetricInput {
+  _placeholder: Boolean
+}
+
+input CustomMetricInput {
+  _placeholder: Boolean
+}
+
+input CustomMetricQueryInput {
+  _placeholder: Boolean
+}
+
+input CustomRuleComparisonInput {
+  _placeholder: Boolean
+}
+
+input CustomRuleSnoozeInput {
+  _placeholder: Boolean
+}
+
+input CustomRuleSqlBlocksInput {
+  _placeholder: Boolean
+}
+
+input CustomSqlRuleAlertConditionInput {
+  _placeholder: Boolean
+}
+
+input DODCriteriaInput {
+  _placeholder: Boolean
+}
+
+input DataProfilerWidgetDataInput {
+  _placeholder: Boolean
+}
+
+input DataShareInput {
+  _placeholder: Boolean
+}
+
+input DataSourceSchemaInput {
+  _placeholder: Boolean
+}
+
+input DataSourceUnionInput {
+  _placeholder: Boolean
+}
+
+input DatabricksSqlWarehouseConnectionInput {
+  _placeholder: Boolean
+}
+
+input DatabricksSqlWarehouseInput {
+  _placeholder: Boolean
+}
+
+input DatasetFilterInput {
+  _placeholder: Boolean
+}
+
+input DatasetInput {
+  _placeholder: Boolean
+}
+
+input DateTimeRangeInput {
+  _placeholder: Boolean
+}
+
+input DbtArtifactsInput {
+  _placeholder: Boolean
+}
+
+input DeleteAgentTraceTableInput {
+  _placeholder: Boolean
+}
+
+input EvalSchemaFieldInput {
+  _placeholder: Boolean
+}
+
+input ExceptionAttributeInput {
+  _placeholder: Boolean
+}
+
+input ExtendedDataSourceInput {
+  _placeholder: Boolean
+}
+
+input FieldConfigInput {
+  _placeholder: Boolean
+}
+
+input FieldMetricFilterInput {
+  _placeholder: Boolean
+}
+
+input FieldMetricInput {
+  _placeholder: Boolean
+}
+
+input FieldPatternInput {
+  _placeholder: Boolean
+}
+
+input FieldQueryFilterInput {
+  _placeholder: Boolean
+}
+
+input FieldQueryParametersInput {
+  _placeholder: Boolean
+}
+
+input FieldValueRangeInput {
+  _placeholder: Boolean
+}
+
+input FilterGroupInput {
+  _placeholder: Boolean
+}
+
+input FilterPredicateInput {
+  _placeholder: Boolean
+}
+
+input FilterSpanInput {
+  _placeholder: Boolean
+}
+
+input FilterSpanUnionInput {
+  _placeholder: Boolean
+}
+
+input FilterUnionInput {
+  _placeholder: Boolean
+}
+
+input FilterValueFieldInput {
+  _placeholder: Boolean
+}
+
+input FilterValueLiteralInput {
+  _placeholder: Boolean
+}
+
+input FilterValueUnionInput {
+  _placeholder: Boolean
+}
+
+input FindingFilterInput {
+  _placeholder: Boolean
+}
+
+input FreshnessAutomatedAlertConditionInput {
+  _placeholder: Boolean
+}
+
+input FreshnessExplicitAlertConditionInput {
+  _placeholder: Boolean
+}
+
+input GetAgentGraphInput {
+  _placeholder: Boolean
+}
+
+input GetConversationEvalInput {
+  _placeholder: Boolean
+}
+
+input GetConversationExplanationInput {
+  _placeholder: Boolean
+}
+
+input GetConversationMessageContentV2Input {
+  _placeholder: Boolean
+}
+
+input GetConversationThreadInput {
+  _placeholder: Boolean
+}
+
+input GetConversationThreadV2Input {
+  _placeholder: Boolean
+}
+
+input GetConversationsFiltersDataInput {
+  _placeholder: Boolean
+}
+
+input GetConversationsInput {
+  _placeholder: Boolean
+}
+
+input GetNodeAttributesInput {
+  _placeholder: Boolean
+}
+
+input GetNodeDetailInput {
+  _placeholder: Boolean
+}
+
+input GetToolCallOverviewInput {
+  _placeholder: Boolean
+}
+
+input GetToolCallTimeSeriesInput {
+  _placeholder: Boolean
+}
+
+input GetTopToolsInput {
+  _placeholder: Boolean
+}
+
+input GetTraceExplanationInput {
+  _placeholder: Boolean
+}
+
+input GetTraceOverviewInput {
+  _placeholder: Boolean
+}
+
+input GetTraceTimeSeriesInput {
+  _placeholder: Boolean
+}
+
+input GetTracesInput {
+  _placeholder: Boolean
+}
+
+input GluePolicyInput {
+  _placeholder: Boolean
+}
+
+input InviteUsersInput {
+  _placeholder: Boolean
+}
+
+input JiraStatusMappingInput {
+  _placeholder: Boolean
+}
+
+input JiraWebhookConfigInput {
+  _placeholder: Boolean
+}
+
+input JobsPerformanceFacetFilterInput {
+  _placeholder: Boolean
+}
+
+input JobsPerformanceFacetQueryInput {
+  _placeholder: Boolean
+}
+
+input JobsPerformanceFilterInput {
+  _placeholder: Boolean
+}
+
+input JobsPerformancePagingInput {
+  _placeholder: Boolean
+}
+
+input LineageEdgeInput {
+  _placeholder: Boolean
+}
+
+input MergeAlertsInput {
+  _placeholder: Boolean
+}
+
+input MetricAlertConditionInput {
+  _placeholder: Boolean
+}
+
+input ModifyCollectionBlockListInput {
+  _placeholder: Boolean
+}
+
+input MonitorConfigurationInput {
+  _placeholder: Boolean
+}
+
+input MonitorRecommendationsInput {
+  _placeholder: Boolean
+}
+
+input MonitorSamplingConfigInput {
+  _placeholder: Boolean
+}
+
+input MonitorSelectExpressionInput {
+  _placeholder: Boolean
+}
+
+input MonitorTuningRecInput {
+  _placeholder: Boolean
+}
+
+input MonteCarloStatusMappingInput {
+  _placeholder: Boolean
+}
+
+input MskKafkaConnectCredentialsInput {
+  _placeholder: Boolean
+}
+
+input NodeInput {
+  _placeholder: Boolean
+}
+
+input NumericFilterInput {
+  _placeholder: Boolean
+}
+
+input NumericRangeInput {
+  _placeholder: Boolean
+}
+
+input ObjectPropertyInput {
+  _placeholder: Boolean
+}
+
+input PrAgentRiskFactorWeightsInput {
+  _placeholder: Boolean
+}
+
+input ProjectFilterInput {
+  _placeholder: Boolean
+}
+
+input PullRequestFilterInput {
+  _placeholder: Boolean
+}
+
+input QueryLogsRequestInput {
+  _placeholder: Boolean
+}
+
+input QuerySelectionInput {
+  _placeholder: Boolean
+}
+
+input QueryTemplateVariableValueInput {
+  _placeholder: Boolean
+}
+
+input ReportArgumentsUnionInput {
+  _placeholder: Boolean
+}
+
+input RetrieveTableDataRequestInput {
+  _placeholder: Boolean
+}
+
+input RetrieveWidgetDataRequestInput {
+  _placeholder: Boolean
+}
+
+input RuntimeVariableValueInput {
+  _placeholder: Boolean
+}
+
+input ScheduleConfigInput {
+  _placeholder: Boolean
+}
+
+input SchemaFieldInput {
+  _placeholder: Boolean
+}
+
+input SegmentCountQueryInput {
+  _placeholder: Boolean
+}
+
+input SelfHostedKafkaConnectCredentialsInput {
+  _placeholder: Boolean
+}
+
+input SelfHostedKafkaCredentialsInput {
+  _placeholder: Boolean
+}
+
+input SensitivityInput {
+  _placeholder: Boolean
+}
+
+input ServiceNowCredentialsUnionInput {
+  _placeholder: Boolean
+}
+
+input ServiceNowIntegrationOptionsInput {
+  _placeholder: Boolean
+}
+
+input ServiceNowStateMappingInput {
+  _placeholder: Boolean
+}
+
+input ServiceNowWebhookConfigInput {
+  _placeholder: Boolean
+}
+
+input SetIncidentFeedbackInput {
+  _placeholder: Boolean
+}
+
+input SetIncidentFeedbackV2Input {
+  _placeholder: Boolean
+}
+
+input SeverityInput {
+  _placeholder: Boolean
+}
+
+input SloPolicyInput {
+  _placeholder: Boolean
+}
+
+input SpanAttributeFilterInput {
+  _placeholder: Boolean
+}
+
+input SparkBinaryInput {
+  _placeholder: Boolean
+}
+
+input SparkHttpInput {
+  _placeholder: Boolean
+}
+
+input StringFilterInput {
+  _placeholder: Boolean
+}
+
+input TableMonitorAlertConditionInput {
+  _placeholder: Boolean
+}
+
+input TagFilterInput {
+  _placeholder: Boolean
+}
+
+input TagKeyValuePairInput {
+  _placeholder: Boolean
+}
+
+input TasksPerformanceFilterInput {
+  _placeholder: Boolean
+}
+
+input TasksPerformancePagingInput {
+  _placeholder: Boolean
+}
+
+input ThresholdModifierInput {
+  _placeholder: Boolean
+}
+
+input TimeFilterInput {
+  _placeholder: Boolean
+}
+
+input TimeRangeInput {
+  _placeholder: Boolean
+}
+
+input TimestampFilterInput {
+  _placeholder: Boolean
+}
+
+input TimestampRangeInput {
+  _placeholder: Boolean
+}
+
+input ToggleMuteDatasetInput {
+  _placeholder: Boolean
+}
+
+input ToggleMuteDatasetsInput {
+  _placeholder: Boolean
+}
+
+input ToggleMuteTableInput {
+  _placeholder: Boolean
+}
+
+input ToggleMuteTablesInput {
+  _placeholder: Boolean
+}
+
+input ToggleMuteWithRegexInput {
+  _placeholder: Boolean
+}
+
+input TraceFiltersInput {
+  _placeholder: Boolean
+}
+
+input TraceSegmentFilterInput {
+  _placeholder: Boolean
+}
+
+input TrackTableInput {
+  _placeholder: Boolean
+}
+
+input TransformInput {
+  _placeholder: Boolean
+}
+
+input TriageAlertsInput {
+  _placeholder: Boolean
+}
+
+input UCSAutomatedAlertConditionInput {
+  _placeholder: Boolean
+}
+
+input UCSExplicitAlertConditionInput {
+  _placeholder: Boolean
+}
+
+input UpdateDataShareInput {
+  _placeholder: Boolean
+}
+
+input UpdateUserStateInput {
+  _placeholder: Boolean
+}
+
+input UsageAlertConfigInput {
+  _placeholder: Boolean
+}
+
+input UserSettingInput {
+  _placeholder: Boolean
+}
+
+input ValidationRollingWindowInput {
+  _placeholder: Boolean
+}
+
+input ValidationTimeFilterInput {
+  _placeholder: Boolean
+}
+
+input VariableDefinitionInput {
+  _placeholder: Boolean
+}
+
+input VolumeChangeAutomatedAlertConditionInput {
+  _placeholder: Boolean
+}
+
+input VolumeChangeExplicitAlertConditionInput {
+  _placeholder: Boolean
+}
+
+input WebhookHeaderInput {
+  _placeholder: Boolean
+}
+
+input WidgetDataSourceUnionInput {
+  _placeholder: Boolean
+}
+
+input WidgetDefinitionInput {
+  _placeholder: Boolean
+}
+
+input WidgetOptionsUnionInput {
+  _placeholder: Boolean
+}
+
+input WidgetOrderInput {
+  _placeholder: Boolean
+}
+
+input WildcardTemplateInput {
+  _placeholder: Boolean
+}
+
+type AdfJobConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AdfJobRunConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AdfJobRunsConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AdfTaskConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AdfTaskRunConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AgentTraceTableConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AgenticPlatformPipelineConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AgenticPlatformPipelineExecutionConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AirflowDagConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AirflowDagRunConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AirflowTaskConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AirflowTaskRunConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AirflowTaskRunStatsConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AlationIntegrationConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AlertConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AlertsCountByDateConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AssetCollectionPreferencesConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AssetMetricAuditLogConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AudienceMonitorConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AuditLogEntryConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type BulkMonitorConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type CatalogObjectMetadataConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type ClassifiedAssetConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type CollectionBlockConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type CollectionDataSetConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type CollibraIntegrationConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type ComparisonMonitorResponseConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type Connection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type CustomDashboardConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type CustomDashboardListConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type CustomIntegrationConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type CustomRuleConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type CustomRuleQueryConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type CustomSQLTemplateConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type CustomUserConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DataExplorerComparisonDashboardTypeConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DataExplorerDashboardTypeConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DataExplorerWidgetTypeConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DataProductAssetConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DataProductConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DatabricksJobConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DatabricksJobRunConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DatabricksJobRunsConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DatabricksTaskConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DatabricksTaskRunConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DatasetConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DbtEdgeConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DbtJobConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DbtJobExecutionConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DbtJobExecutionsConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DbtModelResultsConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DbtModelsConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DbtNodeConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DbtProjectConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DbtRunConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DbtRunStepConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DbtTestResultsConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DeltaLogConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DomainOutputV2Connection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type DomainRestrictionConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type ETLJobsConnectionTypeConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type EtlGroupV3Connection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type EtlJobRunV3Connection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type EtlJobV3Connection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type EtlTaskRunV3Connection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type EtlTaskV3Connection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type EventConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type EventDetectorFeedbackConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type ExceptionActivityLogEntryConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type FindingConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type FivetranConnectorConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type FivetranDestinationConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type GithubPullRequestConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type GroupEventConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type IncidentConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type IncidentsCountByDateConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type InformaticaMappingTaskConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type InformaticaMappingTaskRunConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type InformaticaMappingTaskRunsConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type JobExecutionHistoryLogConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type JobPerformanceSummaryConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type MetricMonitoringConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type MonitorAtRiskConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type MonitorTuningRunConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type MonteCarloConfigTemplateConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type NotificationRoutingRuleConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type ObjectPropertyConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type PaginatedAuthorizationGroupConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type PaginatedEventGroupConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type PlatformAgentConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type PlatformServiceConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type ProjectConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type ResourceConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type SchemaChangeConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type SlackChannelV2Connection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type SlackEngagementConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type SlackMessageDetailsConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type TableAnomalyConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type TableFieldConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type TableMonitorConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type TablePartitionKeysConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type TableSchemaVersionConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type TableStatsConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type TableTagConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type TaskPerformanceSummaryConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type TestCustomerMcpServerConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type TraceConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type UnifiedUserAssignmentConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type UnifiedUserConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type UseCaseConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type UseCaseTableConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type UseCaseTableDetailConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type UserBasicInfoConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type UserConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type UserDefinedMonitorConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type UserDefinedMonitorConnectionV2Connection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type UserInviteConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type UserSettingsConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type WarehouseTableConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type WarehouseTableHealthConnection {
+  edges: [JSON]
+  pageInfo: PageInfo
+}
+
+type AdfJobEdge {
+  node: JSON
+  cursor: String
+}
+
+type AdfJobRunEdge {
+  node: JSON
+  cursor: String
+}
+
+type AdfJobRunsEdge {
+  node: JSON
+  cursor: String
+}
+
+type AdfTaskEdge {
+  node: JSON
+  cursor: String
+}
+
+type AdfTaskRunEdge {
+  node: JSON
+  cursor: String
+}
+
+type AgentGraphEdge {
+  node: JSON
+  cursor: String
+}
+
+type AgentTraceTableEdge {
+  node: JSON
+  cursor: String
+}
+
+type AgenticPlatformPipelineEdge {
+  node: JSON
+  cursor: String
+}
+
+type AgenticPlatformPipelineExecutionEdge {
+  node: JSON
+  cursor: String
+}
+
+type AirflowDagEdge {
+  node: JSON
+  cursor: String
+}
+
+type AirflowDagRunEdge {
+  node: JSON
+  cursor: String
+}
+
+type AirflowTaskEdge {
+  node: JSON
+  cursor: String
+}
+
+type AirflowTaskRunEdge {
+  node: JSON
+  cursor: String
+}
+
+type AirflowTaskRunStatsEdge {
+  node: JSON
+  cursor: String
+}
+
+type AlationIntegrationEdge {
+  node: JSON
+  cursor: String
+}
+
+type AlertEdge {
+  node: JSON
+  cursor: String
+}
+
+type AlertsCountByDateEdge {
+  node: JSON
+  cursor: String
+}
+
+type AssetCollectionPreferencesEdge {
+  node: JSON
+  cursor: String
+}
+
+type AssetMetricAuditLogEdge {
+  node: JSON
+  cursor: String
+}
+
+type AudienceMonitorEdge {
+  node: JSON
+  cursor: String
+}
+
+type AuditLogEntryEdge {
+  node: JSON
+  cursor: String
+}
+
+type BulkMonitorEdge {
+  node: JSON
+  cursor: String
+}
+
+type CatalogObjectMetadataEdge {
+  node: JSON
+  cursor: String
+}
+
+type ClassifiedAssetEdge {
+  node: JSON
+  cursor: String
+}
+
+type CollectionBlockEdge {
+  node: JSON
+  cursor: String
+}
+
+type CollectionDataSetEdge {
+  node: JSON
+  cursor: String
+}
+
+type CollibraIntegrationEdge {
+  node: JSON
+  cursor: String
+}
+
+type ComparisonMonitorResponseEdge {
+  node: JSON
+  cursor: String
+}
+
+type ConversationSpanEdge {
+  node: JSON
+  cursor: String
+}
+
+type CreateOrUpdateLineageEdge {
+  node: JSON
+  cursor: String
+}
+
+type CustomDashboardEdge {
+  node: JSON
+  cursor: String
+}
+
+type CustomDashboardListEdge {
+  node: JSON
+  cursor: String
+}
+
+type CustomRuleEdge {
+  node: JSON
+  cursor: String
+}
+
+type CustomRuleQueryEdge {
+  node: JSON
+  cursor: String
+}
+
+type CustomSQLTemplateEdge {
+  node: JSON
+  cursor: String
+}
+
+type CustomUserEdge {
+  node: JSON
+  cursor: String
+}
+
+type DataExplorerComparisonDashboardTypeEdge {
+  node: JSON
+  cursor: String
+}
+
+type DataExplorerDashboardTypeEdge {
+  node: JSON
+  cursor: String
+}
+
+type DataExplorerWidgetTypeEdge {
+  node: JSON
+  cursor: String
+}
+
+type DataProductAssetEdge {
+  node: JSON
+  cursor: String
+}
+
+type DataProductEdge {
+  node: JSON
+  cursor: String
+}
+
+type DatabricksJobEdge {
+  node: JSON
+  cursor: String
+}
+
+type DatabricksJobRunEdge {
+  node: JSON
+  cursor: String
+}
+
+type DatabricksJobRunsEdge {
+  node: JSON
+  cursor: String
+}
+
+type DatabricksTaskEdge {
+  node: JSON
+  cursor: String
+}
+
+type DatabricksTaskRunEdge {
+  node: JSON
+  cursor: String
+}
+
+type DatasetEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtEdgeEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtJobEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtJobExecutionEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtJobExecutionsEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtModelResultsEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtModelsEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtNodeEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtProjectEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtRunEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtRunStepEdge {
+  node: JSON
+  cursor: String
+}
+
+type DbtTestResultsEdge {
+  node: JSON
+  cursor: String
+}
+
+type DeltaLogConnectionEdge {
+  node: JSON
+  cursor: String
+}
+
+type DomainOutputV2Edge {
+  node: JSON
+  cursor: String
+}
+
+type DomainRestrictionEdge {
+  node: JSON
+  cursor: String
+}
+
+type ETLJobsConnectionTypeEdge {
+  node: JSON
+  cursor: String
+}
+
+type EtlGroupV3Edge {
+  node: JSON
+  cursor: String
+}
+
+type EtlJobRunV3Edge {
+  node: JSON
+  cursor: String
+}
+
+type EtlJobV3Edge {
+  node: JSON
+  cursor: String
+}
+
+type EtlTaskRunV3Edge {
+  node: JSON
+  cursor: String
+}
+
+type EtlTaskV3Edge {
+  node: JSON
+  cursor: String
+}
+
+type EventDetectorFeedbackEdge {
+  node: JSON
+  cursor: String
+}
+
+type EventEdge {
+  node: JSON
+  cursor: String
+}
+
+type ExceptionActivityLogEntryEdge {
+  node: JSON
+  cursor: String
+}
+
+type FindingEdge {
+  node: JSON
+  cursor: String
+}
+
+type FivetranConnectorEdge {
+  node: JSON
+  cursor: String
+}
+
+type FivetranDestinationEdge {
+  node: JSON
+  cursor: String
+}
+
+type GithubPullRequestEdge {
+  node: JSON
+  cursor: String
+}
+
+type GraphEdge {
+  node: JSON
+  cursor: String
+}
+
+type GroupEventEdge {
+  node: JSON
+  cursor: String
+}
+
+type IncidentEdge {
+  node: JSON
+  cursor: String
+}
+
+type IncidentsCountByDateEdge {
+  node: JSON
+  cursor: String
+}
+
+type InformaticaMappingTaskEdge {
+  node: JSON
+  cursor: String
+}
+
+type InformaticaMappingTaskRunEdge {
+  node: JSON
+  cursor: String
+}
+
+type InformaticaMappingTaskRunsEdge {
+  node: JSON
+  cursor: String
+}
+
+type JobExecutionHistoryLogEdge {
+  node: JSON
+  cursor: String
+}
+
+type JobLineageEdge {
+  node: JSON
+  cursor: String
+}
+
+type JobPerformanceSummaryEdge {
+  node: JSON
+  cursor: String
+}
+
+type LineageGraphEdge {
+  node: JSON
+  cursor: String
+}
+
+type MetricMonitoringEdge {
+  node: JSON
+  cursor: String
+}
+
+type MonitorAtRiskEdge {
+  node: JSON
+  cursor: String
+}
+
+type MonitorTuningRunEdge {
+  node: JSON
+  cursor: String
+}
+
+type MonteCarloConfigTemplateEdge {
+  node: JSON
+  cursor: String
+}
+
+type NotificationRoutingRuleEdge {
+  node: JSON
+  cursor: String
+}
+
+type ObjectPropertyEdge {
+  node: JSON
+  cursor: String
+}
+
+type PaginatedAuthorizationGroupEdge {
+  node: JSON
+  cursor: String
+}
+
+type PaginatedEventGroupEdge {
+  node: JSON
+  cursor: String
+}
+
+type PlatformAgentEdge {
+  node: JSON
+  cursor: String
+}
+
+type ProjectEdge {
+  node: JSON
+  cursor: String
+}
+
+type ResourceEdge {
+  node: JSON
+  cursor: String
+}
+
+type SchemaChangeEdge {
+  node: JSON
+  cursor: String
+}
+
+type SlackChannelV2Edge {
+  node: JSON
+  cursor: String
+}
+
+type SlackEngagementEdge {
+  node: JSON
+  cursor: String
+}
+
+type SlackMessageDetailsEdge {
+  node: JSON
+  cursor: String
+}
+
+type TableAnomalyEdge {
+  node: JSON
+  cursor: String
+}
+
+type TableFieldEdge {
+  node: JSON
+  cursor: String
+}
+
+type TableMonitorEdge {
+  node: JSON
+  cursor: String
+}
+
+type TablePartitionKeysEdge {
+  node: JSON
+  cursor: String
+}
+
+type TableSchemaVersionEdge {
+  node: JSON
+  cursor: String
+}
+
+type TableStatsEdge {
+  node: JSON
+  cursor: String
+}
+
+type TableTagEdge {
+  node: JSON
+  cursor: String
+}
+
+type TaskPerformanceSummaryEdge {
+  node: JSON
+  cursor: String
+}
+
+type TraceEdge {
+  node: JSON
+  cursor: String
+}
+
+type UnifiedUserAssignmentEdge {
+  node: JSON
+  cursor: String
+}
+
+type UnifiedUserEdge {
+  node: JSON
+  cursor: String
+}
+
+type UseCaseEdge {
+  node: JSON
+  cursor: String
+}
+
+type UseCaseTableDetailEdge {
+  node: JSON
+  cursor: String
+}
+
+type UseCaseTableEdge {
+  node: JSON
+  cursor: String
+}
+
+type UserBasicInfoEdge {
+  node: JSON
+  cursor: String
+}
+
+type UserDefinedMonitorConnectionV2Edge {
+  node: JSON
+  cursor: String
+}
+
+type UserDefinedMonitorEdge {
+  node: JSON
+  cursor: String
+}
+
+type UserEdge {
+  node: JSON
+  cursor: String
+}
+
+type UserInviteEdge {
+  node: JSON
+  cursor: String
+}
+
+type UserSettingsEdge {
+  node: JSON
+  cursor: String
+}
+
+type WarehouseTableEdge {
+  node: JSON
+  cursor: String
+}
+
+type WarehouseTableHealthEdge {
+  node: JSON
+  cursor: String
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type AIMessageOutput {
+  _type: String
+}
+
+type AccessControlItemOutput {
+  _type: String
+}
+
+type AccessRequest {
+  _type: String
+}
+
+type AccessRequestOutput {
+  _type: String
+}
+
+type AccessToken {
+  _type: String
+}
+
+type Account {
+  _type: String
+}
+
+type AccountAuditLog {
+  _type: String
+}
+
+type AccountEntitlementLimit {
+  _type: String
+}
+
+type AccountEntitlementsInfo {
+  _type: String
+}
+
+type AccountHealthMetric {
+  _type: String
+}
+
+type AccountHealthMetricId {
+  _type: String
+}
+
+type AccountHealthPillar {
+  _type: String
+}
+
+type AccountHealthSnapshot {
+  _type: String
+}
+
+type AccountNotificationDigestSettings {
+  _type: String
+}
+
+type AccountNotificationRoutingRules {
+  _type: String
+}
+
+type AccountNotificationSetting {
+  _type: String
+}
+
+type AccountSecretOutput {
+  _type: String
+}
+
+type AccountUsageObject {
+  _type: String
+}
+
+type ActiveNodeDetails {
+  _type: String
+}
+
+type AddAllowListEntry {
+  _type: String
+}
+
+type AddBiConnectionMutation {
+  _type: String
+}
+
+type AddConnectionMutation {
+  _type: String
+}
+
+type AddCustomConnector {
+  _type: String
+}
+
+type AddCustomEtlConnector {
+  _type: String
+}
+
+type AddDatabricksConnectionMutation {
+  _type: String
+}
+
+type AddDomainAssignments {
+  _type: String
+}
+
+type AddEtlConnectionMutation {
+  _type: String
+}
+
+type AddFavoriteAsset {
+  _type: String
+}
+
+type AddMonitorsLabels {
+  _type: String
+}
+
+type AddOrUpdateCustomDashboardWidget {
+  _type: String
+}
+
+type AddOrUpdateWidgetFromDefinition {
+  _type: String
+}
+
+type AddPlatformService {
+  _type: String
+}
+
+type AddRedshiftConsumerConnectionMutation {
+  _type: String
+}
+
+type AddStreamingConnectionMutation {
+  _type: String
+}
+
+type AddStreamingSystemMutation {
+  _type: String
+}
+
+type AddToCollectionBlockList {
+  _type: String
+}
+
+type AdditionalData {
+  _type: String
+}
+
+type AdfJob {
+  _type: String
+}
+
+type AdfJobRun {
+  _type: String
+}
+
+type AdfTask {
+  _type: String
+}
+
+type AdfTaskRun {
+  _type: String
+}
+
+type Agent {
+  _type: String
+}
+
+type AgentAssistant {
+  _type: String
+}
+
+type AgentCapabilities {
+  _type: String
+}
+
+type AgentCapability {
+  _type: String
+}
+
+type AgentCapabilityCreditBudget {
+  _type: String
+}
+
+type AgentCapabilityCreditConsumption {
+  _type: String
+}
+
+type AgentCustomConnectors {
+  _type: String
+}
+
+type AgentCustomEtlConnectors {
+  _type: String
+}
+
+type AgentDetails {
+  _type: String
+}
+
+type AgentGraph {
+  _type: String
+}
+
+type AgentGraphErrorSpan {
+  _type: String
+}
+
+type AgentGraphInsight {
+  _type: String
+}
+
+type AgentGraphInsightCategory {
+  _type: String
+}
+
+type AgentGraphInsightSeverity {
+  _type: String
+}
+
+type AgentGraphInsights {
+  _type: String
+}
+
+type AgentGraphNode {
+  _type: String
+}
+
+type AgentGraphNodeKind {
+  _type: String
+}
+
+type AgentHealthCard {
+  _type: String
+}
+
+type AgentHealthCheck {
+  _type: String
+}
+
+type AgentHealthCheckResolution {
+  _type: String
+}
+
+type AgentHealthCheckValidity {
+  _type: String
+}
+
+type AgentHealthConfidence {
+  _type: String
+}
+
+type AgentHealthEvidence {
+  _type: String
+}
+
+type AgentHealthEvidenceCategory {
+  _type: String
+}
+
+type AgentHealthEvidenceSample {
+  _type: String
+}
+
+type AgentHealthEvidenceSource {
+  _type: String
+}
+
+type AgentHealthFinding {
+  _type: String
+}
+
+type AgentHealthFindingPayload {
+  _type: String
+}
+
+type AgentHealthFindingResult {
+  _type: String
+}
+
+type AgentHealthGranularity {
+  _type: String
+}
+
+type AgentHealthIssue {
+  _type: String
+}
+
+type AgentHealthPriority {
+  _type: String
+}
+
+type AgentHealthRecommendedAction {
+  _type: String
+}
+
+type AgentHealthSeverity {
+  _type: String
+}
+
+type AgentHealthWorkflowSummary {
+  _type: String
+}
+
+type AgentLogEntry {
+  _type: String
+}
+
+type AgentMetadata {
+  _type: String
+}
+
+type AgentMetadataV2 {
+  _type: String
+}
+
+type AgentModelPlatform {
+  _type: String
+}
+
+type AgentObservabilityBillingAgent {
+  _type: String
+}
+
+type AgentObservabilityBillingInfo {
+  _type: String
+}
+
+type AgentSegmentsResult {
+  _type: String
+}
+
+type AgentSpanCondition {
+  _type: String
+}
+
+type AgentSpanExportState {
+  _type: String
+}
+
+type AgentSpanExportStatusOutput {
+  _type: String
+}
+
+type AgentSpanFieldFilter {
+  _type: String
+}
+
+type AgentSpanFilter {
+  _type: String
+}
+
+type AgentSpanNode {
+  _type: String
+}
+
+type AgentSpanTree {
+  _type: String
+}
+
+type AgentTraceExportStatusOutput {
+  _type: String
+}
+
+type AgentTraceTable {
+  _type: String
+}
+
+type AgentTraceTableModelSpanFormat {
+  _type: String
+}
+
+type AgenticDomainOutput {
+  _type: String
+}
+
+type AgenticFindingPriority {
+  _type: String
+}
+
+type AgenticNotificationRoute {
+  _type: String
+}
+
+type AgenticPlatformConfigOutput {
+  _type: String
+}
+
+type AgenticPlatformPipelineExecutionOutput {
+  _type: String
+}
+
+type AgenticPlatformPipelineOutput {
+  _type: String
+}
+
+type AggregateMetricParams {
+  _type: String
+}
+
+type AggregatedQuery {
+  _type: String
+}
+
+type AggregatedQueryResults {
+  _type: String
+}
+
+type AggregationFunction {
+  _type: String
+}
+
+type AiAgent {
+  _type: String
+}
+
+type AirflowCapabilitiesResponse {
+  _type: String
+}
+
+type AirflowConnectionDetails {
+  _type: String
+}
+
+type AirflowDag {
+  _type: String
+}
+
+type AirflowDagRun {
+  _type: String
+}
+
+type AirflowDagRunInfo {
+  _type: String
+}
+
+type AirflowRunState {
+  _type: String
+}
+
+type AirflowTask {
+  _type: String
+}
+
+type AirflowTaskRun {
+  _type: String
+}
+
+type AirflowTaskRunAttempt {
+  _type: String
+}
+
+type AirflowTaskRunStats {
+  _type: String
+}
+
+type AirflowUrls {
+  _type: String
+}
+
+type AlationIntegration {
+  _type: String
+}
+
+type Alert {
+  _type: String
+}
+
+type AlertAccessRequest {
+  _type: String
+}
+
+type AlertAccessRequestOutput {
+  _type: String
+}
+
+type AlertDescriptionOutput {
+  _type: String
+}
+
+type AlertGroupBy {
+  _type: String
+}
+
+type AlertReaction {
+  _type: String
+}
+
+type AlertReactionReason {
+  _type: String
+}
+
+type AlertTimePeriodAggregateData {
+  _type: String
+}
+
+type AlertTypeSummary {
+  _type: String
+}
+
+type AlertWeeklyDataDashboard {
+  _type: String
+}
+
+type AlertsCountByDate {
+  _type: String
+}
+
+type AlertsFilter {
+  _type: String
+}
+
+type AlertsFilterData {
+  _type: String
+}
+
+type AlertsFilterDataValue {
+  _type: String
+}
+
+type AlertsFilterFieldName {
+  _type: String
+}
+
+type AllowedIPEntryOutput {
+  _type: String
+}
+
+type ApiCallReference {
+  _type: String
+}
+
+type ApiUsageLimits {
+  _type: String
+}
+
+type ApiUsageResponse {
+  _type: String
+}
+
+type ApplyMonitorFindings {
+  _type: String
+}
+
+type Asset {
+  _type: String
+}
+
+type AssetCollectionPreferenceNode {
+  _type: String
+}
+
+type AssetCollectionPreferences {
+  _type: String
+}
+
+type AssetCollectionRule {
+  _type: String
+}
+
+type AssetCollectionRuleCondition {
+  _type: String
+}
+
+type AssetCollectionRuleEffect {
+  _type: String
+}
+
+type AssetFilterActivityRead {
+  _type: String
+}
+
+type AssetFilterActivityReadAndWrite {
+  _type: String
+}
+
+type AssetFilterActivityReadAndWriteIsNull {
+  _type: String
+}
+
+type AssetFilterActivityReadIsNull {
+  _type: String
+}
+
+type AssetFilterActivityReadWrite {
+  _type: String
+}
+
+type AssetFilterActivityReadWriteIsNull {
+  _type: String
+}
+
+type AssetFilterActivityVolumeChange {
+  _type: String
+}
+
+type AssetFilterActivityWrite {
+  _type: String
+}
+
+type AssetFilterActivityWriteIsNull {
+  _type: String
+}
+
+type AssetFilterInterface {
+  _type: String
+}
+
+type AssetFilterTableName {
+  _type: String
+}
+
+type AssetFilterTableNameOperator {
+  _type: String
+}
+
+type AssetFilterTableTag {
+  _type: String
+}
+
+type AssetFilterTableTagOperator {
+  _type: String
+}
+
+type AssetIncludeDatabase {
+  _type: String
+}
+
+type AssetMetricAuditLogEntry {
+  _type: String
+}
+
+type AssetOutput {
+  _type: String
+}
+
+type AssetSelection {
+  _type: String
+}
+
+type AssetSelectionLevel {
+  _type: String
+}
+
+type AssetSelectionResult {
+  _type: String
+}
+
+type AssetUsageNode {
+  _type: String
+}
+
+type AssetsUsageFilterOptions {
+  _type: String
+}
+
+type AssetsUsageResults {
+  _type: String
+}
+
+type AssignedAssetOutput {
+  _type: String
+}
+
+type AssignmentWithProperties {
+  _type: String
+}
+
+type AthenaConnectionDetails {
+  _type: String
+}
+
+type AthenaUpdateConnectionDetails {
+  _type: String
+}
+
+type AudienceMonitor {
+  _type: String
+}
+
+type AudienceRef {
+  _type: String
+}
+
+type AuditInfo {
+  _type: String
+}
+
+type AuditLogEntry {
+  _type: String
+}
+
+type AuditedUser {
+  _type: String
+}
+
+type AuthorRef {
+  _type: String
+}
+
+type AuthorizationGroupOutput {
+  _type: String
+}
+
+type AuthorizationGroupSource {
+  _type: String
+}
+
+type AuthorizationPolicyStatement {
+  _type: String
+}
+
+type AuthorizationProvisioningOutput {
+  _type: String
+}
+
+type AutoOperator {
+  _type: String
+}
+
+type AvailableFilter {
+  _type: String
+}
+
+type AvailableFilterAggregatedValue {
+  _type: String
+}
+
+type AvailablePlatformAgentData {
+  _type: String
+}
+
+type AwsAgentExternalId {
+  _type: String
+}
+
+type AwsAgentInfraDetailsResult {
+  _type: String
+}
+
+type AwsAgentLogsQueryResult {
+  _type: String
+}
+
+type AwsAgentLogsStopQueryResult {
+  _type: String
+}
+
+type AwsAgentStartLogsQueryResult {
+  _type: String
+}
+
+type AwsAgentUpgradeLogEntry {
+  _type: String
+}
+
+type AwsEnvConfiguration {
+  _type: String
+}
+
+type AwsInformation {
+  _type: String
+}
+
+type AwsPrivateLinkDetails {
+  _type: String
+}
+
+type AwsPrivateLinkRegionDetails {
+  _type: String
+}
+
+type AwsRegion {
+  _type: String
+}
+
+type AwsRegionsResponse {
+  _type: String
+}
+
+type AzureAgentCleanupTasks {
+  _type: String
+}
+
+type AzureAgentTasksSummary {
+  _type: String
+}
+
+type AzureDataFactoryConnectionDetails {
+  _type: String
+}
+
+type AzureDataFactoryUpdateConnectionDetails {
+  _type: String
+}
+
+type AzureDevOpsIntegrationOutput {
+  _type: String
+}
+
+type AzureDevOpsProjectOutput {
+  _type: String
+}
+
+type AzureDevOpsWorkItem {
+  _type: String
+}
+
+type AzureDevOpsWorkItemOutput {
+  _type: String
+}
+
+type AzureDevOpsWorkItemTypeOutput {
+  _type: String
+}
+
+type AzureDevopsBasicAuthCredentials {
+  _type: String
+}
+
+type AzureDevopsInstallation {
+  _type: String
+}
+
+type AzureDevopsInstallationListItem {
+  _type: String
+}
+
+type AzureDevopsInstallations {
+  _type: String
+}
+
+type AzureDevopsOauthCredentials {
+  _type: String
+}
+
+type AzureDevopsOrganization {
+  _type: String
+}
+
+type AzureDevopsProject {
+  _type: String
+}
+
+type AzureDevopsRepository {
+  _type: String
+}
+
+type AzureDevopsSourceSelection {
+  _type: String
+}
+
+type AzureInformation {
+  _type: String
+}
+
+type BiContainer {
+  _type: String
+}
+
+type BiLineage {
+  _type: String
+}
+
+type BiMetadata {
+  _type: String
+}
+
+type BiWarehouseSources {
+  _type: String
+}
+
+type BigInt {
+  _type: String
+}
+
+type BigQueryProject {
+  _type: String
+}
+
+type BigQueryUpdateConnectionDetails {
+  _type: String
+}
+
+type BillingContractInvoice {
+  _type: String
+}
+
+type BillingContractInvoiceItem {
+  _type: String
+}
+
+type BillingContractInvoiceResults {
+  _type: String
+}
+
+type BillingCreditGrant {
+  _type: String
+}
+
+type BillingCreditGrantResults {
+  _type: String
+}
+
+type BillingInvoice {
+  _type: String
+}
+
+type BillingInvoiceProduct {
+  _type: String
+}
+
+type BillingInvoiceProductCharge {
+  _type: String
+}
+
+type BillingInvoiceResults {
+  _type: String
+}
+
+type BillingInvoicesSort {
+  _type: String
+}
+
+type BillingMonitorUsage {
+  _type: String
+}
+
+type BillingMonitorUsageResults {
+  _type: String
+}
+
+type Boolean {
+  _type: String
+}
+
+type BooleanOperator {
+  _type: String
+}
+
+type BqConnectionDetails {
+  _type: String
+}
+
+type BridgeTokenOutput {
+  _type: String
+}
+
+type BulkAddMonitorDataQualityDimension {
+  _type: String
+}
+
+type BulkAddMonitorTags {
+  _type: String
+}
+
+type BulkCreateCommentForExceptions {
+  _type: String
+}
+
+type BulkCreateOrUpdateObjectProperties {
+  _type: String
+}
+
+type BulkMonitor {
+  _type: String
+}
+
+type BulkMonitorDomainAssignment {
+  _type: String
+}
+
+type BulkMonitorDomainAssignmentError {
+  _type: String
+}
+
+type BulkMonitorJobExecutionLog {
+  _type: String
+}
+
+type BulkMonitorModelPriority {
+  _type: String
+}
+
+type BulkMonitorTable {
+  _type: String
+}
+
+type BulkMonitorWarning {
+  _type: String
+}
+
+type BulkSetEtlJobGeneratesAlerts {
+  _type: String
+}
+
+type BulkUpdateAlerts {
+  _type: String
+}
+
+type BulkUpdateAlertsValues {
+  _type: String
+}
+
+type BulkUpdateIncidents {
+  _type: String
+}
+
+type BulkUpdateIncidentsValues {
+  _type: String
+}
+
+type BulkUpdateMonitorExceptions {
+  _type: String
+}
+
+type CaasCollectionNodeParameters {
+  _type: String
+}
+
+type CaasLinkCollectionResources {
+  _type: String
+}
+
+type CaasUpdateCollectionNodeEnv {
+  _type: String
+}
+
+type CaasUpdateCollectionNodeParameters {
+  _type: String
+}
+
+type CaasUpdateCollectionNodeVersion {
+  _type: String
+}
+
+type CaasUpdateCollectionStorageEncryption {
+  _type: String
+}
+
+type CaasUpdateCollectionStorageLink {
+  _type: String
+}
+
+type CaasUpdateCollectionStorageParameters {
+  _type: String
+}
+
+type CaasUpdateCollectionStorageVersion {
+  _type: String
+}
+
+type CapabilityMode {
+  _type: String
+}
+
+type CatalogMapping {
+  _type: String
+}
+
+type CatalogMappings {
+  _type: String
+}
+
+type CatalogNavNode {
+  _type: String
+}
+
+type CatalogNavResults {
+  _type: String
+}
+
+type CatalogObjectMetadata {
+  _type: String
+}
+
+type CategorizedSearchResponse {
+  _type: String
+}
+
+type CategorizedSearchResult {
+  _type: String
+}
+
+type CategoryLabelRank {
+  _type: String
+}
+
+type CiGateConfig {
+  _type: String
+}
+
+type CiGateRepoOverride {
+  _type: String
+}
+
+type CircuitBreakerState {
+  _type: String
+}
+
+type ClassificationCategories {
+  _type: String
+}
+
+type ClassifiedAssetNode {
+  _type: String
+}
+
+type ClassifiedAssetPageInfo {
+  _type: String
+}
+
+type CleanupCollectorRecordInAccount {
+  _type: String
+}
+
+type ClearBootstrapMemoryData {
+  _type: String
+}
+
+type ClearMemoryData {
+  _type: String
+}
+
+type CollectionBlock {
+  _type: String
+}
+
+type CollectionDataSet {
+  _type: String
+}
+
+type CollectionDetails {
+  _type: String
+}
+
+type CollectionNode {
+  _type: String
+}
+
+type CollectionPreferenceNode {
+  _type: String
+}
+
+type CollectionProperties {
+  _type: String
+}
+
+type CollectionStatusOutput {
+  _type: String
+}
+
+type CollectionStorage {
+  _type: String
+}
+
+type CollibraDomainSearchResponse {
+  _type: String
+}
+
+type CollibraIntegration {
+  _type: String
+}
+
+type CollibraMonitorNoteResponse {
+  _type: String
+}
+
+type CollibraPingResponse {
+  _type: String
+}
+
+type ColumnConfig {
+  _type: String
+}
+
+type ColumnLineage {
+  _type: String
+}
+
+type ComparisonAlertCondition {
+  _type: String
+}
+
+type ComparisonEvaluationResults {
+  _type: String
+}
+
+type ComparisonMonitorResponse {
+  _type: String
+}
+
+type ConditionMatches {
+  _type: String
+}
+
+type ConfigureAgentAssistance {
+  _type: String
+}
+
+type ConfigureAgenticPlatform {
+  _type: String
+}
+
+type ConfigureAiAgentPrompt {
+  _type: String
+}
+
+type ConfigureMetadataEvents {
+  _type: String
+}
+
+type ConfigureQueryLogEvents {
+  _type: String
+}
+
+type ConnectPlatformServiceToExistingAgent {
+  _type: String
+}
+
+type ConnectPlatformServiceToExistingBucket {
+  _type: String
+}
+
+type ConnectPlatformServiceToLegacyBucket {
+  _type: String
+}
+
+type ConnectedMcons {
+  _type: String
+}
+
+type ConnectionIdentifier {
+  _type: String
+}
+
+type ConnectionRestriction {
+  _type: String
+}
+
+type ConnectionTestOptions {
+  _type: String
+}
+
+type ConnectionValidation {
+  _type: String
+}
+
+type ConnectionValidationData {
+  _type: String
+}
+
+type ContextUsage {
+  _type: String
+}
+
+type ContractCommit {
+  _type: String
+}
+
+type ContractCommitResults {
+  _type: String
+}
+
+type Conversation {
+  _type: String
+}
+
+type ConversationEvalDimension {
+  _type: String
+}
+
+type ConversationEvalDimensionError {
+  _type: String
+}
+
+type ConversationEvalResult {
+  _type: String
+}
+
+type ConversationEvalScore {
+  _type: String
+}
+
+type ConversationExplanationResult {
+  _type: String
+}
+
+type ConversationFilter {
+  _type: String
+}
+
+type ConversationFilterData {
+  _type: String
+}
+
+type ConversationFilterFieldName {
+  _type: String
+}
+
+type ConversationFilterValue {
+  _type: String
+}
+
+type ConversationMessageContentChunkV2 {
+  _type: String
+}
+
+type ConversationMessageV2 {
+  _type: String
+}
+
+type ConversationSortField {
+  _type: String
+}
+
+type ConversationSpan {
+  _type: String
+}
+
+type ConversationThreadResult {
+  _type: String
+}
+
+type ConversationThreadV2Result {
+  _type: String
+}
+
+type ConversationTurnError {
+  _type: String
+}
+
+type ConversationTurnV2 {
+  _type: String
+}
+
+type ConversationsResult {
+  _type: String
+}
+
+type ConvertConfigTemplateToUiMonitors {
+  _type: String
+}
+
+type ConvertConfigTemplateToUiMonitorsOutput {
+  _type: String
+}
+
+type ConvertUiMonitorsToConfigTemplate {
+  _type: String
+}
+
+type ConvertUiMonitorsToConfigTemplateOutput {
+  _type: String
+}
+
+type CorrelationSamplingMetadata {
+  _type: String
+}
+
+type CorrelationSamplingResult {
+  _type: String
+}
+
+type CreateAccessToken {
+  _type: String
+}
+
+type CreateAccountSecret {
+  _type: String
+}
+
+type CreateAgentOAuthClient {
+  _type: String
+}
+
+type CreateAgenticDomain {
+  _type: String
+}
+
+type CreateAzureDevOpsIntegration {
+  _type: String
+}
+
+type CreateAzureDevOpsWorkItemForAlert {
+  _type: String
+}
+
+type CreateAzureDevopsInstallation {
+  _type: String
+}
+
+type CreateCollectorRecord {
+  _type: String
+}
+
+type CreateCustomMetricRule {
+  _type: String
+}
+
+type CreateCustomRule {
+  _type: String
+}
+
+type CreateCustomUser {
+  _type: String
+}
+
+type CreateCustomerMcpServer {
+  _type: String
+}
+
+type CreateDashboardScheduleMutation {
+  _type: String
+}
+
+type CreateDataMaintenanceWindowFromHolidays {
+  _type: String
+}
+
+type CreateDatadogIncidentForAlert {
+  _type: String
+}
+
+type CreateDatadogIntegration {
+  _type: String
+}
+
+type CreateDraftMonitorFromYamlOutput {
+  _type: String
+}
+
+type CreateFig {
+  _type: String
+}
+
+type CreateIntegrationKey {
+  _type: String
+}
+
+type CreateJiraIntegration {
+  _type: String
+}
+
+type CreateJiraTicketForAlert {
+  _type: String
+}
+
+type CreateJiraTicketForIncident {
+  _type: String
+}
+
+type CreateLogsIntegration {
+  _type: String
+}
+
+type CreateMcpIntegrationKey {
+  _type: String
+}
+
+type CreateOAuthClientResponse {
+  _type: String
+}
+
+type CreateOpenTelemetryDataStore {
+  _type: String
+}
+
+type CreateOpsgenieIntegration {
+  _type: String
+}
+
+type CreateOrUpdateAccountRoleFromDefinition {
+  _type: String
+}
+
+type CreateOrUpdateAgent {
+  _type: String
+}
+
+type CreateOrUpdateAgentEvaluationMonitor {
+  _type: String
+}
+
+type CreateOrUpdateAgentMetricMonitor {
+  _type: String
+}
+
+type CreateOrUpdateAgentTraceTable {
+  _type: String
+}
+
+type CreateOrUpdateAgentTrajectory {
+  _type: String
+}
+
+type CreateOrUpdateAgentValidation {
+  _type: String
+}
+
+type CreateOrUpdateAgenticNotificationRoute {
+  _type: String
+}
+
+type CreateOrUpdateAlationIntegration {
+  _type: String
+}
+
+type CreateOrUpdateAlationTableFlag {
+  _type: String
+}
+
+type CreateOrUpdateAlertComment {
+  _type: String
+}
+
+type CreateOrUpdateAudience {
+  _type: String
+}
+
+type CreateOrUpdateAudienceNotificationSetting {
+  _type: String
+}
+
+type CreateOrUpdateAudienceRoutingRule {
+  _type: String
+}
+
+type CreateOrUpdateAuthProvisioning {
+  _type: String
+}
+
+type CreateOrUpdateAuthorizationGroup {
+  _type: String
+}
+
+type CreateOrUpdateBulkMonitor {
+  _type: String
+}
+
+type CreateOrUpdateCatalogObjectMetadata {
+  _type: String
+}
+
+type CreateOrUpdateCollibraIntegration {
+  _type: String
+}
+
+type CreateOrUpdateComparisonMonitor {
+  _type: String
+}
+
+type CreateOrUpdateComparisonRule {
+  _type: String
+}
+
+type CreateOrUpdateCustomIntegration {
+  _type: String
+}
+
+type CreateOrUpdateCustomIntegrationResult {
+  _type: String
+}
+
+type CreateOrUpdateCustomMetricRule {
+  _type: String
+}
+
+type CreateOrUpdateCustomRule {
+  _type: String
+}
+
+type CreateOrUpdateCustomSQLTemplate {
+  _type: String
+}
+
+type CreateOrUpdateCustomSqlRule {
+  _type: String
+}
+
+type CreateOrUpdateDashboard {
+  _type: String
+}
+
+type CreateOrUpdateDashboardFromJson {
+  _type: String
+}
+
+type CreateOrUpdateDataExplorerComparisonDashboardMutation {
+  _type: String
+}
+
+type CreateOrUpdateDataExplorerDashboardMutation {
+  _type: String
+}
+
+type CreateOrUpdateDataMaintenanceEntry {
+  _type: String
+}
+
+type CreateOrUpdateDataOperationsDashboardMutation {
+  _type: String
+}
+
+type CreateOrUpdateDataProduct {
+  _type: String
+}
+
+type CreateOrUpdateDataProductV2 {
+  _type: String
+}
+
+type CreateOrUpdateDataSamplingRestrictions {
+  _type: String
+}
+
+type CreateOrUpdateDomain {
+  _type: String
+}
+
+type CreateOrUpdateFieldQualityRule {
+  _type: String
+}
+
+type CreateOrUpdateFreshnessCustomRule {
+  _type: String
+}
+
+type CreateOrUpdateIncidentComment {
+  _type: String
+}
+
+type CreateOrUpdateJsonSchemaMonitor {
+  _type: String
+}
+
+type CreateOrUpdateLineageNode {
+  _type: String
+}
+
+type CreateOrUpdateLineageNodeBlockPattern {
+  _type: String
+}
+
+type CreateOrUpdateLineageNodeCollapsingRule {
+  _type: String
+}
+
+type CreateOrUpdateLineageNodeReplacementRule {
+  _type: String
+}
+
+type CreateOrUpdateMetricMonitor {
+  _type: String
+}
+
+type CreateOrUpdateMonitor {
+  _type: String
+}
+
+type CreateOrUpdateMonitorComment {
+  _type: String
+}
+
+type CreateOrUpdateMonitorLabel {
+  _type: String
+}
+
+type CreateOrUpdateMonteCarloConfigTemplate {
+  _type: String
+}
+
+type CreateOrUpdateMonteCarloConfigTemplateAsync {
+  _type: String
+}
+
+type CreateOrUpdateNotebook {
+  _type: String
+}
+
+type CreateOrUpdateNotificationSetting {
+  _type: String
+}
+
+type CreateOrUpdateObjectProperty {
+  _type: String
+}
+
+type CreateOrUpdatePlatformAgent {
+  _type: String
+}
+
+type CreateOrUpdateQueryPerfRule {
+  _type: String
+}
+
+type CreateOrUpdateRecipientName {
+  _type: String
+}
+
+type CreateOrUpdateResource {
+  _type: String
+}
+
+type CreateOrUpdateSamlIdentityProvider {
+  _type: String
+}
+
+type CreateOrUpdateServiceApiToken {
+  _type: String
+}
+
+type CreateOrUpdateSloPolicy {
+  _type: String
+}
+
+type CreateOrUpdateTableMonitor {
+  _type: String
+}
+
+type CreateOrUpdateTagAssignmentsMutation {
+  _type: String
+}
+
+type CreateOrUpdateTagMutation {
+  _type: String
+}
+
+type CreateOrUpdateUserSettings {
+  _type: String
+}
+
+type CreateOrUpdateUserSettingsBatch {
+  _type: String
+}
+
+type CreateOrUpdateValidation {
+  _type: String
+}
+
+type CreateOrUpdateVolumeRule {
+  _type: String
+}
+
+type CreatePagerDutyServiceIntegration {
+  _type: String
+}
+
+type CreatePiiMonitor {
+  _type: String
+}
+
+type CreateServiceNowIncidentForAlert {
+  _type: String
+}
+
+type CreateServiceNowIntegration {
+  _type: String
+}
+
+type CreateSharedQuery {
+  _type: String
+}
+
+type CreateSingleTableMonitoringNotification {
+  _type: String
+}
+
+type CreateTableauAssetWarning {
+  _type: String
+}
+
+type CreateUnifiedUserAssignment {
+  _type: String
+}
+
+type CreateWebexIntegration {
+  _type: String
+}
+
+type CreatedByFilters {
+  _type: String
+}
+
+type CreatedMonitor {
+  _type: String
+}
+
+type CreatorDimension {
+  _type: String
+}
+
+type CreatorMonitorCount {
+  _type: String
+}
+
+type CreatorMonitorCountsResponse {
+  _type: String
+}
+
+type Criticality {
+  _type: String
+}
+
+type CustomComparisonMetric {
+  _type: String
+}
+
+type CustomConnector {
+  _type: String
+}
+
+type CustomConnectorCapabilities {
+  _type: String
+}
+
+type CustomDashboard {
+  _type: String
+}
+
+type CustomDashboardJsonResponse {
+  _type: String
+}
+
+type CustomDashboardList {
+  _type: String
+}
+
+type CustomDashboardTimeSeriesLookup {
+  _type: String
+}
+
+type CustomDashboardTimeSeriesMetadata {
+  _type: String
+}
+
+type CustomDashboardWidget {
+  _type: String
+}
+
+type CustomDashboardWidgetContentData {
+  _type: String
+}
+
+type CustomEtlConnector {
+  _type: String
+}
+
+type CustomMetric {
+  _type: String
+}
+
+type CustomMetricQuery {
+  _type: String
+}
+
+type CustomRule {
+  _type: String
+}
+
+type CustomRuleComparison {
+  _type: String
+}
+
+type CustomRuleComparisonOperator {
+  _type: String
+}
+
+type CustomRuleExecutionAnalytics {
+  _type: String
+}
+
+type CustomRuleModelPausedReason {
+  _type: String
+}
+
+type CustomRuleQuery {
+  _type: String
+}
+
+type CustomRuleSqlBlocks {
+  _type: String
+}
+
+type CustomSQLOutputDownload {
+  _type: String
+}
+
+type CustomSQLOutputSample {
+  _type: String
+}
+
+type CustomSQLOutputSampleWithExceptions {
+  _type: String
+}
+
+type CustomSQLTemplate {
+  _type: String
+}
+
+type CustomUser {
+  _type: String
+}
+
+type CustomerMcpAuthenticationMethod {
+  _type: String
+}
+
+type CustomerMcpServerOutput {
+  _type: String
+}
+
+type DODCriteriaOutput {
+  _type: String
+}
+
+type DailyUsage {
+  _type: String
+}
+
+type DataAssetDashboard {
+  _type: String
+}
+
+type DataCollector {
+  _type: String
+}
+
+type DataCollectorEventTypes {
+  _type: String
+}
+
+type DataCollectorSchedule {
+  _type: String
+}
+
+type DataCollectorScheduleInfo {
+  _type: String
+}
+
+type DataCollectorScheduleModelDeleteReason {
+  _type: String
+}
+
+type DataCollectorScheduleModelSkipReason {
+  _type: String
+}
+
+type DataColumnTypes {
+  _type: String
+}
+
+type DataExplorerComparisonDashboardInputType {
+  _type: String
+}
+
+type DataExplorerDashboardInputType {
+  _type: String
+}
+
+type DataExplorerWidgetInputType {
+  _type: String
+}
+
+type DataExportNames {
+  _type: String
+}
+
+type DataExportURL {
+  _type: String
+}
+
+type DataMaintenanceEntry {
+  _type: String
+}
+
+type DataMaintenanceMetric {
+  _type: String
+}
+
+type DataOperationsDashboardOutput {
+  _type: String
+}
+
+type DataPoint {
+  _type: String
+}
+
+type DataProduct {
+  _type: String
+}
+
+type DataProductAsset {
+  _type: String
+}
+
+type DataProductAssetData {
+  _type: String
+}
+
+type DataProductDryRunTableCounts {
+  _type: String
+}
+
+type DataProductMetric {
+  _type: String
+}
+
+type DataProductMetricData {
+  _type: String
+}
+
+type DataProductMetricDataPoint {
+  _type: String
+}
+
+type DataProductPipeline {
+  _type: String
+}
+
+type DataProductUpstreamCoverageData {
+  _type: String
+}
+
+type DataProfileField {
+  _type: String
+}
+
+type DataProfileResult {
+  _type: String
+}
+
+type DataQualityWarningsRef {
+  _type: String
+}
+
+type DataSamplingRestrictions {
+  _type: String
+}
+
+type DataShareOutput {
+  _type: String
+}
+
+type DataSourceEvaluationResult {
+  _type: String
+}
+
+type DataSourceInputInterface {
+  _type: String
+}
+
+type DataSourceInputSql {
+  _type: String
+}
+
+type DataSourceInputTable {
+  _type: String
+}
+
+type DataSourceInterface {
+  _type: String
+}
+
+type DataSourceSchema {
+  _type: String
+}
+
+type DataSourceSql {
+  _type: String
+}
+
+type DataSourceTable {
+  _type: String
+}
+
+type DatabricksJob {
+  _type: String
+}
+
+type DatabricksJobRun {
+  _type: String
+}
+
+type DatabricksSqlWarehouseUpdateConnectionDetails {
+  _type: String
+}
+
+type DatabricksTask {
+  _type: String
+}
+
+type DatabricksTaskRun {
+  _type: String
+}
+
+type DatabricksWarehouseResponse {
+  _type: String
+}
+
+type DatadogIncident {
+  _type: String
+}
+
+type DatadogIncidentTypeOutput {
+  _type: String
+}
+
+type DatadogIntegrationOutput {
+  _type: String
+}
+
+type DatadogServiceOutput {
+  _type: String
+}
+
+type DatadogTeamOutput {
+  _type: String
+}
+
+type DatadogUserOutput {
+  _type: String
+}
+
+type Dataset {
+  _type: String
+}
+
+type DatasetEntity {
+  _type: String
+}
+
+type Date {
+  _type: String
+}
+
+type DateTime {
+  _type: String
+}
+
+type DateTimeAttribute {
+  _type: String
+}
+
+type DbtCloudConnectionDetails {
+  _type: String
+}
+
+type DbtCloudUpdateConnectionDetails {
+  _type: String
+}
+
+type DbtConnectionDetails {
+  _type: String
+}
+
+type DbtJob {
+  _type: String
+}
+
+type DbtJobExecution {
+  _type: String
+}
+
+type DbtJobExecutionStatuses {
+  _type: String
+}
+
+type DbtJobInfo {
+  _type: String
+}
+
+type DbtModelResult {
+  _type: String
+}
+
+type DbtNode {
+  _type: String
+}
+
+type DbtNodeResultCount {
+  _type: String
+}
+
+type DbtProject {
+  _type: String
+}
+
+type DbtProjectModelSource {
+  _type: String
+}
+
+type DbtResultCount {
+  _type: String
+}
+
+type DbtRun {
+  _type: String
+}
+
+type DbtRunResult {
+  _type: String
+}
+
+type DbtRunStep {
+  _type: String
+}
+
+type DbtTestRunResult {
+  _type: String
+}
+
+type DcMigrationStatusResponse {
+  _type: String
+}
+
+type DcPingResponse {
+  _type: String
+}
+
+type DeauthorizeSlackAppMutation {
+  _type: String
+}
+
+type Decimal {
+  _type: String
+}
+
+type DeleteAccessToken {
+  _type: String
+}
+
+type DeleteAccountSecret {
+  _type: String
+}
+
+type DeleteAgent {
+  _type: String
+}
+
+type DeleteAgentTraceTable {
+  _type: String
+}
+
+type DeleteAgenticDomain {
+  _type: String
+}
+
+type DeleteAgenticNotificationRoute {
+  _type: String
+}
+
+type DeleteAlationIntegration {
+  _type: String
+}
+
+type DeleteAlertComment {
+  _type: String
+}
+
+type DeleteAllowListEntry {
+  _type: String
+}
+
+type DeleteAssetCollectionPreferences {
+  _type: String
+}
+
+type DeleteAudienceNotificationSetting {
+  _type: String
+}
+
+type DeleteAudienceRoutingRule {
+  _type: String
+}
+
+type DeleteAuthorizationGroup {
+  _type: String
+}
+
+type DeleteAzureDevOpsIntegration {
+  _type: String
+}
+
+type DeleteAzureDevopsInstallation {
+  _type: String
+}
+
+type DeleteBulkMonitor {
+  _type: String
+}
+
+type DeleteCatalogObjectMetadata {
+  _type: String
+}
+
+type DeleteCiGateRepoOverride {
+  _type: String
+}
+
+type DeleteCollibraIntegration {
+  _type: String
+}
+
+type DeleteCustomDashboardWidget {
+  _type: String
+}
+
+type DeleteCustomRule {
+  _type: String
+}
+
+type DeleteCustomSQLTemplate {
+  _type: String
+}
+
+type DeleteCustomerMcpServer {
+  _type: String
+}
+
+type DeleteDashboard {
+  _type: String
+}
+
+type DeleteDashboardScheduleMutation {
+  _type: String
+}
+
+type DeleteDataExplorerComparisonDashboardMutation {
+  _type: String
+}
+
+type DeleteDataExplorerDashboardMutation {
+  _type: String
+}
+
+type DeleteDataMaintenanceEntry {
+  _type: String
+}
+
+type DeleteDataOperationsDashboardMutation {
+  _type: String
+}
+
+type DeleteDataProduct {
+  _type: String
+}
+
+type DeleteDataProductV2 {
+  _type: String
+}
+
+type DeleteDatadogIntegration {
+  _type: String
+}
+
+type DeleteDomain {
+  _type: String
+}
+
+type DeleteEtlJobsV3Result {
+  _type: String
+}
+
+type DeleteEventOnboardingData {
+  _type: String
+}
+
+type DeleteFinding {
+  _type: String
+}
+
+type DeleteGithubInstallation {
+  _type: String
+}
+
+type DeleteGitlabInstallation {
+  _type: String
+}
+
+type DeleteIncidentComment {
+  _type: String
+}
+
+type DeleteIntegrationKey {
+  _type: String
+}
+
+type DeleteIntegrationMutation {
+  _type: String
+}
+
+type DeleteJiraIntegration {
+  _type: String
+}
+
+type DeleteLineageNode {
+  _type: String
+}
+
+type DeleteLineageNodeBlockPattern {
+  _type: String
+}
+
+type DeleteLineageNodeCollapsingRule {
+  _type: String
+}
+
+type DeleteLineageNodeReplacementRule {
+  _type: String
+}
+
+type DeleteLogsIntegration {
+  _type: String
+}
+
+type DeleteMcpIntegrationKey {
+  _type: String
+}
+
+type DeleteMonitor {
+  _type: String
+}
+
+type DeleteMonitorComment {
+  _type: String
+}
+
+type DeleteMonitorLabel {
+  _type: String
+}
+
+type DeleteMonitorTag {
+  _type: String
+}
+
+type DeleteMonitors {
+  _type: String
+}
+
+type DeleteMonteCarloConfigTemplate {
+  _type: String
+}
+
+type DeleteNetworkAccessControl {
+  _type: String
+}
+
+type DeleteNotebook {
+  _type: String
+}
+
+type DeleteNotificationSetting {
+  _type: String
+}
+
+type DeleteOAuthClient {
+  _type: String
+}
+
+type DeleteObjectProperty {
+  _type: String
+}
+
+type DeleteOpenTelemetryDataStore {
+  _type: String
+}
+
+type DeleteOpsgenieIntegration {
+  _type: String
+}
+
+type DeletePagerDutyServiceIntegration {
+  _type: String
+}
+
+type DeletePlatformAgent {
+  _type: String
+}
+
+type DeletePushIngestedTables {
+  _type: String
+}
+
+type DeleteRecipientName {
+  _type: String
+}
+
+type DeleteSamlIdentityProvider {
+  _type: String
+}
+
+type DeleteServiceNowIntegration {
+  _type: String
+}
+
+type DeleteSloPolicy {
+  _type: String
+}
+
+type DeleteStreamingClusterMutation {
+  _type: String
+}
+
+type DeleteStreamingSystemMutation {
+  _type: String
+}
+
+type DeleteTableMonitor {
+  _type: String
+}
+
+type DeleteUnifiedUserAssignment {
+  _type: String
+}
+
+type DeleteUserInvite {
+  _type: String
+}
+
+type DeleteWebexIntegration {
+  _type: String
+}
+
+type DeltaLog {
+  _type: String
+}
+
+type DeltaLogConnectionPageInfo {
+  _type: String
+}
+
+type DenialReason {
+  _type: String
+}
+
+type DeployedMonitor {
+  _type: String
+}
+
+type DeploymentInfo {
+  _type: String
+}
+
+type DerivedTablePartialLineage {
+  _type: String
+}
+
+type DerivedTablesLineageResult {
+  _type: String
+}
+
+type DirectedGraph {
+  _type: String
+}
+
+type DisableAgentAssistance {
+  _type: String
+}
+
+type DisableFreshnessTableMonitor {
+  _type: String
+}
+
+type DisableMetadataEvents {
+  _type: String
+}
+
+type DisableQueryLogEvents {
+  _type: String
+}
+
+type DisableUCSTableMonitor {
+  _type: String
+}
+
+type DisableUser {
+  _type: String
+}
+
+type DisableVolumeChangeTableMonitor {
+  _type: String
+}
+
+type DomainAlertCounts {
+  _type: String
+}
+
+type DomainMembershipOutput {
+  _type: String
+}
+
+type DomainMonitorCounts {
+  _type: String
+}
+
+type DomainOutput {
+  _type: String
+}
+
+type DomainOutputV2 {
+  _type: String
+}
+
+type DomainRef {
+  _type: String
+}
+
+type DomainRestriction {
+  _type: String
+}
+
+type DomainSummaryOutput {
+  _type: String
+}
+
+type DomainTableCounts {
+  _type: String
+}
+
+type DomainsByTagMatchOutput {
+  _type: String
+}
+
+type DomainsByTagsOutput {
+  _type: String
+}
+
+type DomainsForMconsResponse {
+  _type: String
+}
+
+type DownstreamBI {
+  _type: String
+}
+
+type DownstreamImpactRadiusSummary {
+  _type: String
+}
+
+type DownstreamReport {
+  _type: String
+}
+
+type DownstreamReportOwners {
+  _type: String
+}
+
+type DownstreamReportTypes {
+  _type: String
+}
+
+type DownstreamReports {
+  _type: String
+}
+
+type Dynamic {
+  _type: String
+}
+
+type EffectiveTableMonitorOutput {
+  _type: String
+}
+
+type EmptyDataCollector {
+  _type: String
+}
+
+type EnableAgentAssistance {
+  _type: String
+}
+
+type EnableAutomatedFreshnessTableMonitor {
+  _type: String
+}
+
+type EnableAutomatedUCSTableMonitor {
+  _type: String
+}
+
+type EnableAutomatedVolumeChangeTableMonitor {
+  _type: String
+}
+
+type EnableExplicitFreshnessTableMonitor {
+  _type: String
+}
+
+type EnableExplicitUCSTableMonitor {
+  _type: String
+}
+
+type EnableExplicitVolumeChangeTableMonitor {
+  _type: String
+}
+
+type EntitlementLimits {
+  _type: String
+}
+
+type EntitlementTypes {
+  _type: String
+}
+
+type Error {
+  _type: String
+}
+
+type EstimatedCredits {
+  _type: String
+}
+
+type EtlContainer {
+  _type: String
+}
+
+type EtlDurationTrendIssue {
+  _type: String
+}
+
+type EtlGroupV3 {
+  _type: String
+}
+
+type EtlJobRunV3 {
+  _type: String
+}
+
+type EtlJobV3 {
+  _type: String
+}
+
+type EtlRunTrigger {
+  _type: String
+}
+
+type EtlTaskRunV3 {
+  _type: String
+}
+
+type EtlTaskV3 {
+  _type: String
+}
+
+type EvaluatedPermissionPolicy {
+  _type: String
+}
+
+type EvaluationError {
+  _type: String
+}
+
+type EvaluationErrorKind {
+  _type: String
+}
+
+type EvaluationResult {
+  _type: String
+}
+
+type EvaluationTemplateRef {
+  _type: String
+}
+
+type Event {
+  _type: String
+}
+
+type EventDataIncidentCommentTimeline {
+  _type: String
+}
+
+type EventDataIncidentOwnerUpdateTimeline {
+  _type: String
+}
+
+type EventDataIncidentReactionUpdateTimeline {
+  _type: String
+}
+
+type EventDataIncidentSeverityUpdateTimeline {
+  _type: String
+}
+
+type EventDataIncidentSplitTimeline {
+  _type: String
+}
+
+type EventDataIncidentStatusUpdateTimeline {
+  _type: String
+}
+
+type EventDetectorFeedback {
+  _type: String
+}
+
+type EventEvaluation {
+  _type: String
+}
+
+type EventGroup {
+  _type: String
+}
+
+type EventGroupKey {
+  _type: String
+}
+
+type EventGroupMetadata {
+  _type: String
+}
+
+type EventModelEventState {
+  _type: String
+}
+
+type EventMutingRule {
+  _type: String
+}
+
+type EventOnbardingConfig {
+  _type: String
+}
+
+type EventRcaStatusModelReason {
+  _type: String
+}
+
+type EventStateSummary {
+  _type: String
+}
+
+type EventTopology {
+  _type: String
+}
+
+type EventTypeSummary {
+  _type: String
+}
+
+type ExceptionActivityLogEntry {
+  _type: String
+}
+
+type ExceptionMetadataRowValue {
+  _type: String
+}
+
+type ExceptionMetadataSection {
+  _type: String
+}
+
+type ExecDashboardDataColumn {
+  _type: String
+}
+
+type ExecDashboardDataPoint {
+  _type: String
+}
+
+type ExecDashboardDataRow {
+  _type: String
+}
+
+type ExecDashboardMetric {
+  _type: String
+}
+
+type ExecDashboardMetrics {
+  _type: String
+}
+
+type ExecDashboardTable {
+  _type: String
+}
+
+type ExecDashboardTables {
+  _type: String
+}
+
+type ExplanatoryFieldMetadata {
+  _type: String
+}
+
+type ExportAgentSpans {
+  _type: String
+}
+
+type ExportAgentTrace {
+  _type: String
+}
+
+type ExtendedDataSource {
+  _type: String
+}
+
+type ExtractMemoryData {
+  _type: String
+}
+
+type FHEvent {
+  _type: String
+}
+
+type FHEvents {
+  _type: String
+}
+
+type FHEventsFilterValues {
+  _type: String
+}
+
+type FHNumericRcaResult {
+  _type: String
+}
+
+type FHNumericResult {
+  _type: String
+}
+
+type FacetEntry {
+  _type: String
+}
+
+type FacetResults {
+  _type: String
+}
+
+type FavoriteAsset {
+  _type: String
+}
+
+type FeedbackEntry {
+  _type: String
+}
+
+type FeedbackReason {
+  _type: String
+}
+
+type FieldChange {
+  _type: String
+}
+
+type FieldConfig {
+  _type: String
+}
+
+type FieldDistRcaData {
+  _type: String
+}
+
+type FieldDistRcaResult {
+  _type: String
+}
+
+type FieldDownstreamBi {
+  _type: String
+}
+
+type FieldHealth {
+  _type: String
+}
+
+type FieldHealthMetrics {
+  _type: String
+}
+
+type FieldHealthSampling {
+  _type: String
+}
+
+type FieldHealthSamplingConditionsResponse {
+  _type: String
+}
+
+type FieldMetadata {
+  _type: String
+}
+
+type FieldMetricCategory {
+  _type: String
+}
+
+type FieldMetricDataResponse {
+  _type: String
+}
+
+type FieldMetricDefinition {
+  _type: String
+}
+
+type FieldMetricFilterOutput {
+  _type: String
+}
+
+type FieldMetricOutput {
+  _type: String
+}
+
+type FieldMetricQuery {
+  _type: String
+}
+
+type FieldMode {
+  _type: String
+}
+
+type FieldOverviewProperty {
+  _type: String
+}
+
+type FieldOverviewResponse {
+  _type: String
+}
+
+type FieldPatternMatchResult {
+  _type: String
+}
+
+type FieldPatternTableMatch {
+  _type: String
+}
+
+type FieldQuery {
+  _type: String
+}
+
+type FieldQueryFilterOutput {
+  _type: String
+}
+
+type FieldQueryParametersOutput {
+  _type: String
+}
+
+type FieldTypeChange {
+  _type: String
+}
+
+type FieldValueCorrelation {
+  _type: String
+}
+
+type FieldValueFilterOperator {
+  _type: String
+}
+
+type FieldValueRange {
+  _type: String
+}
+
+type FigAgentSummary {
+  _type: String
+}
+
+type FigCostData {
+  _type: String
+}
+
+type FigDimension {
+  _type: String
+}
+
+type FigHealthOutput {
+  _type: String
+}
+
+type FigPracticalMetric {
+  _type: String
+}
+
+type FigPracticalMetricsData {
+  _type: String
+}
+
+type FigProjectSummary {
+  _type: String
+}
+
+type FigRecord {
+  _type: String
+}
+
+type FigRiskLevel {
+  _type: String
+}
+
+type FilterBinary {
+  _type: String
+}
+
+type FilterGroup {
+  _type: String
+}
+
+type FilterInterface {
+  _type: String
+}
+
+type FilterPredicate {
+  _type: String
+}
+
+type FilterSpan {
+  _type: String
+}
+
+type FilterSpanComparisonOperator {
+  _type: String
+}
+
+type FilterSpanInterface {
+  _type: String
+}
+
+type FilterSpanOccurrence {
+  _type: String
+}
+
+type FilterSpanRelation {
+  _type: String
+}
+
+type FilterSql {
+  _type: String
+}
+
+type FilterUnary {
+  _type: String
+}
+
+type FilterValueField {
+  _type: String
+}
+
+type FilterValueInterface {
+  _type: String
+}
+
+type FilterValueLiteral {
+  _type: String
+}
+
+type FilterValueMapKey {
+  _type: String
+}
+
+type FilterValueSql {
+  _type: String
+}
+
+type Finding {
+  _type: String
+}
+
+type FindingFeedbackAction {
+  _type: String
+}
+
+type FindingPriority {
+  _type: String
+}
+
+type FindingSeverity {
+  _type: String
+}
+
+type FindingStage {
+  _type: String
+}
+
+type FivetranConnector {
+  _type: String
+}
+
+type FivetranConnectorSetupStates {
+  _type: String
+}
+
+type FivetranConnectorStatuses {
+  _type: String
+}
+
+type FivetranConnectorSyncStates {
+  _type: String
+}
+
+type FivetranConnectorUpdateStates {
+  _type: String
+}
+
+type FivetranDestination {
+  _type: String
+}
+
+type FlattenedLineageGraphEdges {
+  _type: String
+}
+
+type Float {
+  _type: String
+}
+
+type Freshness {
+  _type: String
+}
+
+type FreshnessAlertConditionOutput {
+  _type: String
+}
+
+type FreshnessAutomatedAlertConditionOutput {
+  _type: String
+}
+
+type FreshnessDetectorThresholdOutput {
+  _type: String
+}
+
+type FreshnessExplicitAlertConditionOutput {
+  _type: String
+}
+
+type FreshnessTableMonitorConfigOutput {
+  _type: String
+}
+
+type G2ReviewPrompt {
+  _type: String
+}
+
+type GenerateAgentAwsExternalId {
+  _type: String
+}
+
+type GenerateCollectorTemplate {
+  _type: String
+}
+
+type GenerateDcUpgradeTemplate {
+  _type: String
+}
+
+type GenerateEvalPromptOutput {
+  _type: String
+}
+
+type GenerateReport {
+  _type: String
+}
+
+type GenerateSqlEvalOutput {
+  _type: String
+}
+
+type GenerateWebhookUrl {
+  _type: String
+}
+
+type GenericAlert {
+  _type: String
+}
+
+type GenericScalar {
+  _type: String
+}
+
+type GetAccountAuditLogsResponse {
+  _type: String
+}
+
+type GetAlationTableFlags {
+  _type: String
+}
+
+type GetCustomerMcpServerAuthorizationUrl {
+  _type: String
+}
+
+type GetTableauAssetWarningByIdResponse {
+  _type: String
+}
+
+type GithubAppInfo {
+  _type: String
+}
+
+type GithubAppInstallation {
+  _type: String
+}
+
+type GithubPullRequest {
+  _type: String
+}
+
+type GithubPullRequestFile {
+  _type: String
+}
+
+type GithubPullRequestImpact {
+  _type: String
+}
+
+type GithubPullRequestInsight {
+  _type: String
+}
+
+type GithubPullRequestsList {
+  _type: String
+}
+
+type GithubUser {
+  _type: String
+}
+
+type GitlabAppInfo {
+  _type: String
+}
+
+type GitlabAppInstallation {
+  _type: String
+}
+
+type GitlabEntityRef {
+  _type: String
+}
+
+type GitlabNamespace {
+  _type: String
+}
+
+type GitlabNamespaceSelection {
+  _type: String
+}
+
+type GitlabProject {
+  _type: String
+}
+
+type GitlabProjectSelection {
+  _type: String
+}
+
+type GitlabTraversalResult {
+  _type: String
+}
+
+type GlueConnectionDetails {
+  _type: String
+}
+
+type GlueUpdateConnectionDetails {
+  _type: String
+}
+
+type HasErrorsValue {
+  _type: String
+}
+
+type HighlightSnippets {
+  _type: String
+}
+
+type HolidayCode {
+  _type: String
+}
+
+type HolidayName {
+  _type: String
+}
+
+type HostingDomainDetails {
+  _type: String
+}
+
+type HostingInformation {
+  _type: String
+}
+
+type IAMPermissionDefinition {
+  _type: String
+}
+
+type IAMResourceDefinition {
+  _type: String
+}
+
+type IComparisonMonitor {
+  _type: String
+}
+
+type ICustomRulesMonitor {
+  _type: String
+}
+
+type ID {
+  _type: String
+}
+
+type IEtlAssetPerformanceSummary {
+  _type: String
+}
+
+type IEventDataBaseTimeline {
+  _type: String
+}
+
+type IMetricsMonitor {
+  _type: String
+}
+
+type IMonitor {
+  _type: String
+}
+
+type ImportanceScoreOperator {
+  _type: String
+}
+
+type ImportanceScoreTableStatsRule {
+  _type: String
+}
+
+type Incident {
+  _type: String
+}
+
+type IncidentCategory {
+  _type: String
+}
+
+type IncidentCategoryCount {
+  _type: String
+}
+
+type IncidentDailyCount {
+  _type: String
+}
+
+type IncidentDashboardData {
+  _type: String
+}
+
+type IncidentFeedback {
+  _type: String
+}
+
+type IncidentGroupBy {
+  _type: String
+}
+
+type IncidentModelFeedback {
+  _type: String
+}
+
+type IncidentModelPriority {
+  _type: String
+}
+
+type IncidentSummary {
+  _type: String
+}
+
+type IncidentTableMcons {
+  _type: String
+}
+
+type IncidentTimePeriodAggregateData {
+  _type: String
+}
+
+type IncidentTopology {
+  _type: String
+}
+
+type IncidentTypeSummary {
+  _type: String
+}
+
+type IncidentWeeklyDataDashboard {
+  _type: String
+}
+
+type IncidentsCountByDate {
+  _type: String
+}
+
+type IncidentsFilter {
+  _type: String
+}
+
+type IncidentsFilterData {
+  _type: String
+}
+
+type IncidentsFilterDataValue {
+  _type: String
+}
+
+type IncidentsFilterFields {
+  _type: String
+}
+
+type InformaticaConnectionDetails {
+  _type: String
+}
+
+type InformaticaMappingTask {
+  _type: String
+}
+
+type InformaticaMappingTaskRun {
+  _type: String
+}
+
+type InformaticaV2ConnectionDetails {
+  _type: String
+}
+
+type InformaticaV2UpdateConnectionDetails {
+  _type: String
+}
+
+type InfrastructureDetails {
+  _type: String
+}
+
+type IngestMemoryData {
+  _type: String
+}
+
+type InputObjectProperty {
+  _type: String
+}
+
+type Insight {
+  _type: String
+}
+
+type Int {
+  _type: String
+}
+
+type IntegerAttribute {
+  _type: String
+}
+
+type IntegrationKey {
+  _type: String
+}
+
+type IntegrationKeyMetadata {
+  _type: String
+}
+
+type IntegrationUpdateResult {
+  _type: String
+}
+
+type InternalNotifications {
+  _type: String
+}
+
+type InternalStepGroupV2 {
+  _type: String
+}
+
+type InvestigationQuery {
+  _type: String
+}
+
+type InviteUsersPayload {
+  _type: String
+}
+
+type InviteUsersV2 {
+  _type: String
+}
+
+type IsImportantTableStatsRule {
+  _type: String
+}
+
+type IsNotMonitoredReason {
+  _type: String
+}
+
+type JSONString {
+  _type: String
+}
+
+type JiraIntegrationOutput {
+  _type: String
+}
+
+type JiraIssueTypeFieldAllowedValueOutput {
+  _type: String
+}
+
+type JiraIssueTypeFieldOutput {
+  _type: String
+}
+
+type JiraIssueTypeOutput {
+  _type: String
+}
+
+type JiraProjectOutput {
+  _type: String
+}
+
+type JiraStatusMappingOutput {
+  _type: String
+}
+
+type JiraStatusOutput {
+  _type: String
+}
+
+type JiraTeamOutput {
+  _type: String
+}
+
+type JiraTestCredentialsOutput {
+  _type: String
+}
+
+type JiraTicket {
+  _type: String
+}
+
+type JiraTicketDetailsOutput {
+  _type: String
+}
+
+type JiraTicketOutput {
+  _type: String
+}
+
+type JiraTicketStatusOutput {
+  _type: String
+}
+
+type JiraUserOutput {
+  _type: String
+}
+
+type JiraWebhookConfigOutput {
+  _type: String
+}
+
+type JobError {
+  _type: String
+}
+
+type JobExecutionException {
+  _type: String
+}
+
+type JobExecutionHistoryLog {
+  _type: String
+}
+
+type JobInfo {
+  _type: String
+}
+
+type JobLineageGraph {
+  _type: String
+}
+
+type JobLineageNode {
+  _type: String
+}
+
+type JobPerformanceData {
+  _type: String
+}
+
+type JobPerformanceFacet {
+  _type: String
+}
+
+type JobPerformanceSummary {
+  _type: String
+}
+
+type JobsPerformanceFacetOption {
+  _type: String
+}
+
+type JobsPerformanceFacetResponse {
+  _type: String
+}
+
+type JobsPerformanceSummarySort {
+  _type: String
+}
+
+type LLMModel {
+  _type: String
+}
+
+type LabelCount {
+  _type: String
+}
+
+type LastSizeChange {
+  _type: String
+}
+
+type LineageAirflowJobAttributes {
+  _type: String
+}
+
+type LineageAzureDataFactoryJobAttributes {
+  _type: String
+}
+
+type LineageBaseJobAttributes {
+  _type: String
+}
+
+type LineageDatabricksJobAttributes {
+  _type: String
+}
+
+type LineageDbtJobAttributes {
+  _type: String
+}
+
+type LineageEdgeJob {
+  _type: String
+}
+
+type LineageFilter {
+  _type: String
+}
+
+type LineageFilterName {
+  _type: String
+}
+
+type LineageFilterOperator {
+  _type: String
+}
+
+type LineageFivetranJobAttributes {
+  _type: String
+}
+
+type LineageGraph {
+  _type: String
+}
+
+type LineageGraphEdgeJobs {
+  _type: String
+}
+
+type LineageGraphEdgeNode {
+  _type: String
+}
+
+type LineageGraphNode {
+  _type: String
+}
+
+type LineageGraphNodeJobs {
+  _type: String
+}
+
+type LineageGraphNodesEdgesJobs {
+  _type: String
+}
+
+type LineageInformaticaJobAttributes {
+  _type: String
+}
+
+type LineageJobAttributes {
+  _type: String
+}
+
+type LineageKafkaConnectorJobAttributes {
+  _type: String
+}
+
+type LineageMconNode {
+  _type: String
+}
+
+type LineageMulesoftJobAttributes {
+  _type: String
+}
+
+type LineageNodeBlockPattern {
+  _type: String
+}
+
+type LineageNodeCollapsingRule {
+  _type: String
+}
+
+type LineageNodeJob {
+  _type: String
+}
+
+type LineageNodeReplacementRule {
+  _type: String
+}
+
+type LineageNodeReplacementRuleResult {
+  _type: String
+}
+
+type LineageNodeTypeStat {
+  _type: String
+}
+
+type LineageNodeTypeStats {
+  _type: String
+}
+
+type LineageSources {
+  _type: String
+}
+
+type LinkAzureDevOpsIntegration {
+  _type: String
+}
+
+type LinkAzureDevOpsWorkItemForAlert {
+  _type: String
+}
+
+type LinkAzureDevopsInstallation {
+  _type: String
+}
+
+type LinkDatadogIncidentForAlert {
+  _type: String
+}
+
+type LinkGithubAppInstallation {
+  _type: String
+}
+
+type LinkGitlabApp {
+  _type: String
+}
+
+type LinkJiraTicketForAlert {
+  _type: String
+}
+
+type LinkJiraTicketForIncident {
+  _type: String
+}
+
+type LinkMsTeamsInstallation {
+  _type: String
+}
+
+type LinkOpsgenieIncident {
+  _type: String
+}
+
+type LinkServiceNowIncidentForAlert {
+  _type: String
+}
+
+type LinkSlackAppInstallation {
+  _type: String
+}
+
+type ListDataOperationsDashboardsOutput {
+  _type: String
+}
+
+type ListDataQualityDimensionsOutput {
+  _type: String
+}
+
+type ListDatasetsResponse {
+  _type: String
+}
+
+type ListMonitorTagsOutput {
+  _type: String
+}
+
+type ListProjectsResponse {
+  _type: String
+}
+
+type ListTagsOutput {
+  _type: String
+}
+
+type LogTypeParseResult {
+  _type: String
+}
+
+type LoginDetails {
+  _type: String
+}
+
+type LogsIntegrationOutput {
+  _type: String
+}
+
+type LookbackRange {
+  _type: String
+}
+
+type LookerConnectionDetails {
+  _type: String
+}
+
+type LookerDashboardTileRef {
+  _type: String
+}
+
+type LookerGitAuthConnectionDetails {
+  _type: String
+}
+
+type LookerGitAuthUpdateConnectionDetails {
+  _type: String
+}
+
+type LookerGitCloneConnectionDetails {
+  _type: String
+}
+
+type LookerUpdateConnectionDetails {
+  _type: String
+}
+
+type ManyToManyChange {
+  _type: String
+}
+
+type MatchAndCreateBiWarehouseSources {
+  _type: String
+}
+
+type MatchingBiWarehouseSources {
+  _type: String
+}
+
+type McSqlResult {
+  _type: String
+}
+
+type MconDomainMembershipsOutput {
+  _type: String
+}
+
+type McpServerAuthDiscovery {
+  _type: String
+}
+
+type MergeAlerts {
+  _type: String
+}
+
+type MergedAlert {
+  _type: String
+}
+
+type MetricAggregationInputType {
+  _type: String
+}
+
+type MetricAnomalyCorrelation {
+  _type: String
+}
+
+type MetricAnomalyCorrelationV2 {
+  _type: String
+}
+
+type MetricCorrelationResult {
+  _type: String
+}
+
+type MetricDimensions {
+  _type: String
+}
+
+type MetricEventGroup {
+  _type: String
+}
+
+type MetricEventGroupKey {
+  _type: String
+}
+
+type MetricEventGroupMetadata {
+  _type: String
+}
+
+type MetricInfo {
+  _type: String
+}
+
+type MetricMeasurement {
+  _type: String
+}
+
+type MetricMonitorSelectExpression {
+  _type: String
+}
+
+type MetricMonitoring {
+  _type: String
+}
+
+type MetricMonitoringBootstrapState {
+  _type: String
+}
+
+type MetricMonitoringModelPausedReason {
+  _type: String
+}
+
+type MetricMonitoringModelPriority {
+  _type: String
+}
+
+type MetricSampling {
+  _type: String
+}
+
+type MetricUnit {
+  _type: String
+}
+
+type Metrics {
+  _type: String
+}
+
+type MetricsFilter {
+  _type: String
+}
+
+type MigrateCollectorResources {
+  _type: String
+}
+
+type MigrateConnectionFromSnowflakeAgent {
+  _type: String
+}
+
+type MigrateConnectionToSnowflakeAgent {
+  _type: String
+}
+
+type ModelExecutionTypes {
+  _type: String
+}
+
+type Monitor {
+  _type: String
+}
+
+type MonitorAggTimeInterval {
+  _type: String
+}
+
+type MonitorApplyEligibility {
+  _type: String
+}
+
+type MonitorApplyMode {
+  _type: String
+}
+
+type MonitorAtRisk {
+  _type: String
+}
+
+type MonitorBootstrap {
+  _type: String
+}
+
+type MonitorComment {
+  _type: String
+}
+
+type MonitorConfiguration {
+  _type: String
+}
+
+type MonitorDashboard {
+  _type: String
+}
+
+type MonitorDashboardData {
+  _type: String
+}
+
+type MonitorDataSource {
+  _type: String
+}
+
+type MonitorDataset {
+  _type: String
+}
+
+type MonitorError {
+  _type: String
+}
+
+type MonitorExceptionActivityModelAction {
+  _type: String
+}
+
+type MonitorLabel {
+  _type: String
+}
+
+type MonitorLabelObject {
+  _type: String
+}
+
+type MonitorLimits {
+  _type: String
+}
+
+type MonitorProject {
+  _type: String
+}
+
+type MonitorQueries {
+  _type: String
+}
+
+type MonitorQueriesResults {
+  _type: String
+}
+
+type MonitorRecommendationModel {
+  _type: String
+}
+
+type MonitorRecommendationsResponse {
+  _type: String
+}
+
+type MonitorSamplingConfig {
+  _type: String
+}
+
+type MonitorSchedulingConfiguration {
+  _type: String
+}
+
+type MonitorSqlBlocks {
+  _type: String
+}
+
+type MonitorSummary {
+  _type: String
+}
+
+type MonitorTable {
+  _type: String
+}
+
+type MonitorTuningRec {
+  _type: String
+}
+
+type MonitorTuningRunResult {
+  _type: String
+}
+
+type MonitorTypeCount {
+  _type: String
+}
+
+type MonitorTypeCountsResponse {
+  _type: String
+}
+
+type MonitorWarehouse {
+  _type: String
+}
+
+type MonitoredTableRuleObject {
+  _type: String
+}
+
+type MonitoredTableRuleTableAttribute {
+  _type: String
+}
+
+type MonteCarloConfigTemplate {
+  _type: String
+}
+
+type MonteCarloConfigTemplateDeleteResponse {
+  _type: String
+}
+
+type MonteCarloConfigTemplateExportResponse {
+  _type: String
+}
+
+type MonteCarloConfigTemplateUpdateAsyncResponse {
+  _type: String
+}
+
+type MonteCarloConfigTemplateUpdateAsyncState {
+  _type: String
+}
+
+type MonteCarloConfigTemplateUpdateResponse {
+  _type: String
+}
+
+type MonteCarloStatusMapping {
+  _type: String
+}
+
+type MonthlyPosition {
+  _type: String
+}
+
+type MsTeamsChannel {
+  _type: String
+}
+
+type MsTeamsChannelList {
+  _type: String
+}
+
+type MsTeamsInstallation {
+  _type: String
+}
+
+type MsTeamsInstallationList {
+  _type: String
+}
+
+type MulesoftConnectionDetails {
+  _type: String
+}
+
+type NameRef {
+  _type: String
+}
+
+type NestedHighlightSnippets {
+  _type: String
+}
+
+type NetworkDetails {
+  _type: String
+}
+
+type NextPageInfo {
+  _type: String
+}
+
+type Node {
+  _type: String
+}
+
+type NodeAttributes {
+  _type: String
+}
+
+type NodeDetail {
+  _type: String
+}
+
+type NodeEdgeCSVStrings {
+  _type: String
+}
+
+type NodeEdgeGraph {
+  _type: String
+}
+
+type NodeEdgeStrings {
+  _type: String
+}
+
+type NodeProperties {
+  _type: String
+}
+
+type NodeWithUUID {
+  _type: String
+}
+
+type NotMonitoredReason {
+  _type: String
+}
+
+type Notebook {
+  _type: String
+}
+
+type NotificationAudience {
+  _type: String
+}
+
+type NotificationDailyCount {
+  _type: String
+}
+
+type NotificationDigestSettings {
+  _type: String
+}
+
+type NotificationExtra {
+  _type: String
+}
+
+type NotificationIncidentDailyCount {
+  _type: String
+}
+
+type NotificationRecordCount {
+  _type: String
+}
+
+type NotificationRoutingRule {
+  _type: String
+}
+
+type NotificationRoutingRules {
+  _type: String
+}
+
+type NotificationSetting {
+  _type: String
+}
+
+type NotificationTagPairs {
+  _type: String
+}
+
+type NotificationTypeCapabilities {
+  _type: String
+}
+
+type NumericAnomalyCorrelation {
+  _type: String
+}
+
+type NumericAnomalyOutliers {
+  _type: String
+}
+
+type NumericCorrelationRcaResult {
+  _type: String
+}
+
+type OAuthClientOutput {
+  _type: String
+}
+
+type OAuthConfiguration {
+  _type: String
+}
+
+type ObjectDocument {
+  _type: String
+}
+
+type ObjectProperty {
+  _type: String
+}
+
+type ObjectPropertyEntry {
+  _type: String
+}
+
+type OpenTelemetryCollectorDetails {
+  _type: String
+}
+
+type OpenTelemetryDataStore {
+  _type: String
+}
+
+type OpsgenieIncident {
+  _type: String
+}
+
+type OpsgenieIntegrationOutput {
+  _type: String
+}
+
+type OpsgenieLinkOutput {
+  _type: String
+}
+
+type OrchestratorDetails {
+  _type: String
+}
+
+type Override {
+  _type: String
+}
+
+type OwnerRef {
+  _type: String
+}
+
+type PageInfo {
+  _type: String
+}
+
+type PagerDutyServiceIntegrationOutput {
+  _type: String
+}
+
+type PaginateUsersBlastRadius2 {
+  _type: String
+}
+
+type PaginatedEventGroup {
+  _type: String
+}
+
+type ParsedQueryResult {
+  _type: String
+}
+
+type PartialObjectProperty {
+  _type: String
+}
+
+type PauseBulkMonitor {
+  _type: String
+}
+
+type PauseMonitor {
+  _type: String
+}
+
+type PauseMonitorBootstrap {
+  _type: String
+}
+
+type PauseMonitors {
+  _type: String
+}
+
+type PauseRule {
+  _type: String
+}
+
+type PauseTableMonitor {
+  _type: String
+}
+
+type PerformanceDashboardAccessValidationCode {
+  _type: String
+}
+
+type PeriodGrouping {
+  _type: String
+}
+
+type Permission {
+  _type: String
+}
+
+type PermissionAccessResult {
+  _type: String
+}
+
+type PermissionEffect {
+  _type: String
+}
+
+type PermissionPolicyDecisionReason {
+  _type: String
+}
+
+type PermissionPolicyDecisionReasonOutput {
+  _type: String
+}
+
+type PiiFilterMetricOutput {
+  _type: String
+}
+
+type PiiFilterOutput {
+  _type: String
+}
+
+type PiiFilterStatusPair {
+  _type: String
+}
+
+type PiiFilteringPreferencesOutput {
+  _type: String
+}
+
+type PiiMonitorMode {
+  _type: String
+}
+
+type PiiScanFinding {
+  _type: String
+}
+
+type PiiScanFindingsSummary {
+  _type: String
+}
+
+type PiiScanInventoryTotals {
+  _type: String
+}
+
+type PiiScanTableSummary {
+  _type: String
+}
+
+type PiiTypeInfo {
+  _type: String
+}
+
+type PineconeConnectionDetails {
+  _type: String
+}
+
+type PineconeUpdateConnectionDetails {
+  _type: String
+}
+
+type PineconeVectorIndexMetadata {
+  _type: String
+}
+
+type PipelineData {
+  _type: String
+}
+
+type PipelinesData {
+  _type: String
+}
+
+type PlatformAgent {
+  _type: String
+}
+
+type PlatformAgentDataSourceEvaluationResult {
+  _type: String
+}
+
+type PlatformMigrationStatusResponse {
+  _type: String
+}
+
+type PlatformMigrationTestStatusResponse {
+  _type: String
+}
+
+type PlatformRegionProperties {
+  _type: String
+}
+
+type PlatformServiceAgent {
+  _type: String
+}
+
+type PlatformServiceDeployment {
+  _type: String
+}
+
+type PlatformServiceObject {
+  _type: String
+}
+
+type PlatformServicePlatform {
+  _type: String
+}
+
+type PlatformServiceSupportCode {
+  _type: String
+}
+
+type PolicyEvaluationResult {
+  _type: String
+}
+
+type PolicyGenerationResponse {
+  _type: String
+}
+
+type PolicyMatchSpecificity {
+  _type: String
+}
+
+type PowerBIAuthModeEnumV2 {
+  _type: String
+}
+
+type PowerBIConnectionDetails {
+  _type: String
+}
+
+type PowerBIDashboardTileRef {
+  _type: String
+}
+
+type PowerBIUpdateAuthModeEnumV2 {
+  _type: String
+}
+
+type PowerBIWorkSpaceRef {
+  _type: String
+}
+
+type PowerBiUpdateConnectionDetails {
+  _type: String
+}
+
+type PrAgentConfig {
+  _type: String
+}
+
+type PrAgentRiskFactorWeights {
+  _type: String
+}
+
+type Predicate {
+  _type: String
+}
+
+type PredicateArity {
+  _type: String
+}
+
+type Priority {
+  _type: String
+}
+
+type PrivateLinkDetails {
+  _type: String
+}
+
+type Project {
+  _type: String
+}
+
+type ProjectEntity {
+  _type: String
+}
+
+type PropertyNameValue {
+  _type: String
+}
+
+type PropertyNameValues {
+  _type: String
+}
+
+type PropertyNames {
+  _type: String
+}
+
+type PropertyValues {
+  _type: String
+}
+
+type ProposedMonitor {
+  _type: String
+}
+
+type Provider {
+  _type: String
+}
+
+type ProvisioningSchema {
+  _type: String
+}
+
+type PruneDeletedTables {
+  _type: String
+}
+
+type PullRequestFilterName {
+  _type: String
+}
+
+type QPMonitorConfigInputType {
+  _type: String
+}
+
+type QueriedTable {
+  _type: String
+}
+
+type QueryCategory {
+  _type: String
+}
+
+type QueryDataObject {
+  _type: String
+}
+
+type QueryDimensions {
+  _type: String
+}
+
+type QueryListObject {
+  _type: String
+}
+
+type QueryListResponse {
+  _type: String
+}
+
+type QueryLogHash {
+  _type: String
+}
+
+type QueryLogHashes {
+  _type: String
+}
+
+type QueryLogMetadata {
+  _type: String
+}
+
+type QueryLogResponse {
+  _type: String
+}
+
+type QueryLogTimeline {
+  _type: String
+}
+
+type QueryLogsFacetRequestTypeV2 {
+  _type: String
+}
+
+type QueryMapObject {
+  _type: String
+}
+
+type QueryRca {
+  _type: String
+}
+
+type QueryRef {
+  _type: String
+}
+
+type QuerySelection {
+  _type: String
+}
+
+type QueryTemplateOutput {
+  _type: String
+}
+
+type QueryTemplateVariable {
+  _type: String
+}
+
+type QueryTemplateVariableValueOutput {
+  _type: String
+}
+
+type QueryWithResults {
+  _type: String
+}
+
+type QueuedJob {
+  _type: String
+}
+
+type RcaData {
+  _type: String
+}
+
+type RcaJob {
+  _type: String
+}
+
+type RcaPlotData {
+  _type: String
+}
+
+type RcaResult {
+  _type: String
+}
+
+type ReInviteUsers {
+  _type: String
+}
+
+type RecommendationConfigInterface {
+  _type: String
+}
+
+type RecommendationConfigMetricMonitor {
+  _type: String
+}
+
+type RecommendationConfigValidationMonitor {
+  _type: String
+}
+
+type RedshiftConnectionDetails {
+  _type: String
+}
+
+type RedshiftUpdateConnectionDetails {
+  _type: String
+}
+
+type RefreshEntitlements {
+  _type: String
+}
+
+type RefreshOpenTelemetryCollectorConfig {
+  _type: String
+}
+
+type RegisterGithubAppInstallationRequest {
+  _type: String
+}
+
+type RegisterGithubAppOnGhes {
+  _type: String
+}
+
+type RegisterGitlabApp {
+  _type: String
+}
+
+type RelatedAlert {
+  _type: String
+}
+
+type RelatedAsset {
+  _type: String
+}
+
+type RelatedMonitor {
+  _type: String
+}
+
+type RelatedUserCount {
+  _type: String
+}
+
+type RelinkOpsgenieIncident {
+  _type: String
+}
+
+type RemoveConnectionCtpConfig {
+  _type: String
+}
+
+type RemoveConnectionMutation {
+  _type: String
+}
+
+type RemoveDataSamplingRestrictions {
+  _type: String
+}
+
+type RemoveDomainAssignments {
+  _type: String
+}
+
+type RemoveFavoriteAsset {
+  _type: String
+}
+
+type RemoveFromCollectionBlockList {
+  _type: String
+}
+
+type RemoveMonitorsLabels {
+  _type: String
+}
+
+type Report {
+  _type: String
+}
+
+type ReportArgumentsAlerts {
+  _type: String
+}
+
+type ReportArgumentsConsumption {
+  _type: String
+}
+
+type ReportArgumentsEvents {
+  _type: String
+}
+
+type ReportArgumentsInterface {
+  _type: String
+}
+
+type ReportArgumentsMonitorLogs {
+  _type: String
+}
+
+type Resource {
+  _type: String
+}
+
+type ResourceModification {
+  _type: String
+}
+
+type ResourcePolicyPath {
+  _type: String
+}
+
+type ResponseURL {
+  _type: String
+}
+
+type RestartAgent {
+  _type: String
+}
+
+type RestoreCollectionStorage {
+  _type: String
+}
+
+type RestoreCustomRule {
+  _type: String
+}
+
+type RestoreMonitors {
+  _type: String
+}
+
+type ResumeMonitorBootstrap {
+  _type: String
+}
+
+type ReusableCapability {
+  _type: String
+}
+
+type RevokeCustomerMcpServerAuthorization {
+  _type: String
+}
+
+type RoleOutput {
+  _type: String
+}
+
+type RunAgentEvaluationsOutput {
+  _type: String
+}
+
+type RunCustomRules {
+  _type: String
+}
+
+type RunDailyCount {
+  _type: String
+}
+
+type RunMonitor {
+  _type: String
+}
+
+type RunMonitors {
+  _type: String
+}
+
+type RunSqlRule {
+  _type: String
+}
+
+type RunTableMonitorValidation {
+  _type: String
+}
+
+type SQLQueryResult {
+  _type: String
+}
+
+type SQLResponse {
+  _type: String
+}
+
+type SamlIdentityProvider {
+  _type: String
+}
+
+type SampleDataSection {
+  _type: String
+}
+
+type SamplingEnabledMetricTypes {
+  _type: String
+}
+
+type SaveEventOnboardingData {
+  _type: String
+}
+
+type SaveNetworkAccessControl {
+  _type: String
+}
+
+type SaveSlackCredentialsMutation {
+  _type: String
+}
+
+type SaveTableImportanceStats {
+  _type: String
+}
+
+type ScalarChange {
+  _type: String
+}
+
+type Scale {
+  _type: String
+}
+
+type ScheduleConfig {
+  _type: String
+}
+
+type ScheduleConfigOutput {
+  _type: String
+}
+
+type SchemaChange {
+  _type: String
+}
+
+type SchemaField {
+  _type: String
+}
+
+type ScoringAnchorOutput {
+  _type: String
+}
+
+type SearchResponse {
+  _type: String
+}
+
+type SearchResult {
+  _type: String
+}
+
+type SearchResultProperty {
+  _type: String
+}
+
+type SegmentCountQuery {
+  _type: String
+}
+
+type SegmentCountSource {
+  _type: String
+}
+
+type SegmentLabels {
+  _type: String
+}
+
+type SegmentsFilter {
+  _type: String
+}
+
+type SelectGitlabProjects {
+  _type: String
+}
+
+type SelfHostedCredentialsConnectionDetails {
+  _type: String
+}
+
+type SelfHostedUpdateCredentialsConnectionDetails {
+  _type: String
+}
+
+type SendAlertInvite {
+  _type: String
+}
+
+type SendDbtArtifactsEvent {
+  _type: String
+}
+
+type SensitivityLevels {
+  _type: String
+}
+
+type SensitivityThreshold {
+  _type: String
+}
+
+type ServiceNowChoiceOutput {
+  _type: String
+}
+
+type ServiceNowCredentialsInterface {
+  _type: String
+}
+
+type ServiceNowCredentialsOAuthClientCredentials {
+  _type: String
+}
+
+type ServiceNowCredentialsUsernamePassword {
+  _type: String
+}
+
+type ServiceNowFieldOutput {
+  _type: String
+}
+
+type ServiceNowIncident {
+  _type: String
+}
+
+type ServiceNowIncidentDetailsOutput {
+  _type: String
+}
+
+type ServiceNowIncidentOutput {
+  _type: String
+}
+
+type ServiceNowIncidentStateOutput {
+  _type: String
+}
+
+type ServiceNowIntegrationOptions {
+  _type: String
+}
+
+type ServiceNowIntegrationOutput {
+  _type: String
+}
+
+type ServiceNowStateMappingOutput {
+  _type: String
+}
+
+type ServiceNowTestCredentialsOutput {
+  _type: String
+}
+
+type ServiceNowUserOutput {
+  _type: String
+}
+
+type ServiceNowWebhookConfigOutput {
+  _type: String
+}
+
+type SessionSettings {
+  _type: String
+}
+
+type SetAccountBillingPlan {
+  _type: String
+}
+
+type SetAccountName {
+  _type: String
+}
+
+type SetAlertOwner {
+  _type: String
+}
+
+type SetAlertSeverity {
+  _type: String
+}
+
+type SetAssetCollectionPreferences {
+  _type: String
+}
+
+type SetAzureDevopsSourceSelections {
+  _type: String
+}
+
+type SetCollibraMcDomainMapping {
+  _type: String
+}
+
+type SetConnectionCtpConfig {
+  _type: String
+}
+
+type SetConnectionDeletionProtectionMutation {
+  _type: String
+}
+
+type SetConnectionName {
+  _type: String
+}
+
+type SetCustomSqlSamplingSize {
+  _type: String
+}
+
+type SetDataLakeCatalogMappings {
+  _type: String
+}
+
+type SetDbtCloudEventFilter {
+  _type: String
+}
+
+type SetDefaultAlertGroupInterval {
+  _type: String
+}
+
+type SetDefaultFailureAudiences {
+  _type: String
+}
+
+type SetDefaultIncidentGroupInterval {
+  _type: String
+}
+
+type SetDefaultLineageAlertGrouping {
+  _type: String
+}
+
+type SetDefaultLineageIncidentGrouping {
+  _type: String
+}
+
+type SetEtlContainerName {
+  _type: String
+}
+
+type SetEtlJobGeneratesAlerts {
+  _type: String
+}
+
+type SetEtlJobGeneratesAlertsV3Result {
+  _type: String
+}
+
+type SetEtlJobGeneratesIncidents {
+  _type: String
+}
+
+type SetEventDetectorFeedback {
+  _type: String
+}
+
+type SetEventDetectorFeedbackByAlert {
+  _type: String
+}
+
+type SetGroupRepetitiveDbtModelFailures {
+  _type: String
+}
+
+type SetGroupRepetitiveDbtSeedFailures {
+  _type: String
+}
+
+type SetGroupRepetitiveDbtSnapshotFailures {
+  _type: String
+}
+
+type SetGroupRepetitiveDbtTestFailures {
+  _type: String
+}
+
+type SetGroupRepetitiveDbtTestWarnings {
+  _type: String
+}
+
+type SetIncidentFeedbackPayload {
+  _type: String
+}
+
+type SetIncidentFeedbackV2Payload {
+  _type: String
+}
+
+type SetIncidentOwner {
+  _type: String
+}
+
+type SetIncidentSeverity {
+  _type: String
+}
+
+type SetIntegrationName {
+  _type: String
+}
+
+type SetJobGeneratesAlerts {
+  _type: String
+}
+
+type SetJobGeneratesIncidents {
+  _type: String
+}
+
+type SetMaxTimeSeries {
+  _type: String
+}
+
+type SetMonitorVisibilityForAsset {
+  _type: String
+}
+
+type SetProjectGenerateAlertsForModelFailures {
+  _type: String
+}
+
+type SetProjectGenerateAlertsForSeedFailures {
+  _type: String
+}
+
+type SetProjectGenerateAlertsForSnapshotFailures {
+  _type: String
+}
+
+type SetProjectGenerateAlertsForTestFailures {
+  _type: String
+}
+
+type SetProjectGenerateAlertsForTestWarnings {
+  _type: String
+}
+
+type SetProjectGenerateIncidentsForModelFailures {
+  _type: String
+}
+
+type SetProjectGenerateIncidentsForTestFailures {
+  _type: String
+}
+
+type SetProjectGenerateIncidentsForTestWarnings {
+  _type: String
+}
+
+type SetProjectPropagateJobTags {
+  _type: String
+}
+
+type SetSensitivity {
+  _type: String
+}
+
+type SetSloPolicies {
+  _type: String
+}
+
+type SetTutorialState {
+  _type: String
+}
+
+type SetWarehouseName {
+  _type: String
+}
+
+type SetWildcardTemplates {
+  _type: String
+}
+
+type SetWorkspacesAllowListForPowerBiReportsCollection {
+  _type: String
+}
+
+type Severity {
+  _type: String
+}
+
+type SharedQueryOutput {
+  _type: String
+}
+
+type SheetDashboardRef {
+  _type: String
+}
+
+type SiteRef {
+  _type: String
+}
+
+type Size {
+  _type: String
+}
+
+type SizeCollectionConfiguration {
+  _type: String
+}
+
+type SizeCollectionQuery {
+  _type: String
+}
+
+type SlackChannel {
+  _type: String
+}
+
+type SlackChannelResponse {
+  _type: String
+}
+
+type SlackChannelV2 {
+  _type: String
+}
+
+type SlackConfig {
+  _type: String
+}
+
+type SlackCredentials {
+  _type: String
+}
+
+type SlackCredentialsV2 {
+  _type: String
+}
+
+type SlackEngagement {
+  _type: String
+}
+
+type SlackMessageDetails {
+  _type: String
+}
+
+type SlackOauthUrlResponse {
+  _type: String
+}
+
+type SlackUserGroupListOutput {
+  _type: String
+}
+
+type SlackUserGroupOutput {
+  _type: String
+}
+
+type SlackUserListOutput {
+  _type: String
+}
+
+type SlackUserOutput {
+  _type: String
+}
+
+type SloPolicy {
+  _type: String
+}
+
+type SnoozeCustomRule {
+  _type: String
+}
+
+type SnoozeCustomRules {
+  _type: String
+}
+
+type SnoozeDbtNode {
+  _type: String
+}
+
+type SnowflakeConnectionDetails {
+  _type: String
+}
+
+type SnowflakeUpdateConnectionDetails {
+  _type: String
+}
+
+type SourceColumn {
+  _type: String
+}
+
+type SpanPredicate {
+  _type: String
+}
+
+type SpanPredicateArity {
+  _type: String
+}
+
+type SpanTrendMetrics {
+  _type: String
+}
+
+type SplitAlert {
+  _type: String
+}
+
+type SplitIncident {
+  _type: String
+}
+
+type SqlBlockEvaluationResult {
+  _type: String
+}
+
+type SqlDialect {
+  _type: String
+}
+
+type SqlExpression {
+  _type: String
+}
+
+type SqlParsedTable {
+  _type: String
+}
+
+type SqlParserResult {
+  _type: String
+}
+
+type SqlQueryTable {
+  _type: String
+}
+
+type SslInputOptions {
+  _type: String
+}
+
+type SslOptions {
+  _type: String
+}
+
+type SslUpdateOptions {
+  _type: String
+}
+
+type SsoDetails {
+  _type: String
+}
+
+type StartDatabricksWarehouse {
+  _type: String
+}
+
+type StartTsaAnalysis {
+  _type: String
+}
+
+type State {
+  _type: String
+}
+
+type StatementOption {
+  _type: String
+}
+
+type StopMonitor {
+  _type: String
+}
+
+type StorageOptimizationCandidate {
+  _type: String
+}
+
+type StorageOptimizationCandidatesFilter {
+  _type: String
+}
+
+type StorageOptimizationCandidatesResult {
+  _type: String
+}
+
+type StorageOptimizationPageInfo {
+  _type: String
+}
+
+type StreamingCluster {
+  _type: String
+}
+
+type StreamingSystem {
+  _type: String
+}
+
+type StreamingSystemWithClusters {
+  _type: String
+}
+
+type Strictness {
+  _type: String
+}
+
+type String {
+  _type: String
+}
+
+type StringAttribute {
+  _type: String
+}
+
+type SubmitFindingFeedback {
+  _type: String
+}
+
+type SupportedTableValidationsResponse {
+  _type: String
+}
+
+type SupportedValidationsResponse {
+  _type: String
+}
+
+type SupportedWidget {
+  _type: String
+}
+
+type SwitchUserAccount {
+  _type: String
+}
+
+type SyncMonitorsToCollibra {
+  _type: String
+}
+
+type TSAAvailability {
+  _type: String
+}
+
+type TableAnomaly {
+  _type: String
+}
+
+type TableAnomalyModelReason {
+  _type: String
+}
+
+type TableCapabilitesWithReasonField {
+  _type: String
+}
+
+type TableCapabilitiesResponse {
+  _type: String
+}
+
+type TableColumnsLineageResult {
+  _type: String
+}
+
+type TableField {
+  _type: String
+}
+
+type TableFieldDescriptor {
+  _type: String
+}
+
+type TableFieldImportance {
+  _type: String
+}
+
+type TableFields {
+  _type: String
+}
+
+type TableFieldsImportance {
+  _type: String
+}
+
+type TableImportanceStatsResponse {
+  _type: String
+}
+
+type TableMetadata {
+  _type: String
+}
+
+type TableMetricV2 {
+  _type: String
+}
+
+type TableMonitor {
+  _type: String
+}
+
+type TableMonitorAlertCondition {
+  _type: String
+}
+
+type TableMonitorConfiguration {
+  _type: String
+}
+
+type TableMonitorCoverage {
+  _type: String
+}
+
+type TableMonitorMetric {
+  _type: String
+}
+
+type TableMonitorModelPriority {
+  _type: String
+}
+
+type TableMonitorStatuses {
+  _type: String
+}
+
+type TableOutput {
+  _type: String
+}
+
+type TablePartitionKeys {
+  _type: String
+}
+
+type TableRef {
+  _type: String
+}
+
+type TableResources {
+  _type: String
+}
+
+type TableSchemaVersion {
+  _type: String
+}
+
+type TableSourceSample {
+  _type: String
+}
+
+type TableStat {
+  _type: String
+}
+
+type TableStats {
+  _type: String
+}
+
+type TableStatsRules {
+  _type: String
+}
+
+type TableStatsV2 {
+  _type: String
+}
+
+type TableTag {
+  _type: String
+}
+
+type TableUpstreamData {
+  _type: String
+}
+
+type TableUseCaseMembership {
+  _type: String
+}
+
+type TableUseCasesResult {
+  _type: String
+}
+
+type TableValidation {
+  _type: String
+}
+
+type TableWithAnomalies {
+  _type: String
+}
+
+type TableauAccount {
+  _type: String
+}
+
+type TableauConnectionDetails {
+  _type: String
+}
+
+type TableauMetadata {
+  _type: String
+}
+
+type TableauUpdateConnectionDetails {
+  _type: String
+}
+
+type TableauWorkbookCount {
+  _type: String
+}
+
+type TagInfoOutput {
+  _type: String
+}
+
+type TagKeyValuePairOutput {
+  _type: String
+}
+
+type TagObjectOutput {
+  _type: String
+}
+
+type TagPair {
+  _type: String
+}
+
+type TaskPerformanceData {
+  _type: String
+}
+
+type TaskPerformanceSummary {
+  _type: String
+}
+
+type TasksPerformanceSummarySort {
+  _type: String
+}
+
+type Terminology {
+  _type: String
+}
+
+type TestAirflowCredentialsV2 {
+  _type: String
+}
+
+type TestAthenaCredentials {
+  _type: String
+}
+
+type TestAthenaCredentialsV2 {
+  _type: String
+}
+
+type TestAzureDataFactoryCredentials {
+  _type: String
+}
+
+type TestAzureDevOpsCredentialsOutput {
+  _type: String
+}
+
+type TestBqCredentials {
+  _type: String
+}
+
+type TestBqCredentialsV2 {
+  _type: String
+}
+
+type TestConfluentKafkaConnectCredentials {
+  _type: String
+}
+
+type TestConfluentKafkaCredentials {
+  _type: String
+}
+
+type TestConnectionResponse {
+  _type: String
+}
+
+type TestCredentialsMutation {
+  _type: String
+}
+
+type TestCredentialsV2Response {
+  _type: String
+}
+
+type TestCustomConnector {
+  _type: String
+}
+
+type TestDatabaseCredentials {
+  _type: String
+}
+
+type TestDatabricksMetastoreSqlWarehouseCredentialsV2 {
+  _type: String
+}
+
+type TestDatabricksSqlWarehouseCredentials {
+  _type: String
+}
+
+type TestDatabricksSqlWarehouseCredentialsV2 {
+  _type: String
+}
+
+type TestDatadogCredentialsOutput {
+  _type: String
+}
+
+type TestDbtCloudCredentials {
+  _type: String
+}
+
+type TestDbtCloudCredentialsV2 {
+  _type: String
+}
+
+type TestFivetranCredentials {
+  _type: String
+}
+
+type TestGlueCredentials {
+  _type: String
+}
+
+type TestGlueCredentialsV2 {
+  _type: String
+}
+
+type TestHiveCredentials {
+  _type: String
+}
+
+type TestInformaticaCredentials {
+  _type: String
+}
+
+type TestInformaticaV2Credentials {
+  _type: String
+}
+
+type TestLookerCredentialsV2 {
+  _type: String
+}
+
+type TestLookerGitAuthCredentialsV2 {
+  _type: String
+}
+
+type TestLookerGitCloneCredentials {
+  _type: String
+}
+
+type TestLookerGitCloneCredentialsV2 {
+  _type: String
+}
+
+type TestLookerGitCredentials {
+  _type: String
+}
+
+type TestMskKafkaConnectCredentials {
+  _type: String
+}
+
+type TestMskKafkaCredentials {
+  _type: String
+}
+
+type TestMulesoftCredentials {
+  _type: String
+}
+
+type TestPineconeCredentials {
+  _type: String
+}
+
+type TestPowerBICredentials {
+  _type: String
+}
+
+type TestPowerBICredentialsV2 {
+  _type: String
+}
+
+type TestPrestoCredentials {
+  _type: String
+}
+
+type TestRedshiftCredentialsV2 {
+  _type: String
+}
+
+type TestS3Credentials {
+  _type: String
+}
+
+type TestSelfHostedCredentials {
+  _type: String
+}
+
+type TestSelfHostedCredentialsV2 {
+  _type: String
+}
+
+type TestSelfHostedKafkaConnectCredentials {
+  _type: String
+}
+
+type TestSelfHostedKafkaCredentials {
+  _type: String
+}
+
+type TestSnowflakeCredentials {
+  _type: String
+}
+
+type TestSnowflakeCredentialsV2 {
+  _type: String
+}
+
+type TestSparkCredentials {
+  _type: String
+}
+
+type TestTableauCredentialsMutation {
+  _type: String
+}
+
+type TestTableauCredentialsV2 {
+  _type: String
+}
+
+type TestTransactionalDbCredentialsV2 {
+  _type: String
+}
+
+type TestUpdatedCredentialsV2Mutation {
+  _type: String
+}
+
+type Threshold {
+  _type: String
+}
+
+type ThresholdModifier {
+  _type: String
+}
+
+type ThresholdsData {
+  _type: String
+}
+
+type TimeAxisDeltaDetectionResult {
+  _type: String
+}
+
+type TimeAxisMetadata {
+  _type: String
+}
+
+type TimeBucketSize {
+  _type: String
+}
+
+type TimeFilter {
+  _type: String
+}
+
+type TimeLineEvent {
+  _type: String
+}
+
+type TimeRangeOutput {
+  _type: String
+}
+
+type TimeRangeUnit {
+  _type: String
+}
+
+type TimeSeries {
+  _type: String
+}
+
+type TimelineEventData {
+  _type: String
+}
+
+type TimestampHistogramSimpleWidgetConfig {
+  _type: String
+}
+
+type TimestampResult {
+  _type: String
+}
+
+type ToggleAccountFeature {
+  _type: String
+}
+
+type ToggleAlertGrouping {
+  _type: String
+}
+
+type ToggleConnectionEnable {
+  _type: String
+}
+
+type ToggleCreateAlertsInDatasource {
+  _type: String
+}
+
+type ToggleDataProductMonitoring {
+  _type: String
+}
+
+type ToggleDatasetInputItem {
+  _type: String
+}
+
+type ToggleDisableSampling {
+  _type: String
+}
+
+type ToggleDisableValueIngestion {
+  _type: String
+}
+
+type ToggleDisableValueSamplingWhenTesting {
+  _type: String
+}
+
+type ToggleEventConfig {
+  _type: String
+}
+
+type ToggleFullDistributionMetrics {
+  _type: String
+}
+
+type ToggleIncidentGrouping {
+  _type: String
+}
+
+type ToggleMuteDatasetPayload {
+  _type: String
+}
+
+type ToggleMuteDatasetsPayload {
+  _type: String
+}
+
+type ToggleMuteTablePayload {
+  _type: String
+}
+
+type ToggleMuteTablesPayload {
+  _type: String
+}
+
+type ToggleMuteWithRegexPayload {
+  _type: String
+}
+
+type TogglePerformanceDashboardForDomainRestrictedUsers {
+  _type: String
+}
+
+type ToggleRestrictSampling {
+  _type: String
+}
+
+type ToggleSchemaChangeAlertGrouping {
+  _type: String
+}
+
+type ToggleSchemaChangeIncidentGrouping {
+  _type: String
+}
+
+type ToggleSizeCollection {
+  _type: String
+}
+
+type ToggleSlackBroadcastUpdates {
+  _type: String
+}
+
+type ToggleSlackReplyWarning {
+  _type: String
+}
+
+type ToggleTableInputItem {
+  _type: String
+}
+
+type ToggleWarehouseTagsCollectionSetting {
+  _type: String
+}
+
+type ToggleWildcardAggregation {
+  _type: String
+}
+
+type TokenMetadata {
+  _type: String
+}
+
+type ToolCallBlock {
+  _type: String
+}
+
+type ToolCallMetricGroup {
+  _type: String
+}
+
+type ToolCallOverviewMetrics {
+  _type: String
+}
+
+type ToolCallOverviewMetricsWithComparison {
+  _type: String
+}
+
+type ToolCallTimeSeriesMetric {
+  _type: String
+}
+
+type ToolDetail {
+  _type: String
+}
+
+type TopTool {
+  _type: String
+}
+
+type Trace {
+  _type: String
+}
+
+type TraceBucketSize {
+  _type: String
+}
+
+type TraceExplanationResult {
+  _type: String
+}
+
+type TraceFilter {
+  _type: String
+}
+
+type TraceFilterData {
+  _type: String
+}
+
+type TraceFilterDataPageInfo {
+  _type: String
+}
+
+type TraceFilterDataRequest {
+  _type: String
+}
+
+type TraceFilterDataSearchCriteria {
+  _type: String
+}
+
+type TraceFilterDataSearchCriteriaFilter {
+  _type: String
+}
+
+type TraceFilterDataValue {
+  _type: String
+}
+
+type TraceFilterFieldName {
+  _type: String
+}
+
+type TraceMetricGroup {
+  _type: String
+}
+
+type TraceNode {
+  _type: String
+}
+
+type TraceOverviewMetrics {
+  _type: String
+}
+
+type TraceOverviewMetricsWithComparison {
+  _type: String
+}
+
+type TracePageInfo {
+  _type: String
+}
+
+type TraceRxReport {
+  _type: String
+}
+
+type TraceSegmentField {
+  _type: String
+}
+
+type TraceSortField {
+  _type: String
+}
+
+type TraceTimeSeriesMetric {
+  _type: String
+}
+
+type TrackTablePayload {
+  _type: String
+}
+
+type TransactionalDbConnectionDetails {
+  _type: String
+}
+
+type TransactionalDbConnectionSettings {
+  _type: String
+}
+
+type TransactionalDbUpdateConnectionDetails {
+  _type: String
+}
+
+type TransactionalDbUpdateConnectionSettings {
+  _type: String
+}
+
+type Transform {
+  _type: String
+}
+
+type TransformFunction {
+  _type: String
+}
+
+type TransformScoringAnchor {
+  _type: String
+}
+
+type TriageAgentRunResult {
+  _type: String
+}
+
+type TriageAlertsOutput {
+  _type: String
+}
+
+type TriageBatchSource {
+  _type: String
+}
+
+type TriagePriority {
+  _type: String
+}
+
+type TriageScore {
+  _type: String
+}
+
+type TriggerAgenticPlatformPipeline {
+  _type: String
+}
+
+type TriggerCircuitBreakerRule {
+  _type: String
+}
+
+type TriggerCircuitBreakerRuleV2 {
+  _type: String
+}
+
+type TriggerConnectionManifestJob {
+  _type: String
+}
+
+type TriggerCustomRule {
+  _type: String
+}
+
+type TriggerMigrationTest {
+  _type: String
+}
+
+type TriggerPlatformMigration {
+  _type: String
+}
+
+type TriggerPlatformMigrationTest {
+  _type: String
+}
+
+type TsaAnalysis {
+  _type: String
+}
+
+type TuningUnavailableReason {
+  _type: String
+}
+
+type UCSAlertConditionOutput {
+  _type: String
+}
+
+type UCSAutomatedAlertConditionOutput {
+  _type: String
+}
+
+type UCSDetectorThresholdOutput {
+  _type: String
+}
+
+type UCSExplicitAlertConditionOutput {
+  _type: String
+}
+
+type UCSTableMonitorConfigOutput {
+  _type: String
+}
+
+type UUID {
+  _type: String
+}
+
+type UnifiedUser {
+  _type: String
+}
+
+type UnifiedUserAssignment {
+  _type: String
+}
+
+type UnknownVectorIndexMetadata {
+  _type: String
+}
+
+type UnlinkAzureDevOpsWorkItemForAlert {
+  _type: String
+}
+
+type UnlinkDatadogIncidentForAlert {
+  _type: String
+}
+
+type UnlinkJiraTicketForAlert {
+  _type: String
+}
+
+type UnlinkJiraTicketForIncident {
+  _type: String
+}
+
+type UnlinkOpsgenieIncident {
+  _type: String
+}
+
+type UnlinkServiceNowIncidentForAlert {
+  _type: String
+}
+
+type UnsnoozeCustomRule {
+  _type: String
+}
+
+type UnsnoozeCustomRules {
+  _type: String
+}
+
+type UnsnoozeDbtNode {
+  _type: String
+}
+
+type UnsubscribeFromDashboardScheduleMutation {
+  _type: String
+}
+
+type UpdateAccountDisplayCatalogSearchTags {
+  _type: String
+}
+
+type UpdateAccountSecret {
+  _type: String
+}
+
+type UpdateAgentEnabled {
+  _type: String
+}
+
+type UpdateAgentParameters {
+  _type: String
+}
+
+type UpdateAgenticDomain {
+  _type: String
+}
+
+type UpdateAgenticPlatformPipeline {
+  _type: String
+}
+
+type UpdateAlert {
+  _type: String
+}
+
+type UpdateAssignedAssets {
+  _type: String
+}
+
+type UpdateAthenaCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateAzureDataFactoryCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateAzureDevOpsIntegration {
+  _type: String
+}
+
+type UpdateAzureDevopsInstallation {
+  _type: String
+}
+
+type UpdateBiConnectionNameMutation {
+  _type: String
+}
+
+type UpdateBigQueryCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateCiGateConfig {
+  _type: String
+}
+
+type UpdateCredentials {
+  _type: String
+}
+
+type UpdateCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateCredentialsV2Result {
+  _type: String
+}
+
+type UpdateCustomConnector {
+  _type: String
+}
+
+type UpdateCustomDashboardWidgetOrdering {
+  _type: String
+}
+
+type UpdateCustomMetricRuleNotes {
+  _type: String
+}
+
+type UpdateCustomMetricSeverity {
+  _type: String
+}
+
+type UpdateCustomRuleInvestigationQuery {
+  _type: String
+}
+
+type UpdateCustomerMcpServer {
+  _type: String
+}
+
+type UpdateDailyUsageAlertConfig {
+  _type: String
+}
+
+type UpdateDashboardScheduleMutation {
+  _type: String
+}
+
+type UpdateDataProductSharing {
+  _type: String
+}
+
+type UpdateDataShare {
+  _type: String
+}
+
+type UpdateDataShareOutput {
+  _type: String
+}
+
+type UpdateDatabricksMetastoreSQLWarehouseCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateDatabricksSQLWarehouseCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateDatadogIntegration {
+  _type: String
+}
+
+type UpdateDbtCloudCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateDbtProjectInfo {
+  _type: String
+}
+
+type UpdateGithubAppInstallation {
+  _type: String
+}
+
+type UpdateGitlabInstallation {
+  _type: String
+}
+
+type UpdateGlueCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateInformaticaV2CredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateJiraIntegration {
+  _type: String
+}
+
+type UpdateJiraIntegrationWebhookSecret {
+  _type: String
+}
+
+type UpdateLogsIntegration {
+  _type: String
+}
+
+type UpdateLookerCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateLookerGitAuthCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateMonitorDataQualityDimension {
+  _type: String
+}
+
+type UpdateMonitorDescription {
+  _type: String
+}
+
+type UpdateMonitorLabels {
+  _type: String
+}
+
+type UpdateMonitorName {
+  _type: String
+}
+
+type UpdateMonitorNotes {
+  _type: String
+}
+
+type UpdateMonitorTags {
+  _type: String
+}
+
+type UpdateMonitorsPriorities {
+  _type: String
+}
+
+type UpdateMonitorsSchedules {
+  _type: String
+}
+
+type UpdateMonitorsSensitivityResponse {
+  _type: String
+}
+
+type UpdateOpsgenieIntegration {
+  _type: String
+}
+
+type UpdateOpsgenieIntegrationWebhookSecret {
+  _type: String
+}
+
+type UpdatePagerDutyServiceIntegration {
+  _type: String
+}
+
+type UpdatePagerDutyServiceIntegrationWebhookSecret {
+  _type: String
+}
+
+type UpdatePiiFilteringPreferences {
+  _type: String
+}
+
+type UpdatePineconeCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdatePlatformService {
+  _type: String
+}
+
+type UpdatePowerBiCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdatePrAgentConfig {
+  _type: String
+}
+
+type UpdateRedshiftCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateSelfHostedCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateServiceNowIntegration {
+  _type: String
+}
+
+type UpdateSessionSettings {
+  _type: String
+}
+
+type UpdateSlackChannelsMutation {
+  _type: String
+}
+
+type UpdateSnowflakeCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateStatementOption {
+  _type: String
+}
+
+type UpdateStreamingClusterNameMutation {
+  _type: String
+}
+
+type UpdateStreamingSystemNameMutation {
+  _type: String
+}
+
+type UpdateTableauAssetWarning {
+  _type: String
+}
+
+type UpdateTableauCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateTransactionalDbCredentialsV2Mutation {
+  _type: String
+}
+
+type UpdateUserAuthorizationGroupMembership {
+  _type: String
+}
+
+type UpdateUserPersona {
+  _type: String
+}
+
+type UpdateUserStatePayload {
+  _type: String
+}
+
+type UpdateWebexIntegration {
+  _type: String
+}
+
+type UpdateWorkspaceIdentifier {
+  _type: String
+}
+
+type UpgradeAgent {
+  _type: String
+}
+
+type Upload {
+  _type: String
+}
+
+type UploadAirflowDagResult {
+  _type: String
+}
+
+type UploadAirflowSlaMisses {
+  _type: String
+}
+
+type UploadAirflowTaskResult {
+  _type: String
+}
+
+type UploadWarehouseCredentialsMutation {
+  _type: String
+}
+
+type UsageAlertConfigOutput {
+  _type: String
+}
+
+type UseCaseOutput {
+  _type: String
+}
+
+type UseCaseTableDetail {
+  _type: String
+}
+
+type UseCaseTableOutput {
+  _type: String
+}
+
+type UseCaseTableSummaryOutput {
+  _type: String
+}
+
+type User {
+  _type: String
+}
+
+type UserAttribute {
+  _type: String
+}
+
+type UserAuthorizationOutput {
+  _type: String
+}
+
+type UserBasicInfo {
+  _type: String
+}
+
+type UserBlastRadius2 {
+  _type: String
+}
+
+type UserDefinedMonitor {
+  _type: String
+}
+
+type UserDefinedMonitorModelBreached {
+  _type: String
+}
+
+type UserDefinedMonitorSearchFields {
+  _type: String
+}
+
+type UserDefinedMonitorV2 {
+  _type: String
+}
+
+type UserDefinedMonitors {
+  _type: String
+}
+
+type UserInfoOutput {
+  _type: String
+}
+
+type UserInvite {
+  _type: String
+}
+
+type UserInviteModelState {
+  _type: String
+}
+
+type UserModelDeleteReason {
+  _type: String
+}
+
+type UserModelPersona {
+  _type: String
+}
+
+type UserModelState {
+  _type: String
+}
+
+type UserOutput {
+  _type: String
+}
+
+type UserPermission {
+  _type: String
+}
+
+type UserPersona {
+  _type: String
+}
+
+type UserSettings {
+  _type: String
+}
+
+type UserTableBlastRadius {
+  _type: String
+}
+
+type UserTutorial {
+  _type: String
+}
+
+type VCSSummary {
+  _type: String
+}
+
+type ValidateConnectionCtpConfig {
+  _type: String
+}
+
+type ValidateCron {
+  _type: String
+}
+
+type ValidateDataAssetAccessResponse {
+  _type: String
+}
+
+type ValidatePerformanceDashboardAccessResponse {
+  _type: String
+}
+
+type Validation {
+  _type: String
+}
+
+type ValidationFailure {
+  _type: String
+}
+
+type ValidationPercentageThresholdOperator {
+  _type: String
+}
+
+type ValidationTimeWindowPeriod {
+  _type: String
+}
+
+type ValidatorTestOptions {
+  _type: String
+}
+
+type VariableDefinition {
+  _type: String
+}
+
+type VariableValue {
+  _type: String
+}
+
+type VectorIndexMetadata {
+  _type: String
+}
+
+type VolumeChangeAlertConditionOutput {
+  _type: String
+}
+
+type VolumeChangeAutomatedAlertConditionOutput {
+  _type: String
+}
+
+type VolumeChangeDetectorThresholdOutput {
+  _type: String
+}
+
+type VolumeChangeExplicitAlertConditionOutput {
+  _type: String
+}
+
+type VolumeChangeTableMonitorConfigOutput {
+  _type: String
+}
+
+type Warehouse {
+  _type: String
+}
+
+type WarehouseDomain {
+  _type: String
+}
+
+type WarehouseRelation {
+  _type: String
+}
+
+type WarehouseTable {
+  _type: String
+}
+
+type WarehouseTableHealth {
+  _type: String
+}
+
+type WarehouseTableIncident {
+  _type: String
+}
+
+type WarehouseTagsCollectionSetting {
+  _type: String
+}
+
+type WebexIntegrationOutput {
+  _type: String
+}
+
+type WebexTestCredentialsOutput {
+  _type: String
+}
+
+type WebhookHeader {
+  _type: String
+}
+
+type WebhookServiceTypes {
+  _type: String
+}
+
+type WebhookStatusValue {
+  _type: String
+}
+
+type WhereConditionSegments {
+  _type: String
+}
+
+type WidgetConfig {
+  _type: String
+}
+
+type WidgetDataSourceInterface {
+  _type: String
+}
+
+type WidgetDataSourceJobExecutions {
+  _type: String
+}
+
+type WidgetDataSourceMetrics {
+  _type: String
+}
+
+type WidgetDataSourceMonitor {
+  _type: String
+}
+
+type WidgetDataSourceMonitorMetrics {
+  _type: String
+}
+
+type WidgetDataSourceTableMetrics {
+  _type: String
+}
+
+type WidgetDefinition {
+  _type: String
+}
+
+type WidgetDefinitionResult {
+  _type: String
+}
+
+type WidgetOptionsGraph {
+  _type: String
+}
+
+type WidgetOptionsInterface {
+  _type: String
+}
+
+type WidgetOptionsSingleValue {
+  _type: String
+}
+
+type WidgetOptionsTable {
+  _type: String
+}
+
+type WidgetOptionsText {
+  _type: String
+}
+
+type WildcardTemplate {
+  _type: String
+}
+
+type WildcardTemplates {
+  _type: String
+}
