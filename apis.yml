@@ -13,7 +13,7 @@ description: 'Monte Carlo is a data and AI observability platform that helps ent
 
   '
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/montecarlodata/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -34,7 +34,7 @@ apis:
     unreachable via standard pull-based collection.
 
     '
-  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://docs.getmontecarlo.com/docs/api
   baseURL: https://api.getmontecarlo.com/graphql
   tags:
