@@ -52,6 +52,10 @@ apis:
   - url: graphql/montecarlodata-graphql.md
     type: GraphQL
 common:
+- type: TrustCenter
+  url: security/montecarlodata-trust-center.yml
+- type: DomainSecurity
+  url: security/montecarlodata-domain-security.yml
 - type: Website
   url: https://montecarlo.ai
 - type: Documentation

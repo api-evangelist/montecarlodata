@@ -1,0 +1,39 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: montecarlo.ai
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 15 21:09:01 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: docs.getmontecarlo.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  3 14:32:36 2026 GMT
+  hsts: null
+- host: api.getmontecarlo.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 16 23:59:59 2026 GMT
+  hsts: null
+domains:
+- domain: montecarlo.ai
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: getmontecarlo.com
+  dnssec: false
+  caa:
+  - 0 issue "ssl.com"
+  - 0 iodef "mailto:domains@montecarlodata.com"
+  - 0 issue "amazon.com"
+  - 0 issue "digicert.com"
+  - 0 issue "letsencrypt.org"
+  - 0 issue "pki.goog"
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
