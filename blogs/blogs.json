@@ -2,23 +2,21 @@
   "repo": "montecarlodata",
   "feeds": [
     {
-      "source": "https://montecarlo.ai/blog/feed/",
-      "feed_url": "https://montecarlo.ai/blog/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "feed",
-      "nature": "undetermined",
-      "nature_basis": null
-    },
-    {
       "source": "https://www.linkedin.com/company/monte-carlo-data",
       "feed_url": "https://www.linkedin.com/company/monte-carlo-data",
       "title": "",
       "saved": 0,
       "method": "none"
+    },
+    {
+      "source": "https://montecarlo.ai/blog/feed/",
+      "feed_url": "https://montecarlo.ai/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     }
   ],
-  "fetched": "2026-08-30T22:33:40Z",
+  "fetched": "2026-09-06T19:17:18Z",
   "post_count": 51,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
