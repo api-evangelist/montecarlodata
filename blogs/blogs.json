@@ -3,10 +3,7 @@
   "feeds": [
     {
       "source": "https://www.linkedin.com/company/monte-carlo-data",
-      "feed_url": "https://www.linkedin.com/company/monte-carlo-data",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "error": "HTTPError"
     },
     {
       "source": "https://montecarlo.ai/blog/feed/",
@@ -16,7 +13,7 @@
       "method": "feed"
     }
   ],
-  "fetched": "2026-09-06T19:17:18Z",
+  "fetched": "2026-09-13T13:00:00Z",
   "post_count": 51,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
