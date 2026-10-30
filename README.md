@@ -1,4 +1,4 @@
-# Monte Carlo (montecarlodata)
+# Monte Carlo
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,64 +64,118 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Monte Carlo is a data and AI observability platform that helps enterprise organizations find and fix bad data fast. The platform exposes a GraphQL API that powers all the same capabilities as the Monte Carlo web application, enabling programmatic management of data monitors, incidents, field health, and lineage across data warehouses, lakes, ETL, and BI tools. Developers can automate custom monitoring configurations, augment lineage with external resources, manage bulk operations, and push metadata from sources unreachable via standard collection through the Push Ingest API. Additional developer tools include a Python SDK (Pycarlo), a CLI for onboarding and integration operations, webhooks for routing incident data to custom platforms, and an Airflow provider for pipeline quality gates.
+Monte Carlo is a data and AI observability platform that helps enterprise organizations find and fix bad data fast. The platform exposes a GraphQL API that powers all the same capabilities as the Monte Carlo web application, enabling programmatic management of data monitors, incidents, field health, and lineage across data warehouses, lakes, ETL, and BI. Developers can automate custom monitoring configurations, augment lineage with external resources, manage bulk operations, and push metadata from sources unreachable via standard collection through the Push Ingest API. Additional developer tools include a Python SDK (Pycarlo), a CLI for onboarding and integration operations, webhooks for routing incident data to custom platforms, and an Airflow provider for pipeline quality gates.
 
-**APIs.json:** https://raw.githubusercontent.com/api-evangelist/montecarlodata/refs/heads/main/apis.yml
+**Areas:** Data Observability · Data Quality · Data Monitoring · Data Lineage · GraphQL · AI Observability · Data Reliability
 
-**Naftiko:** https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=montecarlodata-api-evangelist&utm_content=repo
+## Monte Carlo on APIs.io
 
-## Tags
+Everything profiled for Monte Carlo is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/montecarlodata/](https://apis.io/providers/montecarlodata/)** — or go straight to one of the APIs or properties below.
 
-- Data Observability
-- Data Quality
-- Data Monitoring
-- Data Lineage
-- GraphQL
-- AI Observability
-- Data Reliability
+### APIs (1)
 
-## APIs
+- [Monte Carlo GraphQL API](https://apis.io/apis/montecarlodata/monte-carlo-graphql-api/) — GraphQL API powering the full Monte Carlo platform, enabling programmatic access to data monitors, incidents, field health, lineage, table and warehouse…
 
-| Name | Description | Base URL |
-|------|-------------|----------|
-| Monte Carlo GraphQL API | Full-platform GraphQL API for monitors, incidents, lineage, field health, and Push Ingest | https://api.getmontecarlo.com/graphql |
+### Published properties
 
-## Plans / Rate Limits / FinOps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Resource | File |
-|----------|------|
-| Plans & Pricing | [plans/montecarlodata-plans-pricing.yml](plans/montecarlodata-plans-pricing.yml) |
-| Rate Limits | [rate-limits/montecarlodata-rate-limits.yml](rate-limits/montecarlodata-rate-limits.yml) |
-| FinOps | [finops/montecarlodata-finops.yml](finops/montecarlodata-finops.yml) |
+#### GraphQL (1)
 
-### Pricing Summary
+GraphQL schemas.
 
-| Plan | Users | Tables | Daily API Calls | Pricing |
-|------|-------|--------|-----------------|---------|
-| Start | Up to 10 | Up to 1,000 | 10,000 | Pay-per-table |
-| Scale | Unlimited | Unlimited | 50,000 | Pay-per-table |
-| Enterprise | Unlimited | Unlimited | 100,000 | Custom |
+- [Monte Carlo Data GraphQL API](https://apis.io/graphqls/montecarlodata/montecarlodata-graphql/)
 
-## Timestamps
+#### JSON-LD (1)
 
-- **Created:** 2026-06-13
-- **Modified:** 2026-06-13
+Linked-data contexts for the provider's vocabulary.
 
-## Common
+- [Montecarlodata Context](https://apis.io/jsonld/montecarlodata/montecarlodata-context/)
 
-| Type | URL |
-|------|-----|
-| Website | https://montecarlo.ai |
-| Documentation | https://docs.getmontecarlo.com/docs/developer-resources |
-| GitHub Org | https://github.com/monte-carlo-data |
-| LinkedIn | https://www.linkedin.com/company/monte-carlo-data |
-| Blog | https://montecarlo.ai/blog |
-| Pricing | https://info.montecarlodata.com/solutions/data-observability-platform-pricing |
-| Status Page | https://status.getmontecarlo.com |
-| X (Twitter) | https://x.com/montecarlodata |
+#### Security (2)
 
-## Maintainers
+Authentication, trust centre, and vulnerability disclosure.
 
-| Name | Email |
-|------|-------|
-| Kin Lane | kin@apievangelist.com |
+- [Montecarlodata Domain Security](https://apis.io/security/montecarlodata/montecarlodata-domain-security/)
+- [Montecarlodata Trust Center](https://apis.io/security/montecarlodata/montecarlodata-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Montecarlodata Plans Pricing](https://apis.io/plans/montecarlodata/montecarlodata-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Montecarlodata Rate Limits](https://apis.io/rate-limits/montecarlodata/montecarlodata-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Montecarlodata Finops](https://apis.io/finops/montecarlodata/montecarlodata-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://montecarlo.ai)
+- [Documentation](https://docs.getmontecarlo.com/docs/developer-resources)
+- [Pricing](https://info.montecarlodata.com/solutions/data-observability-platform-pricing)
+- [Blog](https://montecarlo.ai/blog)
+- [Status](https://status.getmontecarlo.com)
+
+## API Evangelist rating
+
+**Kin Score 31.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 46.8 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 26.3 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/montecarlodata/](https://apis.io/providers/montecarlodata/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Monte Carlo: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/montecarlodata/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
